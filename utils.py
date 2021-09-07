@@ -27,6 +27,12 @@ def accuracy(output, labels):
     correct = correct.sum()
     return correct / len(labels)
 
+def rmse(output, labels) :
+    loss = torch.div(torch.abs(output-labels), labels)
+    loss = torch.sum(loss, 0)
+    loss = loss*100/output.shape[0]
+    return torch.sum(loss)
+
 def parse_index_file(filename):
     """Parse index file."""
     index = []
@@ -64,6 +70,7 @@ def load_citation(dataset_str="cora", normalization="AugNormAdj", cuda=True):
             else:
                 objects.append(pkl.load(f))
 
+
     x, y, tx, ty, allx, ally, graph = tuple(objects)
     test_idx_reorder = parse_index_file("data/ind.{}.test.index".format(dataset_str))
     test_idx_range = np.sort(test_idx_reorder)
@@ -82,13 +89,14 @@ def load_citation(dataset_str="cora", normalization="AugNormAdj", cuda=True):
     features = sp.vstack((allx, tx)).tolil()
     features[test_idx_reorder, :] = features[test_idx_range, :]
     adj = nx.adjacency_matrix(nx.from_dict_of_lists(graph))
+    print(type(adj))
     adj = adj + adj.T.multiply(adj.T > adj) - adj.multiply(adj.T > adj)
     labels = np.vstack((ally, ty))
     labels[test_idx_reorder, :] = labels[test_idx_range, :]
 
-    idx_test = test_idx_range.tolist()
-    idx_train = range(len(y))
-    idx_val = range(len(y), len(y)+500)
+    idx_train = range(140)
+    idx_val = range(140, 1700)
+    idx_test = range(1700, 2708)
 
     adj, features = preprocess_citation(adj, features, normalization)
 
@@ -112,4 +120,36 @@ def load_citation(dataset_str="cora", normalization="AugNormAdj", cuda=True):
     return adj, features, labels, idx_train, idx_val, idx_test
 
 
+
+def load_citation_in_order(dataset = "cora", normalization="AugNormAdj", cuda = True) :
+    dir = "data/lab_data/"
+    features = np.genfromtxt(dir+"features.txt")
+    labels = np.genfromtxt(dir+"labels.txt")
+    adj = np.genfromtxt(dir+"adjacent.txt")
+    adj = sp.coo_matrix(adj)
+    # adj = adj + adj.T.multiply(adj.T > adj) - adj.multiply(adj.T > adj)
+
+    adj, features = preprocess_citation(adj, features, normalization)
+
+    features = torch.FloatTensor(features)
+    labels = torch.FloatTensor(labels)
+    # adj = torch.FloatTensor(adj)
+    adj = sparse_mx_to_torch_sparse_tensor(adj).float()
+    
+    idx_train = range(140)
+    idx_train = torch.LongTensor(idx_train)
+    idx_val = range(140, 1200)
+    idx_val = torch.LongTensor(idx_val)
+    idx_test = range(1200, 1680)
+    idx_test = torch.LongTensor(idx_test)
+
+    if cuda:
+        features = features.cuda()
+        adj = adj.cuda()
+        labels = labels.cuda()
+        idx_train = idx_train.cuda()
+        idx_val = idx_val.cuda()
+        idx_test = idx_test.cuda()
+
+    return adj, features, labels, idx_train, idx_val, idx_test
 
