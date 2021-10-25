@@ -60,7 +60,7 @@ class GMLP(nn.Module):
             x_dis = get_feature_dis(Z)
 
         class_feature = self.classifier(feature_cls)
-        # class_logits = F.log_softmax(class_feature, dim=1)
+        class_logits = F.log_softmax(class_feature, dim=1)
 
         if self.training:
             return class_feature, x_dis

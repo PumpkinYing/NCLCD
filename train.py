@@ -71,7 +71,7 @@ if args.cuda:
     idx_test = idx_test.cuda()
 
 
-def Ncontrast(x_dis, adj_label, tau = 1):
+def Ncontrast(x_dis, adj_label, tau = args.tau):
     """
     compute the Ncontrast loss
     """
@@ -85,7 +85,7 @@ def get_batch(batch_size):
     """
     get a batch of feature & adjacency matrix
     """
-    rand_indx = torch.tensor(np.random.choice(np.arange(1200), batch_size)).type(torch.long).cuda()
+    rand_indx = torch.tensor(np.random.choice(np.arange(1300), batch_size)).type(torch.long).cuda()
     rand_indx[0:len(idx_train)] = idx_train
     features_batch = features[rand_indx]
     adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
@@ -129,7 +129,7 @@ def my_test():
         optimizer.zero_grad()
         out, x_dis = model(features_batch)
         loss_train_class = F.mse_loss(out, labels[idx])
-        loss_Ncontrast = Ncontrast(x_dis, adj_label_batch, tau = 0.1)
+        loss_Ncontrast = Ncontrast(x_dis, adj_label_batch, tau = args.tau)
         loss_train = loss_train_class + loss_Ncontrast * args.alpha
         loss_train.backward()
         optimizer.step()
@@ -141,7 +141,7 @@ def my_test():
     acc_val = rmse(output[idx_val], labels[idx_val])
     return acc_test, acc_val
 
-def print_pic(output, out) :
+def print_pic(output, out, name) :
     plt.figure()
     plt.subplot(2,1,1)
     mx_idx = output.shape[0]
@@ -152,7 +152,7 @@ def print_pic(output, out) :
     plt.plot(range(mx_idx), output.detach().cpu().numpy()[:,1], label='output')
     plt.plot(range(mx_idx), out.detach().cpu().numpy()[:,1], label='true')
     plt.legend(loc=3)
-    plt.savefig('./pics/result.jpg')
+    plt.savefig('./pics/'+name+'.jpg')
 
 best_accu = 0
 best_val_acc = 0
@@ -164,15 +164,18 @@ for epoch in tqdm(range(args.epochs)):
     if val_acc > best_val_acc:
         best_val_acc = val_acc
         test_acc = tmp_test_acc
+
+model.eval()
+output = model(features)
+print_pic(output, labels, 'result1')
         
 print(test_acc)
 test_acc, val_acc = my_test()
 print(test_acc, val_acc)
 
 model.eval()
-
 output = model(features)
-print_pic(output, labels)
+print_pic(output, labels, 'result2')
 
 
 log_file = open(r"log.txt", encoding="utf-8",mode="a+")  

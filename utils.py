@@ -136,9 +136,9 @@ def load_citation_in_order(dataset = "cora", normalization="AugNormAdj", cuda = 
     # adj = torch.FloatTensor(adj)
     adj = sparse_mx_to_torch_sparse_tensor(adj).float()
     
-    idx_train = range(140)
+    idx_train = range(1200)
     idx_train = torch.LongTensor(idx_train)
-    idx_val = range(140, 1200)
+    idx_val = range(1200, 1300)
     idx_val = torch.LongTensor(idx_val)
     idx_test = range(1200, 1680)
     idx_test = torch.LongTensor(idx_test)
