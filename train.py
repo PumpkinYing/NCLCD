@@ -11,7 +11,7 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 
 from models import GMLP
-from utils import load_citation, rmse, get_A_r, load_citation_in_order
+from utils import load_citation, rmse, get_A_r, load_citation_in_order, accuracy
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -48,14 +48,17 @@ args.cuda = not args.no_cuda and torch.cuda.is_available()
 ## get data
 adj, features, labels, idx_train, idx_val, idx_test = load_citation_in_order(args.data, 'AugNormAdj', args.cuda)
 adj = adj.to_dense()
+# adj_label = adj
 adj_label = torch.where(adj < args.theta, torch.zeros_like(adj), torch.ones_like(adj))
-# adj_label = get_A_r(adj, args.order)
+labels = labels[:,1]
+# adj_label = get_A_r(adj_label, args.order)
 
 
 ## Model and optimizer
 model = GMLP(nfeat=features.shape[1],
             nhid=args.hidden,
-            nclass=labels.shape[1],
+            # nclass=labels.shape[1],
+            nclass=1,
             dropout=args.dropout,
             )
 optimizer = optim.Adam(model.parameters(),
@@ -93,7 +96,7 @@ def get_batch(batch_size):
 
 def get_neighbour_batch(cur):
     batch_indx = torch.nonzero(adj_label[cur]).squeeze(1)
-    batch_indx = batch_indx[torch.nonzero(torch.where(batch_indx > cur, torch.zeros_like(batch_indx), batch_indx)).squeeze(1)]
+    # batch_indx = batch_indx[torch.nonzero(torch.where(batch_indx > cur, torch.zeros_like(batch_indx), batch_indx)).squeeze(1)]
     features_batch = features[batch_indx]
     adj_label_batch = adj_label[batch_indx, :][:, batch_indx]
     return features_batch, adj_label_batch, batch_indx
@@ -143,25 +146,30 @@ def my_test():
 
 def print_pic(output, out, name) :
     plt.figure()
-    plt.subplot(2,1,1)
     mx_idx = output.shape[0]
-    plt.plot(range(mx_idx), output.detach().cpu().numpy()[:, 0], label='output')
-    plt.plot(range(mx_idx), out.detach().cpu().numpy()[:, 0], label='true')
-    plt.legend(loc=3)
-    plt.subplot(2,1,2)
-    plt.plot(range(mx_idx), output.detach().cpu().numpy()[:,1], label='output')
-    plt.plot(range(mx_idx), out.detach().cpu().numpy()[:,1], label='true')
-    plt.legend(loc=3)
+    # print pic for two outputs
+    # plt.subplot(2,1,1)
+    # plt.plot(range(mx_idx), output.detach().cpu().numpy()[:, 0], label='output')
+    # plt.plot(range(mx_idx), out.detach().cpu().numpy()[:, 0], label='true')
+    # plt.legend(loc=3)
+    # plt.subplot(2,1,2)
+    # plt.plot(range(mx_idx), output.detach().cpu().numpy()[:,1], label='output')
+    # plt.plot(range(mx_idx), out.detach().cpu().numpy()[:,1], label='true')
+    # plt.legend(loc=3)
+
+    #print pic for one pic
+    plt.plot(range(mx_idx), output.detach().cpu().numpy(), label='output')
+    plt.plot(range(mx_idx), out.detach().cpu().numpy(), label='true')
     plt.savefig('./pics/'+name+'.jpg')
 
 best_accu = 0
-best_val_acc = 0
+best_val_acc = 1e10
 print('\n'+'training configs', args)
 for epoch in tqdm(range(args.epochs)):
     train()
     tmp_test_acc, val_acc = test()
     # print(tmp_test_acc, val_acc)
-    if val_acc > best_val_acc:
+    if val_acc < best_val_acc:
         best_val_acc = val_acc
         test_acc = tmp_test_acc
 
@@ -171,7 +179,7 @@ print_pic(output, labels, 'result1')
         
 print(test_acc)
 test_acc, val_acc = my_test()
-print(test_acc, val_acc)
+print(test_acc)
 
 model.eval()
 output = model(features)
