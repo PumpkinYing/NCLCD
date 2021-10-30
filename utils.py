@@ -93,27 +93,26 @@ def load_citation(dataset_str="cora", normalization="AugNormAdj", cuda=True):
     source_nodes = []
     destination_nodes = []
     edge_labels = []
-    # for source in graph :
-    #     for destination in graph[source]:
-    #         if random.randint(1, 100) <= 5: 
-    #             graph[source].remove(destination)
-    #             source_nodes.append(source)
-    #             destination_nodes.append(destination)
-    #             edge_labels.append(1)
-    #     while random.randint(1, 100) <= 5:
-    #         destination = random.randint(0, 2708)
-    #         while destination in graph[source] : 
-    #             destination = random.randint(0, 2708)
-    #         source_nodes.append(source)
-    #         destination_nodes.append(destination)
-    #         edge_labels.append(0)
+    for source in graph :
+        for destination in graph[source]:
+            if random.randint(1, 100) <= 5: 
+                graph[source].remove(destination)
+                source_nodes.append(source)
+                destination_nodes.append(destination)
+                edge_labels.append(1)
+        while random.randint(1, 100) <= 5:
+            destination = random.randint(0, 2708)
+            while destination in graph[source] : 
+                destination = random.randint(0, 2708)
+            source_nodes.append(source)
+            destination_nodes.append(destination)
+            edge_labels.append(0)
 
     source_nodes = torch.tensor(source_nodes, dtype=torch.long)
     destination_nodes = torch.tensor(destination_nodes, dtype=torch.long)
     edge_labels = torch.tensor(edge_labels, dtype=torch.long)
 
     adj = nx.adjacency_matrix(nx.from_dict_of_lists(graph))
-    adj_labels = adj
     adj = adj + adj.T.multiply(adj.T > adj) - adj.multiply(adj.T > adj)
     labels = np.vstack((ally, ty))
     labels[test_idx_reorder, :] = labels[test_idx_range, :]
@@ -122,23 +121,25 @@ def load_citation(dataset_str="cora", normalization="AugNormAdj", cuda=True):
     # idx_val = range(140, 1700)
     # idx_test = range(1700, 2708)
 
-    adj, features = preprocess_citation(adj, features, normalization)
+    adj_normalized, features = preprocess_citation(adj, features, normalization)
 
     # porting to pytorch
     features = torch.FloatTensor(np.array(features.todense())).float()
     labels = torch.LongTensor(labels)
     labels = torch.max(labels, dim=1)[1]
+    adj_normalized = sparse_mx_to_torch_sparse_tensor(adj_normalized).float()
     adj = sparse_mx_to_torch_sparse_tensor(adj).float()
 
     if cuda:
         features = features.cuda()
         adj = adj.cuda()
+        adj_normalized = adj_normalized.cuda()
         labels = labels.cuda()
         source_nodes = source_nodes.cuda()
         destination_nodes = destination_nodes.cuda()
         edge_labels = edge_labels.cuda()
 
-    return adj, adj_labels, features, labels, source_nodes, destination_nodes, edge_labels
+    return adj_normalized, adj, features, labels, source_nodes, destination_nodes, edge_labels
 
 
 

@@ -47,11 +47,11 @@ args = parser.parse_args()
 args.cuda = not args.no_cuda and torch.cuda.is_available()
 
 ## get data
-adj, features, labels, source_nodes, destination_nodes, edge_labels = load_citation(args.data, 'AugNormAdj', args.cuda)
+adj_normalized, adj, features, labels, source_nodes, destination_nodes, edge_labels = load_citation(args.data, 'AugNormAdj', args.cuda)
 # adj = adj.to_dense()
 # adj_label = torch.where(adj < args.theta, torch.zeros_like(adj), torch.ones_like(adj))
-print(adj)
-adj_label = get_A_r(adj, args.order)
+adj=adj.to_dense()
+adj_label = get_A_r(adj_normalized, args.order)
 Loss = torch.nn.BCELoss()
 
 
@@ -89,7 +89,8 @@ def get_batch(batch_size):
     # rand_indx[0:len(idx_train)] = idx_train
     features_batch = features[rand_indx]
     adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
-    return features_batch, adj_label_batch
+    adj_batch = adj[rand_indx,:][:,rand_indx]
+    return features_batch, adj_label_batch, adj_batch
 
 def get_neighbour_batch(cur):
     batch_indx = torch.nonzero(adj_label[cur]).squeeze(1)
@@ -99,11 +100,11 @@ def get_neighbour_batch(cur):
     return features_batch, adj_label_batch, batch_indx
 
 def train():
-    features_batch, adj_label_batch = get_batch(batch_size=args.batch_size)
+    features_batch, adj_label_batch, adj_batch = get_batch(batch_size=args.batch_size)
     model.train()
     optimizer.zero_grad()
     output, x_dis = model(features_batch)
-    loss_train_class = Loss(output, adj_label_batch.reshape(-1, 1))
+    loss_train_class = Loss(output, adj_batch.reshape(-1, 1))
     loss_Ncontrast = Ncontrast(x_dis, adj_label_batch, tau = args.tau)
     loss_train = loss_train_class + loss_Ncontrast * args.alpha
     acc_train = loss_train_class
@@ -112,11 +113,14 @@ def train():
     return acc_train
 
 def test():
-    features_batch, adj_label_batch = get_batch(batch_size=args.batch_size)
+    np.set_printoptions(threshold=np.inf)
+    features_batch, adj_label_batch, adj_batch = get_batch(batch_size=args.batch_size)
     model.eval()
     output = model(features_batch)
-    adj_label_batch = adj_label_batch.reshape(-1, 1).squeeze()
-    loss_train_class = roc_auc_score(adj_label_batch.detach().cpu().numpy(), output.detach().cpu().numpy())
+    adj_batch = adj_batch.reshape(1, -1)
+    output = output.reshape(1, -1)
+    print(adj_batch.detach().cpu().numpy(), np.where(output.detach().cpu().numpy()<0.5,0,1))
+    loss_train_class = roc_auc_score(adj_batch.detach().cpu().numpy(), np.where(output.detach().cpu().numpy()<0.5,0,1))
     acc_train = loss_train_class
     return acc_train
 
@@ -168,9 +172,6 @@ def print_pic(output, out, name) :
     plt.plot(range(mx_idx), out.detach().cpu().numpy(), label='true')
     plt.savefig('./pics/'+name+'.jpg')
 
-features_batch, adj_label_batch = get_batch(batch_size=args.batch_size)
-print(adj_label_batch)
-
 best_accu = 0
 best_val_acc = 0
 print('\n'+'training configs', args)
@@ -186,7 +187,10 @@ for epoch in tqdm(range(args.epochs)):
 
 model.eval()
 # class_prob = model.edge_prediction(features[source_nodes], features[destination_nodes])
-# test_acc = roc_auc_score(edge_labels.detach().cpu().numpy(), class_prob.detach().cpu().numpy(), multi_class='ovo')
+# class_prob = class_prob.reshape(1, -1).squeeze()
+# np.set_printoptions(threshold=np.inf)
+# print(edge_labels.detach().cpu().numpy(), np.where(class_prob.detach().cpu().numpy()<0.5,0,1))
+# test_acc = roc_auc_score(edge_labels.detach().cpu().numpy(), np.where(class_prob.detach().cpu().numpy()<0.5,0,1))
 test_acc = test()
 print(test_acc)
         
