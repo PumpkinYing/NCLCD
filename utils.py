@@ -4,6 +4,7 @@ import torch
 import sys
 import pickle as pkl
 import networkx as nx
+import random
 from normalization import fetch_normalization, row_normalize
 from time import perf_counter
 
@@ -88,15 +89,38 @@ def load_citation(dataset_str="cora", normalization="AugNormAdj", cuda=True):
 
     features = sp.vstack((allx, tx)).tolil()
     features[test_idx_reorder, :] = features[test_idx_range, :]
+
+    source_nodes = []
+    destination_nodes = []
+    edge_labels = []
+    # for source in graph :
+    #     for destination in graph[source]:
+    #         if random.randint(1, 100) <= 5: 
+    #             graph[source].remove(destination)
+    #             source_nodes.append(source)
+    #             destination_nodes.append(destination)
+    #             edge_labels.append(1)
+    #     while random.randint(1, 100) <= 5:
+    #         destination = random.randint(0, 2708)
+    #         while destination in graph[source] : 
+    #             destination = random.randint(0, 2708)
+    #         source_nodes.append(source)
+    #         destination_nodes.append(destination)
+    #         edge_labels.append(0)
+
+    source_nodes = torch.tensor(source_nodes, dtype=torch.long)
+    destination_nodes = torch.tensor(destination_nodes, dtype=torch.long)
+    edge_labels = torch.tensor(edge_labels, dtype=torch.long)
+
     adj = nx.adjacency_matrix(nx.from_dict_of_lists(graph))
-    print(type(adj))
+    adj_labels = adj
     adj = adj + adj.T.multiply(adj.T > adj) - adj.multiply(adj.T > adj)
     labels = np.vstack((ally, ty))
     labels[test_idx_reorder, :] = labels[test_idx_range, :]
 
-    idx_train = range(140)
-    idx_val = range(140, 1700)
-    idx_test = range(1700, 2708)
+    # idx_train = range(140)
+    # idx_val = range(140, 1700)
+    # idx_test = range(1700, 2708)
 
     adj, features = preprocess_citation(adj, features, normalization)
 
@@ -105,19 +129,16 @@ def load_citation(dataset_str="cora", normalization="AugNormAdj", cuda=True):
     labels = torch.LongTensor(labels)
     labels = torch.max(labels, dim=1)[1]
     adj = sparse_mx_to_torch_sparse_tensor(adj).float()
-    idx_train = torch.LongTensor(idx_train)
-    idx_val = torch.LongTensor(idx_val)
-    idx_test = torch.LongTensor(idx_test)
 
     if cuda:
         features = features.cuda()
         adj = adj.cuda()
         labels = labels.cuda()
-        idx_train = idx_train.cuda()
-        idx_val = idx_val.cuda()
-        idx_test = idx_test.cuda()
+        source_nodes = source_nodes.cuda()
+        destination_nodes = destination_nodes.cuda()
+        edge_labels = edge_labels.cuda()
 
-    return adj, features, labels, idx_train, idx_val, idx_test
+    return adj, adj_labels, features, labels, source_nodes, destination_nodes, edge_labels
 
 
 

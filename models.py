@@ -48,7 +48,8 @@ class GMLP(nn.Module):
         super(GMLP, self).__init__()
         self.nhid = nhid
         self.mlp = Mlp(nfeat, self.nhid, dropout)
-        self.classifier = Linear(self.nhid, nclass)
+        # self.classifier = Linear(self.nhid, nclass)
+        self.decoder = Mlp(self.nhid*2, nclass, dropout)
 
     def forward(self, x):
         x = self.mlp(x)
@@ -59,14 +60,22 @@ class GMLP(nn.Module):
         if self.training:
             x_dis = get_feature_dis(Z)
 
-        class_feature = self.classifier(feature_cls)
-        class_logits = F.log_softmax(class_feature, dim=1)
+        # class_feature = self.classifier(feature_cls)
+        batch_size = x.shape[0]
+        feature_concated = torch.cat((feature_cls.repeat(1, batch_size).reshape(batch_size*batch_size, -1), feature_cls.repeat(batch_size, 1)), dim=1)
+        class_feature = self.decoder(feature_concated)
+        class_logits = F.sigmoid(class_feature)
 
         if self.training:
-            return class_feature, x_dis
+            return class_logits, x_dis
         else:
-            return class_feature
+            return class_logits
 
-        
+    def edge_prediction(self, source_nodes_feature, destination_nodes_feature):
+        source_feature_cls = self.mlp(source_nodes_feature)
+        destination_feature_cls = self.mlp(destination_nodes_feature)
+        feature_concated = torch.cat((source_feature_cls, destination_feature_cls), dim=1)
+        class_prob = self.decoder(feature_concated)
+        return F.sigmoid(class_prob)
 
-
+    
