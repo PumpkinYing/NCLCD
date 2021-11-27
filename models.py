@@ -48,8 +48,7 @@ class GMLP(nn.Module):
         super(GMLP, self).__init__()
         self.nhid = nhid
         self.mlp = Mlp(nfeat, self.nhid, dropout)
-        # self.classifier = Linear(self.nhid, nclass)
-        self.decoder = Mlp(self.nhid*2, nclass, dropout)
+        self.classifier = Linear(self.nhid, nclass)
 
     def forward(self, x):
         x = self.mlp(x)
@@ -79,3 +78,12 @@ class GMLP(nn.Module):
         return F.sigmoid(class_prob)
 
     
+class Decoder(nn.Module):
+    def __init__(self, nfeat, nhid, nclass, dropout):
+        super(Decoder, self).__init__()
+        self.nhid = nhid
+        self.mlp = Mlp(nfeat, self.nhid, dropout)
+        self.last_layer = Linear(self.nhid, 1)
+    
+    def forward(self, x):
+        x = self.mlp(x)

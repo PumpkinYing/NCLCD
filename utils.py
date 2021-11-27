@@ -117,9 +117,9 @@ def load_citation(dataset_str="cora", normalization="AugNormAdj", cuda=True):
     labels = np.vstack((ally, ty))
     labels[test_idx_reorder, :] = labels[test_idx_range, :]
 
-    # idx_train = range(140)
-    # idx_val = range(140, 1700)
-    # idx_test = range(1700, 2708)
+    idx_train = range(140)
+    idx_val = range(140, 1700)
+    idx_test = range(1700, 2708)
 
     adj_normalized, features = preprocess_citation(adj, features, normalization)
 
@@ -139,7 +139,7 @@ def load_citation(dataset_str="cora", normalization="AugNormAdj", cuda=True):
         destination_nodes = destination_nodes.cuda()
         edge_labels = edge_labels.cuda()
 
-    return adj_normalized, adj, features, labels, source_nodes, destination_nodes, edge_labels
+    return adj_normalized, adj, features, labels, source_nodes, destination_nodes, edge_labels, idx_train, idx_val
 
 
 
