@@ -9,9 +9,10 @@ import torch.nn.functional as F
 import torch.optim as optim
 from tqdm import tqdm
 import matplotlib.pyplot as plt
+import copy
 
 from models import GMLP
-from utils import load_citation, rmse, get_A_r, load_citation_in_order
+from utils import load_citation, rmse, get_A_r, load_citation_in_order, accuracy, cal_f1_score
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -46,16 +47,16 @@ args = parser.parse_args()
 args.cuda = not args.no_cuda and torch.cuda.is_available()
 
 ## get data
-adj, features, labels, idx_train, idx_val, idx_test = load_citation_in_order(args.data, 'AugNormAdj', args.cuda)
-adj = adj.to_dense()
-adj_label = torch.where(adj < args.theta, torch.zeros_like(adj), torch.ones_like(adj))
-# adj_label = get_A_r(adj, args.order)
+adj, features, labels, idx_train, idx_val, idx_test = load_citation(args.data, 'AugNormAdj', args.cuda)
+# adj = adj.to_dense()
+# adj_label = torch.where(adj < args.theta, torch.zeros_like(adj), torch.ones_like(adj))
+adj_label = get_A_r(adj, args.order)
 
 
 ## Model and optimizer
 model = GMLP(nfeat=features.shape[1],
             nhid=args.hidden,
-            nclass=labels.shape[1],
+            nclass=labels.max().item()+1,
             dropout=args.dropout,
             )
 optimizer = optim.Adam(model.parameters(),
@@ -85,7 +86,7 @@ def get_batch(batch_size):
     """
     get a batch of feature & adjacency matrix
     """
-    rand_indx = torch.tensor(np.random.choice(np.arange(1300), batch_size)).type(torch.long).cuda()
+    rand_indx = torch.tensor(np.random.choice(np.arange(2000), batch_size)).type(torch.long).cuda()
     rand_indx[0:len(idx_train)] = idx_train
     features_batch = features[rand_indx]
     adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
@@ -94,42 +95,37 @@ def get_batch(batch_size):
 def get_neighbour_batch(cur):
     batch_indx = torch.nonzero(adj_label[cur]).squeeze(1)
     batch_indx = batch_indx[torch.nonzero(torch.where(batch_indx > cur, torch.zeros_like(batch_indx), batch_indx)).squeeze(1)]
-    features_batch = features[batch_indx]
-    adj_label_batch = adj_label[batch_indx, :][:, batch_indx]
-    return features_batch, adj_label_batch, batch_indx
+    rand_indx = torch.tensor(np.random.choice(np.arange(2000), args.batch_size)).type(torch.long).cuda()
+    rand_indx[0:len(idx_train)] = idx_train
+    rand_indx[len(idx_train):len(idx_train)+len(batch_indx)] = batch_indx
+    features_batch = features[rand_indx]
+    adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
+    return features_batch, adj_label_batch
 
 def train():
     features_batch, adj_label_batch = get_batch(batch_size=args.batch_size)
     model.train()
     optimizer.zero_grad()
     output, x_dis = model(features_batch)
-    loss_train_class = F.mse_loss(output[idx_train], labels[idx_train])
+    loss_train_class = F.nll_loss(output[idx_train], labels[idx_train])
     loss_Ncontrast = Ncontrast(x_dis, adj_label_batch, tau = args.tau)
     loss_train = loss_train_class + loss_Ncontrast * args.alpha
-    acc_train = rmse(output[idx_train], labels[idx_train])
+    acc_train = accuracy(output[idx_train], labels[idx_train])
     loss_train.backward()
     optimizer.step()
     return 
-
-def test():
-    model.eval()
-    output = model(features)
-    loss_test = F.mse_loss(output[idx_test], labels[idx_test])
-    acc_test = rmse(output[idx_test], labels[idx_test])
-    acc_val = rmse(output[idx_val], labels[idx_val])
-    return acc_test, acc_val
 
 def my_test():
     model.eval()
     output = model(features[idx_train])
     output = torch.cat((output, model(features[idx_val])), dim = 0)
     for i in idx_test :
-        features_batch, adj_label_batch, idx = get_neighbour_batch(i)
+        features_batch, adj_label_batch = get_neighbour_batch(i)
         model.train()
         optimizer.zero_grad()
         out, x_dis = model(features_batch)
-        loss_train_class = F.mse_loss(out, labels[idx])
-        loss_Ncontrast = Ncontrast(x_dis, adj_label_batch, tau = args.tau)
+        loss_train_class = F.nll_loss(out[idx_train], labels[idx_train])
+        loss_Ncontrast = Ncontrast(x_dis, adj_label_batch, tau = 1)
         loss_train = loss_train_class + loss_Ncontrast * args.alpha
         loss_train.backward()
         optimizer.step()
@@ -137,9 +133,8 @@ def my_test():
         model.eval()
         output = torch.cat((output, model(features[i].unsqueeze(0))), dim = 0)
 
-    acc_test = rmse(output[idx_test], labels[idx_test])
-    acc_val = rmse(output[idx_val], labels[idx_val])
-    return acc_test, acc_val
+    acc_test = cal_f1_score(output[idx_test], labels[idx_test])
+    return acc_test
 
 def print_pic(output, out, name) :
     plt.figure()
@@ -159,24 +154,16 @@ best_val_acc = 0
 print('\n'+'training configs', args)
 for epoch in tqdm(range(args.epochs)):
     train()
-    tmp_test_acc, val_acc = test()
-    # print(tmp_test_acc, val_acc)
+    model.eval()
+    cur_output = model(features)
+    val_acc = cal_f1_score(cur_output[idx_val], labels[idx_val])
     if val_acc > best_val_acc:
         best_val_acc = val_acc
-        test_acc = tmp_test_acc
+        best_model = copy.deepcopy(model)
 
-model.eval()
-output = model(features)
-print_pic(output, labels, 'result1')
-        
+print(best_val_acc)
+test_acc = my_test()
 print(test_acc)
-test_acc, val_acc = my_test()
-print(test_acc, val_acc)
-
-model.eval()
-output = model(features)
-print_pic(output, labels, 'result2')
-
 
 log_file = open(r"log.txt", encoding="utf-8",mode="a+")  
 with log_file as file_to_be_write:  

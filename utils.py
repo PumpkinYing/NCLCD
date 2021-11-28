@@ -6,6 +6,7 @@ import pickle as pkl
 import networkx as nx
 from normalization import fetch_normalization, row_normalize
 from time import perf_counter
+from sklearn.metrics import f1_score
 
 
 def get_A_r(adj, r):
@@ -26,6 +27,10 @@ def accuracy(output, labels):
     correct = preds.eq(labels).double()
     correct = correct.sum()
     return correct / len(labels)
+
+def cal_f1_score(output, labels):
+    preds = output.max(1)[1].type_as(labels)
+    return f1_score(labels.cpu(), preds.cpu(), average="micro")
 
 def rmse(output, labels) :
     loss = torch.div(torch.abs(output-labels), labels)
@@ -95,8 +100,8 @@ def load_citation(dataset_str="cora", normalization="AugNormAdj", cuda=True):
     labels[test_idx_reorder, :] = labels[test_idx_range, :]
 
     idx_train = range(140)
-    idx_val = range(140, 1700)
-    idx_test = range(1700, 2708)
+    idx_val = range(140, 2000)
+    idx_test = range(2000, 2708)
 
     adj, features = preprocess_citation(adj, features, normalization)
 
@@ -136,9 +141,9 @@ def load_citation_in_order(dataset = "cora", normalization="AugNormAdj", cuda = 
     # adj = torch.FloatTensor(adj)
     adj = sparse_mx_to_torch_sparse_tensor(adj).float()
     
-    idx_train = range(1200)
+    idx_train = range(140)
     idx_train = torch.LongTensor(idx_train)
-    idx_val = range(1200, 1300)
+    idx_val = range(140, 1300)
     idx_val = torch.LongTensor(idx_val)
     idx_test = range(1200, 1680)
     idx_test = torch.LongTensor(idx_test)

@@ -63,9 +63,9 @@ class GMLP(nn.Module):
         class_logits = F.log_softmax(class_feature, dim=1)
 
         if self.training:
-            return class_feature, x_dis
+            return class_logits, x_dis
         else:
-            return class_feature
+            return class_logits
 
         
 
