@@ -11,7 +11,7 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 import copy
 
-from models import GMLP
+from models import Unsup_GMLP, Classifier
 from utils import load_citation, rmse, get_A_r, load_citation_in_order, accuracy, cal_f1_score
 import warnings
 warnings.filterwarnings('ignore')
@@ -54,17 +54,20 @@ adj_label = get_A_r(adj, args.order)
 
 
 ## Model and optimizer
-model = GMLP(nfeat=features.shape[1],
+model = Unsup_GMLP(nfeat=features.shape[1],
             nhid=args.hidden,
             nclass=labels.max().item()+1,
             dropout=args.dropout,
             )
+classifier = Classifier(nhid=args.hidden, nclass = labels.max().item() + 1)
+
 optimizer = optim.Adam(model.parameters(),
                        lr=args.lr, weight_decay=args.weight_decay)
 
 
 if args.cuda:
     model.cuda()
+    classifier.cuda()
     features = features.cuda()
     labels = labels.cuda()
     idx_train = idx_train.cuda()
@@ -86,7 +89,7 @@ def get_batch(batch_size):
     """
     get a batch of feature & adjacency matrix
     """
-    rand_indx = torch.tensor(np.random.choice(np.arange(2000), batch_size)).type(torch.long).cuda()
+    rand_indx = torch.tensor(np.random.choice(np.arange(2700), batch_size)).type(torch.long).cuda()
     rand_indx[0:len(idx_train)] = idx_train
     features_batch = features[rand_indx]
     adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
@@ -94,7 +97,7 @@ def get_batch(batch_size):
 
 def get_neighbour_batch(cur) :
     batch_indx = torch.nonzero(adj_label[cur]).squeeze(1)
-    batch_indx = batch_indx[torch.nonzero(torch.where(batch_indx > cur, torch.zeros_like(batch_indx), batch_indx)).squeeze(1)]
+    # batch_indx = batch_indx[torch.nonzero(torch.where(batch_indx > cur, torch.zeros_like(batch_indx), batch_indx)).squeeze(1)]
     batch_indx = torch.cat((idx_train, batch_indx))
     features_batch = features[batch_indx]
     adj_label_batch = adj_label[batch_indx, :][:, batch_indx]
@@ -111,39 +114,50 @@ def get_neighbour_batch(cur) :
 #     adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
 #     return features_batch, adj_label_batch
 
-def train():
+def train_unsup():
     features_batch, adj_label_batch = get_batch(batch_size=args.batch_size)
     model.train()
     optimizer.zero_grad()
-    output, x_dis = model(features_batch)
-    loss_train_class = F.nll_loss(output[idx_train], labels[idx_train])
+    x, x_dis = model(features_batch)
     loss_Ncontrast = Ncontrast(x_dis, adj_label_batch, tau = args.tau)
-    loss_train = loss_train_class + loss_Ncontrast * args.alpha
-    acc_train = accuracy(output[idx_train], labels[idx_train])
-    loss_train.backward()
+    loss_Ncontrast.backward()
     optimizer.step()
     return 
 
-def my_test():
+def train_classifier():
     model.eval()
-    output = model(features[idx_train])
-    output = torch.cat((output, model(features[idx_val])), dim = 0)
-    for i in idx_test :
-        features_batch, adj_label_batch = get_neighbour_batch(i)
-        model.train()
-        optimizer.zero_grad()
-        out, x_dis = model(features_batch)
-        loss_train_class = F.nll_loss(out[idx_train], labels[idx_train])
-        loss_Ncontrast = Ncontrast(x_dis, adj_label_batch, tau = 1)
-        loss_train = loss_train_class + loss_Ncontrast * args.alpha
-        loss_train.backward()
-        optimizer.step()
+    embedding, x_dis = model(features)
+    classifier.train()
+    optimizer.zero_grad()
+    output = classifier(embedding)
+    loss_nll = F.nll_loss(output[idx_train], labels[idx_train])
+    loss_nll.backward()
+    optimizer.step()
 
-        model.eval()
-        output = torch.cat((output, model(features[i].unsqueeze(0))), dim = 0)
+    val_f1 = cal_f1_score(output[idx_val], labels[idx_val])
+    test_f1 = cal_f1_score(output[idx_test], labels[idx_test])
+    return val_f1, test_f1
 
-    acc_test = cal_f1_score(output[idx_test], labels[idx_test])
-    return acc_test
+
+# def my_test():
+#     model.eval()
+#     output = model(features[idx_train])
+#     output = torch.cat((output, model(features[idx_val])), dim = 0)
+#     for i in idx_test :
+#         features_batch, adj_label_batch = get_neighbour_batch(i)
+#         model.train()
+#         optimizer.zero_grad()
+#         out, x_dis = model(features_batch)
+#         loss_train_class = F.nll_loss(out[idx_train], labels[idx_train])
+#         loss_Ncontrast = Ncontrast(x_dis, adj_label_batch, tau = 1)
+#         loss_train = loss_train_class + loss_Ncontrast * args.alpha
+#         loss_train.backward()
+#         optimizer.step()
+
+#         output = torch.cat((output, model(features[i].unsqueeze(0))), dim = 0)
+
+#     acc_test = cal_f1_score(output[idx_test], labels[idx_test])
+#     return acc_test
 
 def print_pic(output, out, name) :
     plt.figure()
@@ -158,33 +172,33 @@ def print_pic(output, out, name) :
     plt.legend(loc=3)
     plt.savefig('./pics/'+name+'.jpg')
 
-best_accu = 0
-best_val_acc = 0
 print('\n'+'training configs', args)
 for epoch in tqdm(range(args.epochs)):
-    train()
-    model.eval()
-    cur_output = model(features)
-    val_acc = cal_f1_score(cur_output[idx_val], labels[idx_val])
-    if val_acc > best_val_acc:
-        best_val_acc = val_acc
-        best_model = copy.deepcopy(model)
+    train_unsup()
 
-print(best_val_acc)
-test_acc = my_test()
-print(test_acc)
+best_val_f1 = 0
+best_test_f1 = 0
+for epoch in tqdm(range(args.epochs)):
+    val_f1, test_f1 = train_classifier()
+    if val_f1 > best_val_f1:
+        best_val_f1 = val_f1
+        best_test_f1 = test_f1
+    
+print(best_val_f1)
+print(best_test_f1)
 
-log_file = open(r"log.txt", encoding="utf-8",mode="a+")  
-with log_file as file_to_be_write:  
-    print('tau', 'order', \
-            'batch_size', 'hidden', \
-                'alpha', 'lr', \
-                    'weight_decay', 'data', \
-                        'test_acc', file=file_to_be_write, sep=',')
-    print(args.tau, args.order, \
-         args.batch_size, args.hidden, \
-             args.alpha, args.lr, \
-                 args.weight_decay, args.data, \
-                     test_acc.item(), file=file_to_be_write, sep=',')
+
+# log_file = open(r"log.txt", encoding="utf-8",mode="a+")  
+# with log_file as file_to_be_write:  
+#     print('tau', 'order', \
+#             'batch_size', 'hidden', \
+#                 'alpha', 'lr', \
+#                     'weight_decay', 'data', \
+#                         'test_acc', file=file_to_be_write, sep=',')
+#     print(args.tau, args.order, \
+#          args.batch_size, args.hidden, \
+#              args.alpha, args.lr, \
+#                  args.weight_decay, args.data, \
+#                      test_acc.item(), file=file_to_be_write, sep=',')
 
 

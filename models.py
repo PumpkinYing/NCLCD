@@ -43,6 +43,29 @@ def get_feature_dis(x):
     x_dis = (1-mask) * x_dis
     return x_dis
 
+class Unsup_GMLP(nn.Module):
+    def __init__(self, nfeat, nhid, nclass, dropout):
+        super(Unsup_GMLP, self).__init__()
+        self.nhid = nhid
+        self.mlp = Mlp(nfeat, self.nhid, dropout)
+
+    def forward(self, x):
+        x = self.mlp(x)
+        Z = x
+        x_dis = get_feature_dis(Z)
+        return x, x_dis
+
+class Classifier(nn.Module):
+    def __init__(self, nhid, nclass):
+        super(Classifier, self).__init__()
+        self.nhid = nhid
+        self.classifier = Linear(self.nhid, nclass)
+    
+    def forward(self, x):
+        class_feature = self.classifier(x)
+        class_logits = F.log_softmax(class_feature, dim=1)
+        return class_logits
+
 class GMLP(nn.Module):
     def __init__(self, nfeat, nhid, nclass, dropout):
         super(GMLP, self).__init__()
