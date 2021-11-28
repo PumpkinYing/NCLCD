@@ -92,15 +92,24 @@ def get_batch(batch_size):
     adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
     return features_batch, adj_label_batch
 
-def get_neighbour_batch(cur):
+def get_neighbour_batch(cur) :
     batch_indx = torch.nonzero(adj_label[cur]).squeeze(1)
     batch_indx = batch_indx[torch.nonzero(torch.where(batch_indx > cur, torch.zeros_like(batch_indx), batch_indx)).squeeze(1)]
-    rand_indx = torch.tensor(np.random.choice(np.arange(2000), args.batch_size)).type(torch.long).cuda()
-    rand_indx[0:len(idx_train)] = idx_train
-    rand_indx[len(idx_train):len(idx_train)+len(batch_indx)] = batch_indx
-    features_batch = features[rand_indx]
-    adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
+    batch_indx = torch.cat((idx_train, batch_indx))
+    features_batch = features[batch_indx]
+    adj_label_batch = adj_label[batch_indx, :][:, batch_indx]
     return features_batch, adj_label_batch
+
+
+# def get_neighbour_batch(cur):
+#     batch_indx = torch.nonzero(adj_label[cur]).squeeze(1)
+#     batch_indx = batch_indx[torch.nonzero(torch.where(batch_indx > cur, torch.zeros_like(batch_indx), batch_indx)).squeeze(1)]
+#     rand_indx = torch.tensor(np.random.choice(np.arange(2000), args.batch_size)).type(torch.long).cuda()
+#     rand_indx[0:len(idx_train)] = idx_train
+#     rand_indx[-len(batch_indx):] = batch_indx
+#     features_batch = features[rand_indx]
+#     adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
+#     return features_batch, adj_label_batch
 
 def train():
     features_batch, adj_label_batch = get_batch(batch_size=args.batch_size)

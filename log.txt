@@ -216,3 +216,11 @@ tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
 0.7,2,1000,256,2.0,0.01,0.0005,cora,0.6680790960451978
 tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
 0.7,2,1000,256,2.0,0.01,0.0005,cora,0.6680790960451978
+tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+1.0,4,500,256,2.0,0.001,0.0005,cora,0.6440677966101694
+tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+1.0,4,500,256,2.0,0.001,0.0005,cora,0.6115819209039548
+tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+1.0,4,500,256,2.0,0.001,0.0005,cora,0.557909604519774
+tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+1.0,4,500,256,2.0,0.001,0.0005,cora,0.6468926553672316
