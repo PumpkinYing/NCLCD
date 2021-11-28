@@ -64,6 +64,8 @@ classifier = Classifier(nhid=args.hidden, nclass = labels.max().item() + 1)
 optimizer = optim.Adam(model.parameters(),
                        lr=args.lr, weight_decay=args.weight_decay)
 
+classifier_optimizer = optim.Adam(classifier.parameters(),
+                       lr=args.lr, weight_decay=args.weight_decay)
 
 if args.cuda:
     model.cuda()
@@ -124,20 +126,18 @@ def train_unsup():
     optimizer.step()
     return 
 
-def train_classifier():
+def train_classifier(embedding):
     model.eval()
-    embedding, x_dis = model(features)
     classifier.train()
-    optimizer.zero_grad()
+    classifier_optimizer.zero_grad()
     output = classifier(embedding)
     loss_nll = F.nll_loss(output[idx_train], labels[idx_train])
     loss_nll.backward()
-    optimizer.step()
+    classifier_optimizer.step()
 
     val_f1 = cal_f1_score(output[idx_val], labels[idx_val])
     test_f1 = cal_f1_score(output[idx_test], labels[idx_test])
     return val_f1, test_f1
-
 
 # def my_test():
 #     model.eval()
@@ -178,8 +178,10 @@ for epoch in tqdm(range(args.epochs)):
 
 best_val_f1 = 0
 best_test_f1 = 0
+embedding, x_dis= model(features)
+embedding = embedding.detach()
 for epoch in tqdm(range(args.epochs)):
-    val_f1, test_f1 = train_classifier()
+    val_f1, test_f1 = train_classifier(embedding)
     if val_f1 > best_val_f1:
         best_val_f1 = val_f1
         best_test_f1 = test_f1
