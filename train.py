@@ -11,7 +11,7 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 import copy
 
-from models import Unsup_GMLP, Classifier
+from models import Unsup_GMLP, Classifier, GCN
 from utils import load_citation, rmse, get_A_r, load_citation_in_order, accuracy, cal_f1_score
 import warnings
 warnings.filterwarnings('ignore')
@@ -54,22 +54,22 @@ adj_label = get_A_r(adj, args.order)
 
 
 ## Model and optimizer
-model = Unsup_GMLP(nfeat=features.shape[1],
-            nhid=args.hidden,
-            nclass=labels.max().item()+1,
-            dropout=args.dropout,
-            )
-classifier = Classifier(nhid=args.hidden, nclass = labels.max().item() + 1)
+MLP_model = Unsup_GMLP(nfeat=features.shape[1],
+                       nhid=args.hidden,
+                       dropout=args.dropout,
+                       )
+GCN_model = GCN(nfeat=features.shape[1],
+                nhid=args.hidden,
+                dropout=args.dropout)
 
-optimizer = optim.Adam(model.parameters(),
+MLP_optimizer = optim.Adam(MLP_model.parameters(),
                        lr=args.lr, weight_decay=args.weight_decay)
-
-classifier_optimizer = optim.Adam(classifier.parameters(),
+GCN_optimizer = optim.Adam(GCN_model.parameters(),
                        lr=args.lr, weight_decay=args.weight_decay)
 
 if args.cuda:
-    model.cuda()
-    classifier.cuda()
+    MLP_model.cuda()
+    GCN_model.cuda()
     features = features.cuda()
     labels = labels.cuda()
     idx_train = idx_train.cuda()
@@ -118,16 +118,25 @@ def get_neighbour_batch(cur) :
 
 def train_unsup():
     features_batch, adj_label_batch = get_batch(batch_size=args.batch_size)
-    model.train()
-    optimizer.zero_grad()
-    x, x_dis = model(features_batch)
+    MLP_model.train()
+    MLP_optimizer.zero_grad()
+    x, x_dis = MLP_model(features_batch)
     loss_Ncontrast = Ncontrast(x_dis, adj_label_batch, tau = args.tau)
     loss_Ncontrast.backward()
-    optimizer.step()
+    MLP_optimizer.step()
     return 
 
-def train_classifier(embedding):
-    model.eval()
+def train_unsup_gcn():
+    GCN_model.train()
+    GCN_optimizer.zero_grad()
+    x, x_dis = GCN_model(features, adj_label)
+    loss_Ncontrast = Ncontrast(x_dis, adj_label, tau = args.tau)
+    loss_Ncontrast.backward()
+    GCN_optimizer.step()
+    return 
+
+
+def train_classifier(embedding, classifier):
     classifier.train()
     classifier_optimizer.zero_grad()
     output = classifier(embedding)
@@ -174,14 +183,22 @@ def print_pic(output, out, name) :
 
 print('\n'+'training configs', args)
 for epoch in tqdm(range(args.epochs)):
-    train_unsup()
+    # train_unsup()
+    train_unsup_gcn()
 
 best_val_f1 = 0
 best_test_f1 = 0
-embedding, x_dis= model(features)
+embedding, x_dis= GCN_model(features, adj_label)
 embedding = embedding.detach()
+classifier = Classifier(nhid=embedding.shape[1], nclass=labels.max().item() + 1)
+classifier_optimizer = optim.Adam(classifier.parameters(),
+                    lr=args.lr, weight_decay=args.weight_decay)
+
+if args.cuda:
+    classifier = classifier.cuda()
+
 for epoch in tqdm(range(args.epochs)):
-    val_f1, test_f1 = train_classifier(embedding)
+    val_f1, test_f1 = train_classifier(embedding, classifier)
     if val_f1 > best_val_f1:
         best_val_f1 = val_f1
         best_test_f1 = test_f1
