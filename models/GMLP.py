@@ -4,6 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn import Dropout, Linear, LayerNorm
+from torch_geometric.nn import GCNConv
 
 class Mlp(nn.Module):
     def __init__(self, input_dim, hid_dim, dropout):
@@ -132,6 +133,3 @@ class Unsup_GMLP(nn.Module):
         Z = x
         x_dis = get_feature_dis(Z)
         return x, x_dis
-
-
-
