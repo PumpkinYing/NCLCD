@@ -1,0 +1,812 @@
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,2,400,256,2.0,0.05,0.0001,Cora,[0.30354505169867063, 0.010210084430058742, 0.07272645028292665]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,2,400,256,2.0,0.05,0.0001,Cora,[0.3005908419497784, 0.007405875094919244, 0.07033384383795822]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,2,400,256,2.0,0.05,0.0001,Cora,[0.30280649926144754, 0.00844878490007061, 0.07201961774911632]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,2,400,256,2.0,0.05,0.0001,Cora,[0.301698670605613, 0.00787011298470906, 0.07147427037011557]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,2,400,256,2.0,0.05,0.0001,Cora,[0.2998522895125554, 0.007026544023967013, 0.0678085198162541]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,2,400,256,2.0,0.05,0.0001,Cora,[0.30243722304283605, 0.013976599646827754, 0.07680646665365684]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,2,400,256,2.0,0.05,0.0001,Cora,[0.3020679468242245, 0.0074016287230683, 0.07033606329969293]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,2,400,256,2.0,0.05,0.0001,Cora,[0.30280649926144754, 0.00791840791349007, 0.07049867814642843]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,2,400,256,2.0,0.05,0.0001,Cora,[0.3005908419497784, 0.0076893207697274445, 0.07090349225807392]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,2,400,256,2.0,0.05,0.0001,Cora,[0.2913589364844904, 0.01987650715446405, 0.08599989486627284]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,2,400,256,2.0,0.05,0.0001,Cora,[0.2935745937961595, 0.014812920993772394, 0.07868318394732918]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,2,400,256,2.0,0.05,0.0001,Cora,[0.48929098966026585, 0.40157871828091707, 0.28042005378890783]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,2,400,256,2.0,0.05,0.0001,Cora,[0.345642540620384, 0.22735738979613973, 0.14499516989074523]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,2,400,256,2.0,0.05,0.0001,Cora,[0.4726735598227474, 0.3220249948618049, 0.2690542701856546]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,2,400,256,2.0,0.05,0.0001,Cora,[0.2876661742983752, 0.019411791615288224, 0.08227801129123646]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,2,400,256,2.0,0.05,0.0001,Cora,[0.28729689807976366, 0.017931642940846423, 0.08164459259105464]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,2,400,256,2.0,0.05,0.0001,Cora,[0.29062038404726737, 0.01821228577059866, 0.08167039506991193]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,2,400,256,2.0,0.05,0.0001,Cora,[0.47673559822747413, 0.3766917564324319, 0.3021666244614871]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,2,400,256,2.0,0.05,0.0001,Cora,[0.4675036927621861, 0.35982913388889043, 0.2702459416555371]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,2,400,256,2.0,0.05,0.0001,Cora,[0.2972673559822747, 0.016777007525566004, 0.08354004196113103]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,2,400,256,2.0,0.05,0.0001,Cora,[0.48338257016248154, 0.3986675071033019, 0.27540398606247074]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5491137370753324, 0.3903716716735532, 0.4258911441740439]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,2,400,256,2.0,0.05,0.0001,Cora,[0.3020679468242245, 0.014100555583398537, 0.0844283415415958]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5402511078286558, 0.4038211562240177, 0.35813124246860484]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,2,400,256,2.0,0.05,0.0001,Cora,[0.48670605612998524, 0.4086714504623057, 0.26199076709905705]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,2,400,256,2.0,0.05,0.0001,Cora,[0.2913589364844904, 0.01486782896796462, 0.08346009282660675]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,2,400,256,2.0,0.05,0.0001,Cora,[0.48005908419497784, 0.367038897391003, 0.3196975507827484]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6362629246676514, 0.4844226324912631, 0.4797946226538917]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,2,400,256,2.0,0.05,0.0001,Cora,[0.2980059084194978, 0.01505372567901299, 0.07714201522333183]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6270310192023634, 0.462781670120548, 0.47801036257356594]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6392171344165436, 0.4982954224426546, 0.48878556172657167]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6584194977843427, 0.48389876647690405, 0.5056781756843428]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,2,400,256,2.0,0.05,0.0001,Cora,[0.29874446085672085, 0.007382459046305105, 0.06999260314493239]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,2,400,256,2.0,0.05,0.0001,Cora,[0.3072378138847858, 0.016193440869046193, 0.08592368159165106]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,2,400,256,2.0,0.05,0.0001,Cora,[0.2983751846381093, 0.012121831356897532, 0.0742724020567612]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6392171344165436, 0.48931992907623656, 0.4872013805868103]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6646971935007385, 0.4659463253211341, 0.5830407518347275]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,2,400,256,2.0,0.05,0.0001,Cora,[0.2961595273264402, 0.009859244880310963, 0.07401386541526585]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6610044313146234, 0.46998340147611073, 0.5823993057620577]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6447562776957164, 0.4625198185879683, 0.498565105652058]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6473412112259971, 0.4933861746680188, 0.49543624125887364]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6517725258493353, 0.481108087206501, 0.5639490169522434]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5808714918759232, 0.45986590882365647, 0.4430071752882562]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6477104874446086, 0.47604072110063267, 0.5642736770209796]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6554652880354506, 0.49912665538200457, 0.4994731807759439]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,2,400,256,2.0,0.05,0.0001,Cora,[0.4287296898079764, 0.3003803510722635, 0.28488545108504465]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5033234859675036, 0.3417293359718807, 0.3669778679889523]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5380354505169868, 0.3529806949295344, 0.37761740749924516]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,2,400,256,2.0,0.05,0.0001,Cora,[0.44091580502215655, 0.2822158337785217, 0.3564783122791697]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6418020679468243, 0.4923252050719203, 0.5668433089944191]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6484490398818316, 0.488331801149364, 0.5631932527290229]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6595273264401772, 0.4636160511055434, 0.5797122387655496]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,2,400,256,2.0,0.05,0.0001,Cora,[0.38404726735598227, 0.27608517543776145, 0.20799811204213572]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6909158050221565, 0.4928574582114003, 0.6113790772895117]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,2,400,256,2.0,0.05,0.0001,Cora,[0.587149187592319, 0.4380743341222998, 0.5252038238935357]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,2,400,256,2.0,0.05,0.0001,Cora,[0.3799852289512555, 0.1853476813442667, 0.180215090517332]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5889955686853766, 0.44479449070949445, 0.4515770790862064]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6421713441654358, 0.44582875979721037, 0.5563567338441985]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,2,400,256,2.0,0.05,0.0001,Cora,[0.7093796159527327, 0.5240284345000527, 0.6311599497431123]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6270310192023634, 0.5018806313795298, 0.5793181227317239]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,2,400,256,2.0,0.05,0.0001,Cora,[0.3020679468242245, 0.005798972073253515, 0.07043938367449838]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5114475627769571, 0.3194442629553164, 0.354108554293025]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,2,400,256,2.0,0.05,0.0001,Cora,[0.3707533234859675, 0.26665855720990056, 0.24221510924150078]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5926883308714919, 0.4203319388248791, 0.4995006585903112]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,2,400,256,2.0,0.05,0.0001,Cora,[0.594903988183161, 0.4431822473209143, 0.532595407909793]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,2,400,256,2.0,0.05,0.0001,Cora,[0.656573116691285, 0.47406715095675567, 0.5728652286252248]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,2,400,256,2.0,0.05,0.0001,Cora,[0.4121122599704579, 0.20660221132619158, 0.2318776693013749]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,2,400,256,2.0,0.05,0.0001,Cora,[0.44054652880354506, 0.2865585998315428, 0.277378287341936]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5657311669128509, 0.44646196878781663, 0.3976115039366316]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5867799113737076, 0.4264646514738243, 0.4588048939756159]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5801329394387001, 0.445088090417622, 0.574315107937327]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5051698670605613, 0.34940397864038664, 0.3889322905967428]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5838257016248154, 0.44297687974965133, 0.48469424036135816]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6946085672082718, 0.502525218936985, 0.6682115835394092]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,2,400,256,2.0,0.05,0.0001,Cora,[0.3777695716395864, 0.17058714801704078, 0.22003051516948538]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5801329394387001, 0.41490130821675375, 0.44297127807608955]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6100443131462334, 0.44899584990018165, 0.5457016032153718]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,2,400,256,2.0,0.05,0.0001,Cora,[0.43500738552437224, 0.27708762161018524, 0.21139456878086468]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5720088626292467, 0.41045630370880304, 0.3942785482610792]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,2,400,256,2.0,0.05,0.0001,Cora,[0.5624076809453471, 0.40194623907002586, 0.45061106671208107]
+instance_tau,cluster_tau,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,2,400,256,2.0,0.05,0.0001,Cora,[0.6436484490398818, 0.4827851046641729, 0.6050600896631497]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+1,1,233,2,400,256,2.0,0.05,0.0001,Cora,[0.5014771048744461, 0.3407236238329008, 0.313109629768446]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,300,2,400,256,2.0,0.05,0.0001,Cora,[0.3005908419497784, 0.007405875094919244, 0.07033384383795822]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,400,2,400,256,2.0,0.05,0.0001,Cora,[0.30280649926144754, 0.00844878490007061, 0.07201961774911632]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,500,2,400,256,2.0,0.05,0.0001,Cora,[0.301698670605613, 0.00787011298470906, 0.07147427037011557]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,600,2,400,256,2.0,0.05,0.0001,Cora,[0.2998522895125554, 0.007026544023967013, 0.0678085198162541]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,122,2,400,256,2.0,0.05,0.0001,Cora,[0.30243722304283605, 0.013976599646827754, 0.07680646665365684]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,233,2,400,256,2.0,0.05,0.0001,Cora,[0.3020679468242245, 0.0074016287230683, 0.07033606329969293]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,344,2,400,256,2.0,0.05,0.0001,Cora,[0.30280649926144754, 0.00791840791349007, 0.07049867814642843]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,350,2,400,256,2.0,0.05,0.0001,Cora,[0.3005908419497784, 0.0076893207697274445, 0.07090349225807392]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,2333333,2,400,256,2.0,0.05,0.0001,Cora,[0.3031757754800591, 0.012096037567334619, 0.07670061507401846]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,300,2,400,256,2.0,0.01,0.0001,Cora,[0.5472673559822747, 0.39734155737225707, 0.4453991583629671]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,400,2,400,256,2.0,0.01,0.0001,Cora,[0.5727474150664698, 0.40459007447975787, 0.463540562332638]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,500,2,400,256,2.0,0.01,0.0001,Cora,[0.5221565731166913, 0.3856956903364233, 0.4651222980443644]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,600,2,400,256,2.0,0.01,0.0001,Cora,[0.5003692762186115, 0.39584546482029614, 0.4500634364633323]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,122,2,400,256,2.0,0.01,0.0001,Cora,[0.4848596750369276, 0.36647060275927457, 0.3951505569787856]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,233,2,400,256,2.0,0.01,0.0001,Cora,[0.5118168389955687, 0.3950587905368289, 0.41021076088183206]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,344,2,400,256,2.0,0.01,0.0001,Cora,[0.552437223042836, 0.39852020496225143, 0.5072519360201065]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,350,2,400,256,2.0,0.01,0.0001,Cora,[0.5398818316100443, 0.4006630542375301, 0.4246211486761329]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,2333333,2,400,256,2.0,0.01,0.0001,Cora,[0.5, 0.40173965921347715, 0.44731377837261116]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,300,2,400,256,2.0,0.001,0.0001,Cora,[0.517725258493353, 0.42130623194706834, 0.467213250172835]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,400,2,400,256,2.0,0.001,0.0001,Cora,[0.6358936484490398, 0.4470831734567184, 0.5977839621983415]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,500,2,400,256,2.0,0.001,0.0001,Cora,[0.5605612998522895, 0.4191021428241409, 0.5037583090537715]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,600,2,400,256,2.0,0.001,0.0001,Cora,[0.553175775480059, 0.42612549212944795, 0.4784348764541604]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,122,2,400,256,2.0,0.001,0.0001,Cora,[0.5321270310192023, 0.41990405581313134, 0.48761600652174847]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,233,2,400,256,2.0,0.001,0.0001,Cora,[0.543205317577548, 0.4119546996302554, 0.49340842650288247]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,344,2,400,256,2.0,0.001,0.0001,Cora,[0.5214180206794683, 0.4229910666060439, 0.4662320005935899]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,350,2,400,256,2.0,0.001,0.0001,Cora,[0.551698670605613, 0.4230939069252916, 0.47937810497147076]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,2333333,2,400,256,2.0,0.001,0.0001,Cora,[0.5790251107828656, 0.42718015565496337, 0.4908626123643162]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,300,2,400,256,2.0,0.0001,0.0001,Cora,[0.3548744460856721, 0.1799777860479669, 0.3230682946774569]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,400,2,400,256,2.0,0.0001,0.0001,Cora,[0.3275480059084195, 0.17030198369943195, 0.2894409086558994]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,500,2,400,256,2.0,0.0001,0.0001,Cora,[0.3378877400295421, 0.18519840074838292, 0.2970593835942732]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,600,2,400,256,2.0,0.0001,0.0001,Cora,[0.3799852289512555, 0.18987948657091133, 0.34675074893411656]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,122,2,400,256,2.0,0.0001,0.0001,Cora,[0.3275480059084195, 0.15837502911391524, 0.30361998888265224]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,233,2,400,256,2.0,0.0001,0.0001,Cora,[0.30797636632200887, 0.13887060147402672, 0.27476416938659265]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,344,2,400,256,2.0,0.0001,0.0001,Cora,[0.3733382570162482, 0.19484120813075592, 0.33463140370868466]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,350,2,400,256,2.0,0.0001,0.0001,Cora,[0.3858936484490399, 0.19455976348961865, 0.34585697485156125]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.1,1,2333333,2,400,256,2.0,0.0001,0.0001,Cora,[0.344903988183161, 0.1896833720437469, 0.3050718994386341]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,300,2,400,256,2.0,0.05,0.0001,Cora,[0.2935745937961595, 0.014812920993772394, 0.07868318394732918]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,400,2,400,256,2.0,0.05,0.0001,Cora,[0.48929098966026585, 0.40157871828091707, 0.28042005378890783]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,500,2,400,256,2.0,0.05,0.0001,Cora,[0.345642540620384, 0.22735738979613973, 0.14499516989074523]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,600,2,400,256,2.0,0.05,0.0001,Cora,[0.4726735598227474, 0.3220249948618049, 0.2690542701856546]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,122,2,400,256,2.0,0.05,0.0001,Cora,[0.2876661742983752, 0.019411791615288224, 0.08227801129123646]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,233,2,400,256,2.0,0.05,0.0001,Cora,[0.28729689807976366, 0.017931642940846423, 0.08164459259105464]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,344,2,400,256,2.0,0.05,0.0001,Cora,[0.29062038404726737, 0.01821228577059866, 0.08167039506991193]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,350,2,400,256,2.0,0.05,0.0001,Cora,[0.47673559822747413, 0.3766917564324319, 0.3021666244614871]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,2333333,2,400,256,2.0,0.05,0.0001,Cora,[0.2861890694239291, 0.017671780109706024, 0.08167261417577938]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,300,2,400,256,2.0,0.01,0.0001,Cora,[0.5672082717872969, 0.45168814445883176, 0.4697248644095173]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,400,2,400,256,2.0,0.01,0.0001,Cora,[0.6731905465288035, 0.4844160853884085, 0.6011793118427456]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,500,2,400,256,2.0,0.01,0.0001,Cora,[0.5273264401772526, 0.4511053194338891, 0.4368922692453104]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,600,2,400,256,2.0,0.01,0.0001,Cora,[0.6019202363367799, 0.47854827618774665, 0.4920572616904553]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,122,2,400,256,2.0,0.01,0.0001,Cora,[0.6816838995568686, 0.49507867023126834, 0.6085723475196216]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,233,2,400,256,2.0,0.01,0.0001,Cora,[0.5908419497784343, 0.45010693818155595, 0.5078649639542218]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,344,2,400,256,2.0,0.01,0.0001,Cora,[0.620384047267356, 0.44641965320922217, 0.5515024872838437]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,350,2,400,256,2.0,0.01,0.0001,Cora,[0.629615952732644, 0.4803934964050774, 0.5225296244453149]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,2333333,2,400,256,2.0,0.01,0.0001,Cora,[0.6997784342688331, 0.5139338903087748, 0.6293865458791463]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,300,2,400,256,2.0,0.001,0.0001,Cora,[0.5697932053175776, 0.42991029382575324, 0.4824839968225917]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,400,2,400,256,2.0,0.001,0.0001,Cora,[0.544682422451994, 0.4193039311269357, 0.4763369127702921]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,500,2,400,256,2.0,0.001,0.0001,Cora,[0.5882570162481536, 0.41983336562923396, 0.5152230888884983]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,600,2,400,256,2.0,0.001,0.0001,Cora,[0.5801329394387001, 0.4511533056983401, 0.4878722984742602]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,122,2,400,256,2.0,0.001,0.0001,Cora,[0.5561299852289513, 0.4233250614815996, 0.47638960851997253]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,233,2,400,256,2.0,0.001,0.0001,Cora,[0.5838257016248154, 0.4526394692887378, 0.48971906853690367]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,344,2,400,256,2.0,0.001,0.0001,Cora,[0.5819793205317577, 0.41196919871729865, 0.5264637112199247]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,350,2,400,256,2.0,0.001,0.0001,Cora,[0.55096011816839, 0.42004932277873575, 0.48486500841594665]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,2333333,2,400,256,2.0,0.001,0.0001,Cora,[0.5797636632200887, 0.4407545664853784, 0.48516369540746906]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,300,2,400,256,2.0,0.0001,0.0001,Cora,[0.3652141802067947, 0.23043618506570865, 0.31968339213429076]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,400,2,400,256,2.0,0.0001,0.0001,Cora,[0.3386262924667651, 0.18677106635963675, 0.3168961020234936]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,500,2,400,256,2.0,0.0001,0.0001,Cora,[0.3777695716395864, 0.22940708189982262, 0.33019483146924905]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,600,2,400,256,2.0,0.0001,0.0001,Cora,[0.439069423929099, 0.24600313772449098, 0.37611403070503063]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,122,2,400,256,2.0,0.0001,0.0001,Cora,[0.32791728212703103, 0.16967285462732806, 0.30532457395024043]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,233,2,400,256,2.0,0.0001,0.0001,Cora,[0.35081240768094535, 0.18613497264094178, 0.31374469943700056]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,344,2,400,256,2.0,0.0001,0.0001,Cora,[0.37296898079763663, 0.24092050590537342, 0.31962964864347787]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,350,2,400,256,2.0,0.0001,0.0001,Cora,[0.4124815361890694, 0.24162834670465716, 0.3695757619804018]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,1,2333333,2,400,256,2.0,0.0001,0.0001,Cora,[0.38220088626292464, 0.24572347065302574, 0.3253462460926855]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,300,2,400,256,2.0,0.05,0.0001,Cora,[0.2972673559822747, 0.016777007525566004, 0.08354004196113103]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,400,2,400,256,2.0,0.05,0.0001,Cora,[0.48338257016248154, 0.3986675071033019, 0.27540398606247074]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,500,2,400,256,2.0,0.05,0.0001,Cora,[0.5491137370753324, 0.3903716716735532, 0.4258911441740439]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,600,2,400,256,2.0,0.05,0.0001,Cora,[0.3020679468242245, 0.014100555583398537, 0.0844283415415958]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,122,2,400,256,2.0,0.05,0.0001,Cora,[0.5402511078286558, 0.4038211562240177, 0.35813124246860484]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,233,2,400,256,2.0,0.05,0.0001,Cora,[0.48670605612998524, 0.4086714504623057, 0.26199076709905705]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,344,2,400,256,2.0,0.05,0.0001,Cora,[0.2913589364844904, 0.01486782896796462, 0.08346009282660675]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,350,2,400,256,2.0,0.05,0.0001,Cora,[0.48005908419497784, 0.367038897391003, 0.3196975507827484]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,2333333,2,400,256,2.0,0.05,0.0001,Cora,[0.5391432791728212, 0.4246018442043007, 0.36537731448674954]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,300,2,400,256,2.0,0.01,0.0001,Cora,[0.6240768094534712, 0.4728508282706052, 0.6110286633728569]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,400,2,400,256,2.0,0.01,0.0001,Cora,[0.6004431314623339, 0.44451559479808755, 0.5956324340543055]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,500,2,400,256,2.0,0.01,0.0001,Cora,[0.6059822747415067, 0.4498140681357148, 0.5318954817707752]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,600,2,400,256,2.0,0.01,0.0001,Cora,[0.6144756277695717, 0.4757617344845202, 0.6041178016663105]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,122,2,400,256,2.0,0.01,0.0001,Cora,[0.6081979320531757, 0.47200591484240845, 0.5818591878642686]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,233,2,400,256,2.0,0.01,0.0001,Cora,[0.6081979320531757, 0.47484511723088, 0.5864478826369253]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,344,2,400,256,2.0,0.01,0.0001,Cora,[0.6262924667651403, 0.45143617968773914, 0.5473663240551112]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,350,2,400,256,2.0,0.01,0.0001,Cora,[0.6107828655834564, 0.46350204815461027, 0.5862300852763049]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,2333333,2,400,256,2.0,0.01,0.0001,Cora,[0.6045051698670606, 0.4667211076993733, 0.5836225815138417]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,300,2,400,256,2.0,0.001,0.0001,Cora,[0.6207533234859675, 0.48106854205199073, 0.6028400871228017]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,400,2,400,256,2.0,0.001,0.0001,Cora,[0.6942392909896603, 0.5049519473164441, 0.6626778745787419]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,500,2,400,256,2.0,0.001,0.0001,Cora,[0.6632200886262924, 0.46219419202250533, 0.5837715677388243]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,600,2,400,256,2.0,0.001,0.0001,Cora,[0.6340472673559823, 0.49436351337463397, 0.5976497610350899]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,122,2,400,256,2.0,0.001,0.0001,Cora,[0.6403249630723782, 0.49027522661050416, 0.5984914661599908]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,233,2,400,256,2.0,0.001,0.0001,Cora,[0.6798375184638109, 0.4884303234659096, 0.6143863571282058]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,344,2,400,256,2.0,0.001,0.0001,Cora,[0.6502954209748892, 0.5000634280477826, 0.6221718720042168]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,350,2,400,256,2.0,0.001,0.0001,Cora,[0.629615952732644, 0.4767938324986803, 0.6010390433075201]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,2333333,2,400,256,2.0,0.001,0.0001,Cora,[0.6229689807976366, 0.480030335403182, 0.5872534547188567]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,300,2,400,256,2.0,0.0001,0.0001,Cora,[0.37186115214180204, 0.2290690011101975, 0.3454290133675692]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,400,2,400,256,2.0,0.0001,0.0001,Cora,[0.3829394387001477, 0.23358072288732454, 0.3232473474114084]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,500,2,400,256,2.0,0.0001,0.0001,Cora,[0.3940177252584934, 0.22747744144014811, 0.35500277253069934]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,600,2,400,256,2.0,0.0001,0.0001,Cora,[0.44977843426883307, 0.25839684038955746, 0.38750568437262]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,122,2,400,256,2.0,0.0001,0.0001,Cora,[0.344903988183161, 0.1877550668219209, 0.32069493068853083]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,233,2,400,256,2.0,0.0001,0.0001,Cora,[0.3829394387001477, 0.22106085920196014, 0.33054794866854265]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,344,2,400,256,2.0,0.0001,0.0001,Cora,[0.3929098966026588, 0.2612851419536469, 0.3458425644503252]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,350,2,400,256,2.0,0.0001,0.0001,Cora,[0.42836041358936483, 0.25787733969649057, 0.38461798896907556]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,1,2333333,2,400,256,2.0,0.0001,0.0001,Cora,[0.37813884785819796, 0.24703169728797617, 0.33466124177406925]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,300,2,400,256,2.0,0.05,0.0001,Cora,[0.2980059084194978, 0.01505372567901299, 0.07714201522333183]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,400,2,400,256,2.0,0.05,0.0001,Cora,[0.6270310192023634, 0.462781670120548, 0.47801036257356594]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,500,2,400,256,2.0,0.05,0.0001,Cora,[0.6392171344165436, 0.4982954224426546, 0.48878556172657167]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,600,2,400,256,2.0,0.05,0.0001,Cora,[0.6584194977843427, 0.48389876647690405, 0.5056781756843428]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,122,2,400,256,2.0,0.05,0.0001,Cora,[0.29874446085672085, 0.007382459046305105, 0.06999260314493239]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,233,2,400,256,2.0,0.05,0.0001,Cora,[0.3072378138847858, 0.016193440869046193, 0.08592368159165106]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,344,2,400,256,2.0,0.05,0.0001,Cora,[0.2983751846381093, 0.012121831356897532, 0.0742724020567612]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,350,2,400,256,2.0,0.05,0.0001,Cora,[0.6392171344165436, 0.48931992907623656, 0.4872013805868103]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,2333333,2,400,256,2.0,0.05,0.0001,Cora,[0.6373707533234859, 0.47584297811648396, 0.4907528140990884]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,300,2,400,256,2.0,0.01,0.0001,Cora,[0.6617429837518464, 0.4931016961893147, 0.651829498556522]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,400,2,400,256,2.0,0.01,0.0001,Cora,[0.6270310192023634, 0.49482014594902757, 0.6015628815269476]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,500,2,400,256,2.0,0.01,0.0001,Cora,[0.5716395864106352, 0.45612995656542554, 0.5319556699680993]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,600,2,400,256,2.0,0.01,0.0001,Cora,[0.6093057607090103, 0.4575144182223749, 0.6011760159205749]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,122,2,400,256,2.0,0.01,0.0001,Cora,[0.6838995568685377, 0.5034675104437997, 0.6644008197691289]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,233,2,400,256,2.0,0.01,0.0001,Cora,[0.6141063515509602, 0.4456526848185182, 0.6098324418268903]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,344,2,400,256,2.0,0.01,0.0001,Cora,[0.6783604135893648, 0.5014054948827509, 0.6630675610292063]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,350,2,400,256,2.0,0.01,0.0001,Cora,[0.5823485967503693, 0.45454548633149106, 0.5513397575562332]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,2333333,2,400,256,2.0,0.01,0.0001,Cora,[0.5845642540620384, 0.4328579502945423, 0.5770856389628404]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,300,2,400,256,2.0,0.001,0.0001,Cora,[0.656573116691285, 0.49775199068972775, 0.6320430907523952]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,400,2,400,256,2.0,0.001,0.0001,Cora,[0.6835302806499262, 0.5080747550931117, 0.6518815447420205]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,500,2,400,256,2.0,0.001,0.0001,Cora,[0.681314623338257, 0.48891602272262336, 0.6484944337749138]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,600,2,400,256,2.0,0.001,0.0001,Cora,[0.6676514032496307, 0.4680136050192538, 0.5952815192499765]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,122,2,400,256,2.0,0.001,0.0001,Cora,[0.672821270310192, 0.4952621239357981, 0.6024469592993522]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,233,2,400,256,2.0,0.001,0.0001,Cora,[0.6562038404726735, 0.48008631282378983, 0.5837753144428922]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,344,2,400,256,2.0,0.001,0.0001,Cora,[0.6846381093057607, 0.5026101653000605, 0.6137861138944457]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,350,2,400,256,2.0,0.001,0.0001,Cora,[0.672821270310192, 0.48161258166838145, 0.6090017247424004]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,2333333,2,400,256,2.0,0.001,0.0001,Cora,[0.6584194977843427, 0.47918201699694607, 0.5862204154616393]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,300,2,400,256,2.0,0.0001,0.0001,Cora,[0.39586410635155095, 0.24249808689290783, 0.34314170669683214]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,400,2,400,256,2.0,0.0001,0.0001,Cora,[0.405096011816839, 0.23181972110490492, 0.3369324615790782]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,500,2,400,256,2.0,0.0001,0.0001,Cora,[0.422821270310192, 0.25763607312049563, 0.3802654014384193]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,600,2,400,256,2.0,0.0001,0.0001,Cora,[0.4431314623338257, 0.2779159958706966, 0.3742467194148965]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,122,2,400,256,2.0,0.0001,0.0001,Cora,[0.36484490398818314, 0.21479307474928536, 0.3428141341842975]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,233,2,400,256,2.0,0.0001,0.0001,Cora,[0.3988183161004431, 0.23369553107735733, 0.34088714628311295]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,344,2,400,256,2.0,0.0001,0.0001,Cora,[0.42688330871491875, 0.2466288892476106, 0.37943141663153857]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,350,2,400,256,2.0,0.0001,0.0001,Cora,[0.4183899556868538, 0.24530293026553418, 0.3796026455585695]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,1,2333333,2,400,256,2.0,0.0001,0.0001,Cora,[0.41617429837518466, 0.2563877184500775, 0.3569485069898679]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,300,2,400,256,2.0,0.05,0.0001,Cora,[0.2961595273264402, 0.009859244880310963, 0.07401386541526585]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,400,2,400,256,2.0,0.05,0.0001,Cora,[0.6610044313146234, 0.46998340147611073, 0.5823993057620577]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,500,2,400,256,2.0,0.05,0.0001,Cora,[0.6447562776957164, 0.4625198185879683, 0.498565105652058]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,600,2,400,256,2.0,0.05,0.0001,Cora,[0.6473412112259971, 0.4933861746680188, 0.49543624125887364]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,122,2,400,256,2.0,0.05,0.0001,Cora,[0.6517725258493353, 0.481108087206501, 0.5639490169522434]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,233,2,400,256,2.0,0.05,0.0001,Cora,[0.5808714918759232, 0.45986590882365647, 0.4430071752882562]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,344,2,400,256,2.0,0.05,0.0001,Cora,[0.6477104874446086, 0.47604072110063267, 0.5642736770209796]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,350,2,400,256,2.0,0.05,0.0001,Cora,[0.6554652880354506, 0.49912665538200457, 0.4994731807759439]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,2333333,2,400,256,2.0,0.05,0.0001,Cora,[0.301698670605613, 0.008214194509738478, 0.07696916010558916]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,300,2,400,256,2.0,0.01,0.0001,Cora,[0.6462333825701625, 0.4772034375097348, 0.6388268088235527]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,400,2,400,256,2.0,0.01,0.0001,Cora,[0.662850812407681, 0.47942290470196736, 0.6467570359091399]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,500,2,400,256,2.0,0.01,0.0001,Cora,[0.672821270310192, 0.49557853163640936, 0.6611425770470778]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,600,2,400,256,2.0,0.01,0.0001,Cora,[0.6285081240768094, 0.483022393326139, 0.6046685371337462]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,122,2,400,256,2.0,0.01,0.0001,Cora,[0.6635893648449039, 0.4844631495803825, 0.6492861493071519]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,233,2,400,256,2.0,0.01,0.0001,Cora,[0.655096011816839, 0.48872380566193224, 0.6537236522801477]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,344,2,400,256,2.0,0.01,0.0001,Cora,[0.6325701624815362, 0.49956008742467917, 0.5973800259389153]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,350,2,400,256,2.0,0.01,0.0001,Cora,[0.6229689807976366, 0.46446992396118303, 0.6121061138033591]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,2333333,2,400,256,2.0,0.01,0.0001,Cora,[0.5661004431314623, 0.46367466063722174, 0.5310033703178686]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,300,2,400,256,2.0,0.001,0.0001,Cora,[0.6709748892171344, 0.5034528508318001, 0.6527383519850084]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,400,2,400,256,2.0,0.001,0.0001,Cora,[0.6399556868537666, 0.4730516465874948, 0.606211725543617]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,500,2,400,256,2.0,0.001,0.0001,Cora,[0.6669128508124077, 0.4861415105880877, 0.6359143815843666]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,600,2,400,256,2.0,0.001,0.0001,Cora,[0.6573116691285081, 0.4565119172063492, 0.5847962715831027]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,122,2,400,256,2.0,0.001,0.0001,Cora,[0.672821270310192, 0.5091155896801254, 0.6403820356784156]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,233,2,400,256,2.0,0.001,0.0001,Cora,[0.6185376661742984, 0.44969721924983785, 0.5452191563170328]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,344,2,400,256,2.0,0.001,0.0001,Cora,[0.6632200886262924, 0.4691973293527048, 0.5862087133562089]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,350,2,400,256,2.0,0.001,0.0001,Cora,[0.6783604135893648, 0.4879747973473271, 0.6447986207699251]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,2333333,2,400,256,2.0,0.001,0.0001,Cora,[0.6355243722304283, 0.4584345858963958, 0.5628846847307366]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,300,2,400,256,2.0,0.0001,0.0001,Cora,[0.40066469719350073, 0.24401288535244597, 0.35841832834103365]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,400,2,400,256,2.0,0.0001,0.0001,Cora,[0.3932791728212703, 0.2373611224439252, 0.33499635494180724]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,500,2,400,256,2.0,0.0001,0.0001,Cora,[0.38330871491875923, 0.2620718611249707, 0.32595073623466925]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,600,2,400,256,2.0,0.0001,0.0001,Cora,[0.38884785819793205, 0.2656977519968523, 0.3467140876722726]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,122,2,400,256,2.0,0.0001,0.0001,Cora,[0.3552437223042836, 0.21651466117860388, 0.33638212149277874]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,233,2,400,256,2.0,0.0001,0.0001,Cora,[0.4124815361890694, 0.23586045112549706, 0.3683446384863815]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,344,2,400,256,2.0,0.0001,0.0001,Cora,[0.3947562776957164, 0.2635145497066112, 0.33008390970554397]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,350,2,400,256,2.0,0.0001,0.0001,Cora,[0.4309453471196455, 0.2643008720890632, 0.38639892275354626]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.5,1,2333333,2,400,256,2.0,0.0001,0.0001,Cora,[0.3988183161004431, 0.24642070139728764, 0.33886721691623006]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,300,2,400,256,2.0,0.05,0.0001,Cora,[0.5033234859675036, 0.3417293359718807, 0.3669778679889523]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,400,2,400,256,2.0,0.05,0.0001,Cora,[0.5380354505169868, 0.3529806949295344, 0.37761740749924516]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,500,2,400,256,2.0,0.05,0.0001,Cora,[0.44091580502215655, 0.2822158337785217, 0.3564783122791697]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,600,2,400,256,2.0,0.05,0.0001,Cora,[0.6418020679468243, 0.4923252050719203, 0.5668433089944191]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,122,2,400,256,2.0,0.05,0.0001,Cora,[0.6484490398818316, 0.488331801149364, 0.5631932527290229]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,233,2,400,256,2.0,0.05,0.0001,Cora,[0.6595273264401772, 0.4636160511055434, 0.5797122387655496]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,344,2,400,256,2.0,0.05,0.0001,Cora,[0.38404726735598227, 0.27608517543776145, 0.20799811204213572]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,350,2,400,256,2.0,0.05,0.0001,Cora,[0.6909158050221565, 0.4928574582114003, 0.6113790772895117]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,2333333,2,400,256,2.0,0.05,0.0001,Cora,[0.6451255539143279, 0.49240123228013777, 0.48903027596156357]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,300,2,400,256,2.0,0.01,0.0001,Cora,[0.6048744460856721, 0.4948895618528071, 0.6124703428397862]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,400,2,400,256,2.0,0.01,0.0001,Cora,[0.6935007385524372, 0.5006707719898607, 0.6734529289150375]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,500,2,400,256,2.0,0.01,0.0001,Cora,[0.7211964549483013, 0.526760331987355, 0.6991497061172424]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,600,2,400,256,2.0,0.01,0.0001,Cora,[0.6953471196454948, 0.506073652783348, 0.6740698778771131]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,122,2,400,256,2.0,0.01,0.0001,Cora,[0.6935007385524372, 0.5068908458256142, 0.6730031294782297]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,233,2,400,256,2.0,0.01,0.0001,Cora,[0.6259231905465288, 0.4620761172580051, 0.6226983400619718]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,344,2,400,256,2.0,0.01,0.0001,Cora,[0.6558345642540621, 0.4668966984728543, 0.6398859573926404]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,350,2,400,256,2.0,0.01,0.0001,Cora,[0.7101181683899557, 0.5157246188483774, 0.6884986753072917]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,2333333,2,400,256,2.0,0.01,0.0001,Cora,[0.6462333825701625, 0.4808197412175742, 0.6399865317254826]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,300,2,400,256,2.0,0.001,0.0001,Cora,[0.6377400295420975, 0.47020292679117637, 0.6087558605243645]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,400,2,400,256,2.0,0.001,0.0001,Cora,[0.6591580502215657, 0.48659439858552855, 0.6400301989034399]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,500,2,400,256,2.0,0.001,0.0001,Cora,[0.6602658788774003, 0.4821885825646078, 0.6415747125393477]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,600,2,400,256,2.0,0.001,0.0001,Cora,[0.628138847858198, 0.46087584702081, 0.6097805184238482]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,122,2,400,256,2.0,0.001,0.0001,Cora,[0.5912112259970458, 0.4575593156092805, 0.560006796519015]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,233,2,400,256,2.0,0.001,0.0001,Cora,[0.6344165435745938, 0.4617968929664143, 0.5952945397325917]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,344,2,400,256,2.0,0.001,0.0001,Cora,[0.6192762186115214, 0.44175575713867127, 0.5451575143538593]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,350,2,400,256,2.0,0.001,0.0001,Cora,[0.656573116691285, 0.4762832006497741, 0.6262051622325904]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,2333333,2,400,256,2.0,0.001,0.0001,Cora,[0.6344165435745938, 0.45639660251844727, 0.5582159500124676]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,300,2,400,256,2.0,0.0001,0.0001,Cora,[0.3858936484490399, 0.24037438008696818, 0.336543629606762]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,400,2,400,256,2.0,0.0001,0.0001,Cora,[0.4309453471196455, 0.24097380025951767, 0.35380502015794196]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,500,2,400,256,2.0,0.0001,0.0001,Cora,[0.4183899556868538, 0.26311723117177954, 0.360843989384657]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,600,2,400,256,2.0,0.0001,0.0001,Cora,[0.4250369276218611, 0.28074200887666734, 0.36599036818874947]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,122,2,400,256,2.0,0.0001,0.0001,Cora,[0.36447562776957165, 0.22737571977250376, 0.33100148550676334]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,233,2,400,256,2.0,0.0001,0.0001,Cora,[0.3847858197932053, 0.2322172306349492, 0.33773697848896633]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,344,2,400,256,2.0,0.0001,0.0001,Cora,[0.4172821270310192, 0.2785317394842432, 0.35760871988955895]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,350,2,400,256,2.0,0.0001,0.0001,Cora,[0.39807976366322007, 0.25957136931427865, 0.34800670860996974]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.6,1,2333333,2,400,256,2.0,0.0001,0.0001,Cora,[0.42319054652880356, 0.24774255528634986, 0.3835844089647679]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,300,2,400,256,2.0,0.05,0.0001,Cora,[0.3799852289512555, 0.1853476813442667, 0.180215090517332]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,400,2,400,256,2.0,0.05,0.0001,Cora,[0.5889955686853766, 0.44479449070949445, 0.4515770790862064]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,500,2,400,256,2.0,0.05,0.0001,Cora,[0.6421713441654358, 0.44582875979721037, 0.5563567338441985]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,600,2,400,256,2.0,0.05,0.0001,Cora,[0.7093796159527327, 0.5240284345000527, 0.6311599497431123]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,122,2,400,256,2.0,0.05,0.0001,Cora,[0.6270310192023634, 0.5018806313795298, 0.5793181227317239]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,233,2,400,256,2.0,0.05,0.0001,Cora,[0.3020679468242245, 0.005798972073253515, 0.07043938367449838]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,344,2,400,256,2.0,0.05,0.0001,Cora,[0.5114475627769571, 0.3194442629553164, 0.354108554293025]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,350,2,400,256,2.0,0.05,0.0001,Cora,[0.3707533234859675, 0.26665855720990056, 0.24221510924150078]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,2333333,2,400,256,2.0,0.05,0.0001,Cora,[0.6233382570162481, 0.45661095598465495, 0.5485227056142947]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,300,2,400,256,2.0,0.01,0.0001,Cora,[0.6905465288035451, 0.5262675618410192, 0.686376199035337]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,400,2,400,256,2.0,0.01,0.0001,Cora,[0.7119645494830132, 0.521485566052078, 0.690940718803971]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,500,2,400,256,2.0,0.01,0.0001,Cora,[0.7256277695716395, 0.5224039086809152, 0.7017996789127805]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,600,2,400,256,2.0,0.01,0.0001,Cora,[0.6185376661742984, 0.5021142694640472, 0.5705511611892836]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,122,2,400,256,2.0,0.01,0.0001,Cora,[0.6949778434268833, 0.5008708335343203, 0.6762926432571515]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,233,2,400,256,2.0,0.01,0.0001,Cora,[0.7097488921713442, 0.5135161959182091, 0.6938498337793193]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,344,2,400,256,2.0,0.01,0.0001,Cora,[0.6576809453471196, 0.5026226268768367, 0.659066426434306]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,350,2,400,256,2.0,0.01,0.0001,Cora,[0.6100443131462334, 0.46938602685483116, 0.5594936376473639]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,2333333,2,400,256,2.0,0.01,0.0001,Cora,[0.6547267355982275, 0.4815465627898455, 0.6426333040420762]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,300,2,400,256,2.0,0.001,0.0001,Cora,[0.6403249630723782, 0.47703070346161963, 0.6001951873441843]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,400,2,400,256,2.0,0.001,0.0001,Cora,[0.6410635155096012, 0.4861057863593092, 0.6029903645370904]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,500,2,400,256,2.0,0.001,0.0001,Cora,[0.6669128508124077, 0.48891659211962113, 0.6492673943796949]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,600,2,400,256,2.0,0.001,0.0001,Cora,[0.654357459379616, 0.4908769951355837, 0.6323676489366941]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,122,2,400,256,2.0,0.001,0.0001,Cora,[0.5889955686853766, 0.45775303135642925, 0.5580477458380235]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,233,2,400,256,2.0,0.001,0.0001,Cora,[0.6573116691285081, 0.4792624696787314, 0.6203267606630126]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,344,2,400,256,2.0,0.001,0.0001,Cora,[0.6159527326440177, 0.4479291349272509, 0.5432522971187805]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,350,2,400,256,2.0,0.001,0.0001,Cora,[0.6395864106351551, 0.47571416743275463, 0.626430826750763]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,2333333,2,400,256,2.0,0.001,0.0001,Cora,[0.6388478581979321, 0.47660114634947953, 0.603632797106431]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,300,2,400,256,2.0,0.0001,0.0001,Cora,[0.4032496307237814, 0.24483157544847062, 0.35979265470824245]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,400,2,400,256,2.0,0.0001,0.0001,Cora,[0.4206056129985229, 0.2391120120811543, 0.3436393081421511]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,500,2,400,256,2.0,0.0001,0.0001,Cora,[0.4113737075332349, 0.25845495998608314, 0.36159071136783255]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,600,2,400,256,2.0,0.0001,0.0001,Cora,[0.4641802067946824, 0.2758482685758707, 0.407564870658871]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,122,2,400,256,2.0,0.0001,0.0001,Cora,[0.3700147710487445, 0.22397516771626982, 0.35136240177017736]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,233,2,400,256,2.0,0.0001,0.0001,Cora,[0.3870014771048744, 0.23719115659016488, 0.34339045066103246]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,344,2,400,256,2.0,0.0001,0.0001,Cora,[0.4224519940915805, 0.27881860562624633, 0.35996265826975493]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,350,2,400,256,2.0,0.0001,0.0001,Cora,[0.43500738552437224, 0.26832830368694127, 0.38801018250133673]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.7,1,2333333,2,400,256,2.0,0.0001,0.0001,Cora,[0.43833087149187594, 0.264475874742417, 0.3694191959675625]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,300,2,400,256,2.0,0.05,0.0001,Cora,[0.594903988183161, 0.4431822473209143, 0.532595407909793]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,400,2,400,256,2.0,0.05,0.0001,Cora,[0.656573116691285, 0.47406715095675567, 0.5728652286252248]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,500,2,400,256,2.0,0.05,0.0001,Cora,[0.4121122599704579, 0.20660221132619158, 0.2318776693013749]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,600,2,400,256,2.0,0.05,0.0001,Cora,[0.44054652880354506, 0.2865585998315428, 0.277378287341936]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,122,2,400,256,2.0,0.05,0.0001,Cora,[0.5657311669128509, 0.44646196878781663, 0.3976115039366316]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,233,2,400,256,2.0,0.05,0.0001,Cora,[0.5867799113737076, 0.4264646514738243, 0.4588048939756159]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,344,2,400,256,2.0,0.05,0.0001,Cora,[0.5801329394387001, 0.445088090417622, 0.574315107937327]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,350,2,400,256,2.0,0.05,0.0001,Cora,[0.5051698670605613, 0.34940397864038664, 0.3889322905967428]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,2333333,2,400,256,2.0,0.05,0.0001,Cora,[0.518463810930576, 0.3397912297754808, 0.3558192388871769]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,300,2,400,256,2.0,0.01,0.0001,Cora,[0.7134416543574594, 0.5329101376969947, 0.6897642106099747]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,400,2,400,256,2.0,0.01,0.0001,Cora,[0.7045790251107829, 0.5244737283123269, 0.6922103767306867]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,500,2,400,256,2.0,0.01,0.0001,Cora,[0.73301329394387, 0.5432443842086949, 0.7091829282633949]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,600,2,400,256,2.0,0.01,0.0001,Cora,[0.7016248153618907, 0.5044499851619749, 0.6865094512946539]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,122,2,400,256,2.0,0.01,0.0001,Cora,[0.7256277695716395, 0.5312272732964347, 0.7027275739741983]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,233,2,400,256,2.0,0.01,0.0001,Cora,[0.7071639586410635, 0.5118564154332799, 0.6904349616672618]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,344,2,400,256,2.0,0.01,0.0001,Cora,[0.7079025110782866, 0.5176209291139584, 0.693115802586651]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,350,2,400,256,2.0,0.01,0.0001,Cora,[0.7090103397341211, 0.5087305134845442, 0.683713917753978]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,2333333,2,400,256,2.0,0.01,0.0001,Cora,[0.662850812407681, 0.4962564244439347, 0.657516682228176]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,300,2,400,256,2.0,0.001,0.0001,Cora,[0.6185376661742984, 0.4693559537591376, 0.5850933016163891]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,400,2,400,256,2.0,0.001,0.0001,Cora,[0.6399556868537666, 0.48309439747487126, 0.625420518903292]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,500,2,400,256,2.0,0.001,0.0001,Cora,[0.6672821270310192, 0.4873534038912127, 0.6496589233353862]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,600,2,400,256,2.0,0.001,0.0001,Cora,[0.6680206794682423, 0.49657558431239407, 0.6403806593917745]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,122,2,400,256,2.0,0.001,0.0001,Cora,[0.604135893648449, 0.44615240427419905, 0.5782854747208919]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,233,2,400,256,2.0,0.001,0.0001,Cora,[0.6266617429837519, 0.49160686397055087, 0.6054916977904117]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,344,2,400,256,2.0,0.001,0.0001,Cora,[0.6177991137370753, 0.4743441254123181, 0.6098528820238132]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,350,2,400,256,2.0,0.001,0.0001,Cora,[0.6536189069423929, 0.4790375973928019, 0.6410238751885879]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,2333333,2,400,256,2.0,0.001,0.0001,Cora,[0.630354505169867, 0.4764326913310782, 0.5994409957165233]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,300,2,400,256,2.0,0.0001,0.0001,Cora,[0.40140324963072377, 0.24045058459340665, 0.36984593811075844]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,400,2,400,256,2.0,0.0001,0.0001,Cora,[0.44534711964549484, 0.24817599912644667, 0.3644660264628155]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,500,2,400,256,2.0,0.0001,0.0001,Cora,[0.3744460856720827, 0.23364330324280258, 0.32758390181968094]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,600,2,400,256,2.0,0.0001,0.0001,Cora,[0.4516248153618907, 0.2713123111295652, 0.39426451326487694]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,122,2,400,256,2.0,0.0001,0.0001,Cora,[0.36927621861152143, 0.23094351745551517, 0.33191681394452316]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,233,2,400,256,2.0,0.0001,0.0001,Cora,[0.405096011816839, 0.24899614496572098, 0.34244888264732926]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,344,2,400,256,2.0,0.0001,0.0001,Cora,[0.39918759231905465, 0.26987487049911235, 0.3385070911606051]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,350,2,400,256,2.0,0.0001,0.0001,Cora,[0.43870014771048743, 0.26216715250589706, 0.3943207215565921]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.8,1,2333333,2,400,256,2.0,0.0001,0.0001,Cora,[0.4010339734121123, 0.2571148575181149, 0.3644728741639912]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,300,2,400,256,2.0,0.05,0.0001,Cora,[0.6946085672082718, 0.502525218936985, 0.6682115835394092]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,400,2,400,256,2.0,0.05,0.0001,Cora,[0.3777695716395864, 0.17058714801704078, 0.22003051516948538]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,500,2,400,256,2.0,0.05,0.0001,Cora,[0.5801329394387001, 0.41490130821675375, 0.44297127807608955]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,600,2,400,256,2.0,0.05,0.0001,Cora,[0.6100443131462334, 0.44899584990018165, 0.5457016032153718]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,122,2,400,256,2.0,0.05,0.0001,Cora,[0.43500738552437224, 0.27708762161018524, 0.21139456878086468]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,233,2,400,256,2.0,0.05,0.0001,Cora,[0.5720088626292467, 0.41045630370880304, 0.3942785482610792]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,344,2,400,256,2.0,0.05,0.0001,Cora,[0.5624076809453471, 0.40194623907002586, 0.45061106671208107]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,350,2,400,256,2.0,0.05,0.0001,Cora,[0.6436484490398818, 0.4827851046641729, 0.6050600896631497]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,2333333,2,400,256,2.0,0.05,0.0001,Cora,[0.45753323485967506, 0.37736380308385553, 0.4020433548900317]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,300,2,400,256,2.0,0.01,0.0001,Cora,[0.7296898079763663, 0.5352348281018194, 0.7116885777636579]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,400,2,400,256,2.0,0.01,0.0001,Cora,[0.5845642540620384, 0.4734536739789203, 0.5987699896961379]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,500,2,400,256,2.0,0.01,0.0001,Cora,[0.691285081240768, 0.4930195255511513, 0.6763188789925744]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,600,2,400,256,2.0,0.01,0.0001,Cora,[0.7138109305760709, 0.5164770523925601, 0.697738749529792]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,122,2,400,256,2.0,0.01,0.0001,Cora,[0.6853766617429837, 0.4997702819961976, 0.6676505918360381]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,233,2,400,256,2.0,0.01,0.0001,Cora,[0.7112259970457903, 0.519740434077224, 0.6963413115696181]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,344,2,400,256,2.0,0.01,0.0001,Cora,[0.7385524372230429, 0.5485854473931491, 0.7168284726864668]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,350,2,400,256,2.0,0.01,0.0001,Cora,[0.7134416543574594, 0.5171580030265417, 0.6916010323855534]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,2333333,2,400,256,2.0,0.01,0.0001,Cora,[0.6344165435745938, 0.475113059620123, 0.6438479860493986]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,300,2,400,256,2.0,0.001,0.0001,Cora,[0.6521418020679468, 0.4775394310700005, 0.6373316545254275]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,400,2,400,256,2.0,0.001,0.0001,Cora,[0.6473412112259971, 0.4996664945920539, 0.6192222149254187]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,500,2,400,256,2.0,0.001,0.0001,Cora,[0.6709748892171344, 0.4977509468369388, 0.6589498802209478]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,600,2,400,256,2.0,0.001,0.0001,Cora,[0.6495568685376661, 0.4769727063322787, 0.625772676299219]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,122,2,400,256,2.0,0.001,0.0001,Cora,[0.619645494830133, 0.4568293438865625, 0.605861613911027]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,233,2,400,256,2.0,0.001,0.0001,Cora,[0.6229689807976366, 0.45804389259682365, 0.6019749624066947]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,344,2,400,256,2.0,0.001,0.0001,Cora,[0.672821270310192, 0.49206205719636, 0.6605574916370452]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,350,2,400,256,2.0,0.001,0.0001,Cora,[0.6495568685376661, 0.47768234761310086, 0.6394034176070909]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,2333333,2,400,256,2.0,0.001,0.0001,Cora,[0.6115214180206795, 0.47190330674677616, 0.5975969010785042]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,300,2,400,256,2.0,0.0001,0.0001,Cora,[0.3932791728212703, 0.24465024617783768, 0.33950579637924977]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,400,2,400,256,2.0,0.0001,0.0001,Cora,[0.4331610044313146, 0.2511391738778015, 0.36188334862145954]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,500,2,400,256,2.0,0.0001,0.0001,Cora,[0.37518463810930575, 0.2517068706306245, 0.3327953820130013]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,600,2,400,256,2.0,0.0001,0.0001,Cora,[0.48929098966026585, 0.2772437377233115, 0.424733425264947]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,122,2,400,256,2.0,0.0001,0.0001,Cora,[0.3696454948301329, 0.23526724602852744, 0.3337955769444173]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,233,2,400,256,2.0,0.0001,0.0001,Cora,[0.4224519940915805, 0.252950434605407, 0.3608223239213581]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,344,2,400,256,2.0,0.0001,0.0001,Cora,[0.4121122599704579, 0.2710564841937308, 0.3483908083515286]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,350,2,400,256,2.0,0.0001,0.0001,Cora,[0.41802067946824223, 0.27115471004765074, 0.3611226534820001]
+instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
+0.9,1,2333333,2,400,256,2.0,0.0001,0.0001,Cora,[0.41285081240768096, 0.24949990034495512, 0.37446501176626423]

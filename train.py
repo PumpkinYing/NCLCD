@@ -2,6 +2,7 @@ from __future__ import division
 from __future__ import print_function
 import random
 import time
+import os
 import argparse
 import numpy as np
 import torch
@@ -29,11 +30,11 @@ parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='Disables CUDA training.')
 parser.add_argument('--epochs', type=int, default=400,
                     help='Number of epochs to train.')
-parser.add_argument('--lr', type=float, default=0.001,
+parser.add_argument('--lr', type=float, default=0.05,
                     help='learning rate.')
-parser.add_argument('--weight_decay', type=float, default=5e-4,
+parser.add_argument('--weight_decay', type=float, default=1e-4,
                     help='Weight decay (L2 loss on parameters).')
-parser.add_argument('--hidden', type=int, default=128,
+parser.add_argument('--hidden', type=int, default=256,
                     help='Number of hidden units.')
 parser.add_argument('--dropout', type=float, default=0.6,
                     help='Dropout rate (1 - keep probability).')
@@ -47,13 +48,14 @@ parser.add_argument('--order', type=int, default=2,
                     help='to compute order-th power of adj')
 parser.add_argument('--instance_tau', type=float, default=1,
                     help='temperature for Ncontrast loss')
-parser.add_argument('--cluster_tau', type=float, default=5,
+parser.add_argument('--cluster_tau', type=float, default=1,
                     help='temperature for Ncontrast loss')
 parser.add_argument('--theta', type=float, default=0.7,
                     help='threshold of adj matrix')
+parser.add_argument('--seed', type=int, default=233)
 parser.add_argument('--drop_edge_rate_1', type=float, default=0.2)
 parser.add_argument('--drop_edge_rate_2', type=float, default=0.4)
-parser.add_argument('--drop_feature_rate_1', type=float, default=0.2)
+parser.add_argument('--drop_feature_rate_1', type=float, default=0.3)
 parser.add_argument('--drop_feature_rate_2', type=float, default=0.4)
 
 args = parser.parse_args()
@@ -64,40 +66,6 @@ adj, features, labels, idx_train, idx_val, idx_test = load_citation(args.data, '
 # adj = adj.to_dense()
 # adj_label = torch.where(adj < args.theta, torch.zeros_like(adj), torch.ones_like(adj))
 adj_label = get_A_r(adj, args.order)
-
-
-## Model and optimizer
-MLP_model = GMLP.Unsup_GMLP(nfeat=features.shape[1],
-                       nhid=args.hidden,
-                       dropout=args.dropout,
-                       )
-GCN_model = GMLP.GCN(nfeat=features.shape[1],
-                nhid=args.hidden,
-                dropout=args.dropout)
-CC_model = GRACE_cluster.CC(nfeat=features.shape[1],
-                            nhid=args.hidden,
-                            prohid=args.hidden,
-                            nclass=labels.max().item() + 1,
-                            instance_tau=args.instance_tau,
-                            cluster_tau=args.cluster_tau)
-
-MLP_optimizer = optim.Adam(MLP_model.parameters(),
-                       lr=args.lr, weight_decay=args.weight_decay)
-GCN_optimizer = optim.Adam(GCN_model.parameters(),
-                       lr=args.lr, weight_decay=args.weight_decay)
-CC_optimizer = optim.Adam(CC_model.parameters(),
-                       lr=args.lr, weight_decay=args.weight_decay)
-
-if args.cuda:
-    MLP_model.cuda()
-    GCN_model.cuda()
-    CC_model.cuda()
-    features = features.cuda()
-    labels = labels.cuda()
-    idx_train = idx_train.cuda()
-    idx_val = idx_val.cuda()
-    idx_test = idx_test.cuda()
-
 
 def Ncontrast(x_dis, adj_label, tau = args.instance_tau):
     """
@@ -152,10 +120,10 @@ def train_unsup_gcn():
     GCN_model.train()
     GCN_optimizer.zero_grad()
     x, x_dis = GCN_model(features, adj_label)
-    loss_Ncontrast = Ncontrast(x_dis, adj_label, tau = args.tau)
+    loss_Ncontrast = Ncontrast(x_dis, adj_label, tau = args.instance_tau)
     loss_Ncontrast.backward()
     GCN_optimizer.step()
-    return 
+    return loss_Ncontrast
 
 def train_grace_cluster(model, x, edge_index):
     model.train()
@@ -236,17 +204,61 @@ def get_dataset(path, name):
 path = osp.join(osp.expanduser('~'), 'datasets', args.data)
 dataset = get_dataset(path, args.data)
 data = dataset[0]
-
 if args.cuda:
     data = data.cuda()
+
+def seed_it(seed):
+    os.environ["PYTHONSEED"] = str(seed)
+    np.random.seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = True
+    torch.backends.cudnn.enabled = True
+    torch.manual_seed(seed)
+
+
+seed_it(args.seed)
+
+## Model and optimizer
+MLP_model = GMLP.Unsup_GMLP(nfeat=features.shape[1],
+                       nhid=args.hidden,
+                       dropout=args.dropout,
+                       )
+GCN_model = GMLP.GCN(nfeat=features.shape[1],
+                nhid=args.hidden,
+                dropout=args.dropout)
+CC_model = GRACE_cluster.CC(nfeat=features.shape[1],
+                            nhid=args.hidden,
+                            prohid=args.hidden,
+                            nclass=labels.max().item() + 1,
+                            instance_tau=args.instance_tau,
+                            cluster_tau=args.cluster_tau)
+
+MLP_optimizer = optim.Adam(MLP_model.parameters(),
+                       lr=args.lr, weight_decay=args.weight_decay)
+GCN_optimizer = optim.Adam(GCN_model.parameters(),
+                       lr=args.lr, weight_decay=args.weight_decay)
+CC_optimizer = optim.Adam(CC_model.parameters(),
+                       lr=args.lr, weight_decay=args.weight_decay)
+
+if args.cuda:
+    MLP_model.cuda()
+    GCN_model.cuda()
+    CC_model.cuda()
+    features = features.cuda()
+    labels = labels.cuda()
+    idx_train = idx_train.cuda()
+    idx_val = idx_val.cuda()
+    idx_test = idx_test.cuda()
 
 print('\n'+'training configs', args)
 for epoch in range(args.epochs):
     loss = train_grace_cluster(CC_model, data.x, data.edge_index)
-    print("Epoch: %d, Loss: %f"%(epoch, loss))
-    # train_unsup_gcn()
+    # loss = train_unsup_gcn()
+    # print("Epoch: %d, Loss: %f"%(epoch, loss))
 
-# # embedding, x_dis= GCN_model(features, adj_label)
+# embedding, x_dis= GCN_model(features, adj_label)
 embedding = CC_model(features, data.edge_index)
 # embedding = embedding.detach()
 pred = CC_model.getCluster(embedding)
@@ -275,17 +287,17 @@ print(scores)
 # print(best_test_f1)
 
 
-# log_file = open(r"log.txt", encoding="utf-8",mode="a+")  
-# with log_file as file_to_be_write:  
-#     print('tau', 'order', \
-#             'batch_size', 'hidden', \
-#                 'alpha', 'lr', \
-#                     'weight_decay', 'data', \
-#                         'test_acc', file=file_to_be_write, sep=',')
-#     print(args.tau, args.order, \
-#          args.batch_size, args.hidden, \
-#              args.alpha, args.lr, \
-#                  args.weight_decay, args.data, \
-#                      test_acc.item(), file=file_to_be_write, sep=',')
+log_file = open(r"log_Cora_GRACECC.txt", encoding="utf-8",mode="a+")  
+with log_file as file_to_be_write:  
+    print('instance_tau', 'cluster_tau', 'seed', 'epochs', \
+            'hidden', \
+                'alpha', 'lr', \
+                    'weight_decay', 'data', \
+                        'test_acc', file=file_to_be_write, sep=',')
+    print(args.instance_tau, args.cluster_tau, args.seed, args.epochs, \
+          args.hidden, \
+             args.alpha, args.lr, \
+                 args.weight_decay, args.data, \
+                     scores, file=file_to_be_write, sep=',')
 
 

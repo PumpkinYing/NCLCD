@@ -128,7 +128,7 @@ def sparse_mx_to_torch_sparse_tensor(sparse_mx):
     shape = torch.Size(sparse_mx.shape)
     return torch.sparse.FloatTensor(indices, values, shape)
 
-def load_citation(dataset_str="cora", normalization="AugNormAdj", cuda=True):
+def load_citation(dataset_str="Cora", normalization="AugNormAdj", cuda=True):
     """
     Load Citation Networks Datasets.
     """
@@ -146,7 +146,7 @@ def load_citation(dataset_str="cora", normalization="AugNormAdj", cuda=True):
     test_idx_reorder = parse_index_file("data/ind.{}.test.index".format(dataset_str))
     test_idx_range = np.sort(test_idx_reorder)
 
-    if dataset_str == 'citeseer':
+    if dataset_str == 'CiteSeer':
         # Fix citeseer dataset (there are some isolated nodes in the graph)
         # Find isolated nodes, add them as zero-vecs into the right position
         test_idx_range_full = range(min(test_idx_reorder), max(test_idx_reorder)+1)

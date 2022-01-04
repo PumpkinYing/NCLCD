@@ -122,35 +122,35 @@ class CC(torch.nn.Module):
             / (refl_sim.sum(1) + between_sim.sum(1) - refl_sim.diag()))
 
     def cluster_loss(self, z1: torch.Tensor, z2: torch.Tensor):
-        # p1 = z1.sum(0).view(-1)
-        # p1 /= p1.sum()
-        # ne1 = math.log(p1.size(0)) + (p1 * torch.log(p1)).sum()
-        # p2 = z2.sum(0).view(-1)
-        # p2 /= p2.sum()
-        # ne2 = math.log(p2.size(0)) + (p2 * torch.log(p2)).sum()
-        # ne_loss = ne1 + ne2
+        p1 = z1.sum(0).view(-1)
+        p1 /= p1.sum()
+        ne1 = math.log(p1.size(0)) + (p1 * torch.log(p1)).sum()
+        p2 = z2.sum(0).view(-1)
+        p2 /= p2.sum()
+        ne2 = math.log(p2.size(0)) + (p2 * torch.log(p2)).sum()
+        ne_loss = ne1 + ne2
 
-        # z1 = z1.t()
-        # z2 = z2.t()
-        # N = 2 * self.class_num
-        # c = torch.cat((z1, z2), dim=0)
+        z1 = z1.t()
+        z2 = z2.t()
+        N = 2 * self.class_num
+        c = torch.cat((z1, z2), dim=0)
 
-        # similarity_f = nn.CosineSimilarity(dim=2)
-        # criterion = nn.CrossEntropyLoss(reduction="sum")
-        # sim = similarity_f(c.unsqueeze(1), c.unsqueeze(0)) / self.cluster_tau
-        # sim_i_j = torch.diag(sim, self.class_num)
-        # sim_j_i = torch.diag(sim, -self.class_num)
+        similarity_f = nn.CosineSimilarity(dim=2)
+        criterion = nn.CrossEntropyLoss(reduction="sum")
+        sim = similarity_f(c.unsqueeze(1), c.unsqueeze(0)) / self.cluster_tau
+        sim_i_j = torch.diag(sim, self.class_num)
+        sim_j_i = torch.diag(sim, -self.class_num)
 
-        # mask = self.mask_correlated_clusters(self.class_num)
-        # positive_clusters = torch.cat((sim_i_j, sim_j_i), dim=0).reshape(N, 1)
-        # negative_clusters = sim[mask].reshape(N, -1)
+        mask = self.mask_correlated_clusters(self.class_num)
+        positive_clusters = torch.cat((sim_i_j, sim_j_i), dim=0).reshape(N, 1)
+        negative_clusters = sim[mask].reshape(N, -1)
 
-        # labels = torch.zeros(N).to(positive_clusters.device).long()
-        # logits = torch.cat((positive_clusters, negative_clusters), dim=1)
-        # loss = criterion(logits, labels)
-        # loss /= N
+        labels = torch.zeros(N).to(positive_clusters.device).long()
+        logits = torch.cat((positive_clusters, negative_clusters), dim=1)
+        loss = criterion(logits, labels)
+        loss /= N
 
-        # return loss + ne_loss
+        return loss + ne_loss
 
         f = lambda x: torch.exp(x / self.cluster_tau)
         refl_sim = f(self.sim_clust(z1, z1))
@@ -204,7 +204,7 @@ class CC(torch.nn.Module):
         clu_loss_1 = self.cluster_loss(c1, c2)
         clu_loss_2 = self.cluster_loss(c2, c1)
 
-        return ret + (clu_loss_1 + clu_loss_2) * 0.2
+        return ret + (clu_loss_1 + clu_loss_2) * 0.5
 
     def getCluster(self, embedding) :
         pred = self.cluster_projector(embedding)
