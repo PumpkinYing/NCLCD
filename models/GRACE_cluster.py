@@ -73,15 +73,22 @@ class CC(torch.nn.Module):
 
     def forward(self, x: torch.Tensor,
                 edge_index: torch.Tensor) -> torch.Tensor:
-        return self.encoder(x, edge_index)
+        h = self.encoder(x, edge_index)
+        z = F.normalize(self.instance_projector(h), dim=1)
+        c = self.cluster_projector(h)
+        return z, c
 
     def sim(self, z1: torch.Tensor, z2: torch.Tensor):
         z1 = F.normalize(z1)
         z2 = F.normalize(z2)
         return torch.mm(z1, z2.t())
 
-    def sim_clust(self, z1: torch.Tensor, z2: torch.Tensor):
-        return torch.mm(z1.t(), z2)
+    def clu_sim(self, z1: torch.Tensor, z2: torch.Tensor):
+        z1 = z1.t()
+        z2 = z2.t()
+        z1 = F.normalize(z1)
+        z2 = F.normalize(z2)
+        return torch.mm(z1, z2.t())
 
     def mask_correlated_clusters(self, class_num):
         N = 2 * class_num
@@ -122,6 +129,14 @@ class CC(torch.nn.Module):
             / (refl_sim.sum(1) + between_sim.sum(1) - refl_sim.diag()))
 
     def cluster_loss(self, z1: torch.Tensor, z2: torch.Tensor):
+        f = lambda x: torch.exp(x / self.cluster_tau)
+        refl_sim = f(self.clu_sim(z1, z1))
+        between_sim = f(self.clu_sim(z1, z2))
+
+        return -torch.log(
+            between_sim.diag()
+            / (refl_sim.sum(1) + between_sim.sum(1) - refl_sim.diag()))
+
         p1 = z1.sum(0).view(-1)
         p1 /= p1.sum()
         ne1 = math.log(p1.size(0)) + (p1 * torch.log(p1)).sum()
@@ -182,14 +197,8 @@ class CC(torch.nn.Module):
 
         return torch.cat(losses)
 
-    def loss(self, z1: torch.Tensor, z2: torch.Tensor,
+    def loss(self, h1, h2, c1, c2,
              mean: bool = True, batch_size: int = 0):
-        h1 = self.instance_projector(z1)
-        c1 = self.cluster_projector(z1)
-
-        h2 = self.instance_projector(z2)
-        c2 = self.cluster_projector(z2)
-
         if batch_size == 0:
             l1 = self.instance_loss(h1, h2)
             l2 = self.instance_loss(h2, h1)
@@ -198,16 +207,19 @@ class CC(torch.nn.Module):
             l2 = self.batched_semi_loss(h2, h1, batch_size)
         
 
-        ret = (l1 + l2) * 0.5
-        ret = ret.mean() if mean else ret.sum()
+        ins_loss = (l1 + l2) * 0.5
+        # ins_loss = ins_loss.mean() if mean else ins_loss.sum()
 
         clu_loss_1 = self.cluster_loss(c1, c2)
         clu_loss_2 = self.cluster_loss(c2, c1)
+        clu_loss = (clu_loss_1 + clu_loss_2) * 0.5
+        # clu_loss = clu_loss.mean() if mean else clu_loss.sum()
 
-        return ret + (clu_loss_1 + clu_loss_2) * 0.5
+        return ins_loss + clu_loss
 
-    def getCluster(self, embedding) :
-        pred = self.cluster_projector(embedding)
+    def getCluster(self, x, edge_index) :
+        x = self.encoder(x, edge_index)
+        pred = self.cluster_projector(x)
         return torch.argmax(pred, dim = 1)
 
 

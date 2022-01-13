@@ -95,8 +95,10 @@ class Classifier(nn.Module):
     
     def forward(self, x):
         class_feature = self.classifier(x)
-        class_logits = F.log_softmax(class_feature, dim=1)
-        return class_logits
+        class_logits = F.softmax(class_feature, dim=1)
+        Z = class_logits
+        z_dis = get_feature_dis(Z)
+        return class_logits, z_dis
 
 class GMLP(nn.Module):
     def __init__(self, nfeat, nhid, nclass, dropout):

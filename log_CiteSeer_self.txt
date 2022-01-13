@@ -582,3 +582,273 @@ instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data
 0.9,1,500,2,400,256,2.0,0.05,0.0001,CiteSeer,[0.20979861737300873, 0.005306688889545098, 0.0600364681833598]
 instance_tau,cluster_tau,seed,order,batch_size,hidden,alpha,lr,weight_decay,data,test_acc
 1,1,233,2,400,256,2.0,0.05,0.0001,Cora,[0.3020679468242245, 0.0, 0.06628312130297383]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,300,200,256,2.0,0.01,0.0001,CiteSeer,[0.478809738503156, 0.26376630537544826, 0.4474181836738085]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,400,200,256,2.0,0.01,0.0001,CiteSeer,[0.4352269311692215, 0.2716420588767067, 0.37490223316966165]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,500,200,256,2.0,0.01,0.0001,CiteSeer,[0.4472497745716862, 0.24603812835661507, 0.3928894224905533]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,1000,200,256,2.0,0.01,0.0001,CiteSeer,[0.4349263600841599, 0.20082519548722394, 0.4166400000902139]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,23333,200,256,2.0,0.01,0.0001,CiteSeer,[0.46648632401562967, 0.2651696520225138, 0.410989779148827]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,100,500,256,2.0,0.01,0.0001,CiteSeer,[0.6372107003306282, 0.39142291376773225, 0.6017239708778717]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,200,500,256,2.0,0.01,0.0001,CiteSeer,[0.658551247370003, 0.39802949448793007, 0.6191172759013894]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,234,500,256,2.0,0.01,0.0001,CiteSeer,[0.6738803727081455, 0.4115370344038576, 0.6369956565634882]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,300,500,256,2.0,0.01,0.0001,CiteSeer,[0.6612563871355576, 0.40213541729912583, 0.6293035833823909]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,400,500,256,2.0,0.01,0.0001,CiteSeer,[0.6681695220919748, 0.3962207306545879, 0.6071238198398895]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,500,500,256,2.0,0.01,0.0001,CiteSeer,[0.6176735798016231, 0.39949255659401306, 0.5752798681373164]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,1000,500,256,2.0,0.01,0.0001,CiteSeer,[0.680492936579501, 0.4069703726441995, 0.5948252452971121]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,23333,500,256,2.0,0.01,0.0001,CiteSeer,[0.6666666666666666, 0.40348825279386374, 0.6295227093463476]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,100,600,256,2.0,0.01,0.0001,CiteSeer,[0.6260895701833483, 0.40814655766253716, 0.5680789820571007]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,200,600,256,2.0,0.01,0.0001,CiteSeer,[0.6429215509467989, 0.37844432974164566, 0.609608991950113]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,234,600,256,2.0,0.01,0.0001,CiteSeer,[0.6642620979861737, 0.39519884964563673, 0.6301069913263514]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,300,600,256,2.0,0.01,0.0001,CiteSeer,[0.6594529606251879, 0.3986954971829046, 0.6252683231858046]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,400,600,256,2.0,0.01,0.0001,CiteSeer,[0.6780883678990082, 0.4021602799946412, 0.5899827569194757]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,500,600,256,2.0,0.01,0.0001,CiteSeer,[0.6140667267808837, 0.3827316466950018, 0.579639769262648]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,1000,600,256,2.0,0.01,0.0001,CiteSeer,[0.6498346859032161, 0.3865502184016958, 0.5962451390203427]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,23333,600,256,2.0,0.01,0.0001,CiteSeer,[0.6639615269011121, 0.3990807561395926, 0.6355939049854683]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,0.4,100,600,256,2.0,0.01,0.0001,CiteSeer,[0.5193868349864743, 0.34051199922352876, 0.41693929402915914]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,0.4,200,600,256,2.0,0.01,0.0001,CiteSeer,[0.5473399458972047, 0.3313884076144739, 0.4906070817294393]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,0.4,234,600,256,2.0,0.01,0.0001,CiteSeer,[0.5088668470093177, 0.324200045992237, 0.40937391372700044]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,0.4,300,600,256,2.0,0.01,0.0001,CiteSeer,[0.4950405770964833, 0.33483697886832264, 0.4550325059721547]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.2,0.4,400,600,256,2.0,0.01,0.0001,CiteSeer,[0.5037571385632702, 0.3350074866059066, 0.4395603274888949]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,100,600,256,2.0,0.01,0.0001,CiteSeer,[0.6260895701833483, 0.40814655766253716, 0.5680789820571007]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,200,600,256,2.0,0.01,0.0001,CiteSeer,[0.6429215509467989, 0.37844432974164566, 0.609608991950113]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,234,600,256,2.0,0.01,0.0001,CiteSeer,[0.6642620979861737, 0.39519884964563673, 0.6301069913263514]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,300,600,256,2.0,0.01,0.0001,CiteSeer,[0.6594529606251879, 0.3986954971829046, 0.6252683231858046]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,400,600,256,2.0,0.01,0.0001,CiteSeer,[0.6780883678990082, 0.4021602799946412, 0.5899827569194757]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,500,600,256,2.0,0.01,0.0001,CiteSeer,[0.6140667267808837, 0.3827316466950018, 0.579639769262648]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,1000,600,256,2.0,0.01,0.0001,CiteSeer,[0.6498346859032161, 0.3865502184016958, 0.5962451390203427]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,23333,600,256,2.0,0.01,0.0001,CiteSeer,[0.6639615269011121, 0.3990807561395926, 0.6355939049854683]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,123123,600,256,2.0,0.01,0.0001,CiteSeer,[0.686804929365795, 0.40756711401527185, 0.6243663537806697]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,100,600,256,2.0,0.01,0.0001,CiteSeer,[0.6260895701833483, 0.40814655766253716, 0.5680789820571007]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,101,600,256,2.0,0.01,0.0001,CiteSeer,[0.6417192666065524, 0.39411406218743444, 0.6124755188308316]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,102,600,256,2.0,0.01,0.0001,CiteSeer,[0.6459272617974151, 0.384811725816304, 0.6160549237645748]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,103,600,256,2.0,0.01,0.0001,CiteSeer,[0.6531409678388939, 0.3941097384477901, 0.6197797618331267]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,104,600,256,2.0,0.01,0.0001,CiteSeer,[0.6354072738202585, 0.3826244773433981, 0.5814502845028681]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,105,600,256,2.0,0.01,0.0001,CiteSeer,[0.6834986474301172, 0.4207221417748755, 0.6437570024915826]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,106,600,256,2.0,0.01,0.0001,CiteSeer,[0.6495341148181545, 0.39165073057734734, 0.6193993077664136]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,107,600,256,2.0,0.01,0.0001,CiteSeer,[0.6594529606251879, 0.38846137107314904, 0.628478854354756]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,108,600,256,2.0,0.01,0.0001,CiteSeer,[0.6435226931169221, 0.3841669995728082, 0.6169900953753644]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,109,600,256,2.0,0.01,0.0001,CiteSeer,[0.6558461076044485, 0.39374228728741245, 0.6229467968144633]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,110,600,256,2.0,0.01,0.0001,CiteSeer,[0.6621581003907424, 0.40354796031619655, 0.6280044142053904]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,111,600,256,2.0,0.01,0.0001,CiteSeer,[0.6471295461376616, 0.385690149681537, 0.6137938510233417]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,112,600,256,2.0,0.01,0.0001,CiteSeer,[0.6420198376916141, 0.38176968781457393, 0.6130077402571371]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,113,600,256,2.0,0.01,0.0001,CiteSeer,[0.6492335437330928, 0.3873252925035515, 0.6174984685104308]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,114,600,256,2.0,0.01,0.0001,CiteSeer,[0.6564472497745717, 0.4018540874952185, 0.6234462208337628]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,115,600,256,2.0,0.01,0.0001,CiteSeer,[0.6729786594529606, 0.3987928737307321, 0.5877032971560047]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,116,600,256,2.0,0.01,0.0001,CiteSeer,[0.6432221220318606, 0.3767303555137829, 0.609089751718552]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,117,600,256,2.0,0.01,0.0001,CiteSeer,[0.6492335437330928, 0.3924232095972759, 0.6155806857909703]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,118,600,256,2.0,0.01,0.0001,CiteSeer,[0.678990081154193, 0.40297063677677813, 0.5928726917336172]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,119,600,256,2.0,0.01,0.0001,CiteSeer,[0.6588518184550646, 0.3973415133263152, 0.6292256987957964]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,120,600,256,2.0,0.01,0.0001,CiteSeer,[0.6504358280733393, 0.3842747200584898, 0.6172030249332039]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,121,600,256,2.0,0.01,0.0001,CiteSeer,[0.6564472497745717, 0.3956881490317883, 0.6233222008527276]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,122,600,256,2.0,0.01,0.0001,CiteSeer,[0.6615569582206192, 0.3986335872880783, 0.6291882350889293]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,123,600,256,2.0,0.01,0.0001,CiteSeer,[0.6624586714758041, 0.3975274984714507, 0.6275948795248091]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,124,600,256,2.0,0.01,0.0001,CiteSeer,[0.6552449654343252, 0.3959413550430551, 0.6112110767308107]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,125,600,256,2.0,0.01,0.0001,CiteSeer,[0.6537421100090172, 0.39493509804431637, 0.6234582677503705]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,126,600,256,2.0,0.01,0.0001,CiteSeer,[0.6486324015629696, 0.38945723929295994, 0.617786424140616]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,127,600,256,2.0,0.01,0.0001,CiteSeer,[0.6600541027953111, 0.39724145309796743, 0.6235114553865464]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,128,600,256,2.0,0.01,0.0001,CiteSeer,[0.6540426810940787, 0.39660885484677944, 0.6253982595726738]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,129,600,256,2.0,0.01,0.0001,CiteSeer,[0.6690712353471596, 0.40308235116313595, 0.6286338708370244]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,130,600,256,2.0,0.01,0.0001,CiteSeer,[0.65614667868951, 0.39739334584617336, 0.624581068229804]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,131,600,256,2.0,0.01,0.0001,CiteSeer,[0.6420198376916141, 0.3831156420343888, 0.6069931070530273]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,132,600,256,2.0,0.01,0.0001,CiteSeer,[0.678990081154193, 0.40506007688313367, 0.5911422348443222]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,133,600,256,2.0,0.01,0.0001,CiteSeer,[0.6777877968139465, 0.4007786162132923, 0.5932371224990821]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,134,600,256,2.0,0.01,0.0001,CiteSeer,[0.6648632401562969, 0.4019106319150903, 0.627954786476344]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,135,600,256,2.0,0.01,0.0001,CiteSeer,[0.6435226931169221, 0.3865061869529641, 0.6156861300476723]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,136,600,256,2.0,0.01,0.0001,CiteSeer,[0.6537421100090172, 0.3863241635005934, 0.5994760217280728]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,137,600,256,2.0,0.01,0.0001,CiteSeer,[0.6624586714758041, 0.3898270889983699, 0.5989004141419374]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,138,600,256,2.0,0.01,0.0001,CiteSeer,[0.6645626690712354, 0.3984019229949613, 0.6301774343095436]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,139,600,256,2.0,0.01,0.0001,CiteSeer,[0.6663660955816051, 0.3956520058735631, 0.6298479407514455]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,140,600,256,2.0,0.01,0.0001,CiteSeer,[0.6552449654343252, 0.39492291372178784, 0.6259197352613098]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,141,600,256,2.0,0.01,0.0001,CiteSeer,[0.6534415389239555, 0.3886587945010152, 0.6225178092177246]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,142,600,256,2.0,0.01,0.0001,CiteSeer,[0.6862037871956718, 0.4051208879605086, 0.6136384805096514]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,143,600,256,2.0,0.01,0.0001,CiteSeer,[0.6396152690111211, 0.378263525506607, 0.6087664059079507]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,144,600,256,2.0,0.01,0.0001,CiteSeer,[0.6603546738803727, 0.39850755904661844, 0.6289134473270085]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,145,600,256,2.0,0.01,0.0001,CiteSeer,[0.6684700931770363, 0.40861360862467355, 0.6367908188060459]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,146,600,256,2.0,0.01,0.0001,CiteSeer,[0.6345055605650737, 0.39836877284582767, 0.5748327096888944]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,147,600,256,2.0,0.01,0.0001,CiteSeer,[0.6669672377517283, 0.41210786590200255, 0.6379049611090517]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,148,600,256,2.0,0.01,0.0001,CiteSeer,[0.6498346859032161, 0.38477340225541823, 0.6156879914267975]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,149,600,256,2.0,0.01,0.0001,CiteSeer,[0.6678689510069131, 0.40153171504602087, 0.6246318138768596]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,150,600,256,2.0,0.01,0.0001,CiteSeer,[0.6735798016230838, 0.3958087656215219, 0.6083526883851967]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,151,600,256,2.0,0.01,0.0001,CiteSeer,[0.6663660955816051, 0.3962416908356986, 0.6263212405799954]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,152,600,256,2.0,0.01,0.0001,CiteSeer,[0.6654643823264202, 0.40061115896458266, 0.6305327172768518]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,153,600,256,2.0,0.01,0.0001,CiteSeer,[0.6492335437330928, 0.3911440746299869, 0.6199114297213542]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,154,600,256,2.0,0.01,0.0001,CiteSeer,[0.658551247370003, 0.386784361716278, 0.6125120875737365]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,155,600,256,2.0,0.01,0.0001,CiteSeer,[0.6555455365193869, 0.39048901260571606, 0.6272317010543852]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,156,600,256,2.0,0.01,0.0001,CiteSeer,[0.6792906522392546, 0.4022314529773459, 0.591964844152049]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,157,600,256,2.0,0.01,0.0001,CiteSeer,[0.6702735196874061, 0.40343661537533565, 0.632366039628099]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,158,600,256,2.0,0.01,0.0001,CiteSeer,[0.6492335437330928, 0.3884725303995757, 0.6200280965037007]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,159,600,256,2.0,0.01,0.0001,CiteSeer,[0.6519386834986475, 0.3917336624329797, 0.6215780166502012]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,160,600,256,2.0,0.01,0.0001,CiteSeer,[0.6603546738803727, 0.39426099619503324, 0.6277055937670464]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,161,600,256,2.0,0.01,0.0001,CiteSeer,[0.6669672377517283, 0.4134820250972363, 0.63033810742547]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,162,600,256,2.0,0.01,0.0001,CiteSeer,[0.6988277727682597, 0.4299135155506863, 0.6088563597760039]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,163,600,256,2.0,0.01,0.0001,CiteSeer,[0.6744815148782687, 0.4032694831348482, 0.6296154810827534]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,164,600,256,2.0,0.01,0.0001,CiteSeer,[0.6904117823865344, 0.4112152243785073, 0.6038948433659734]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,165,600,256,2.0,0.01,0.0001,CiteSeer,[0.6450255485422303, 0.3904255716191686, 0.6174267675433778]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,166,600,256,2.0,0.01,0.0001,CiteSeer,[0.6609558160504959, 0.39284338737594704, 0.6227739100748877]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,167,600,256,2.0,0.01,0.0001,CiteSeer,[0.6570483919446949, 0.3979113103104518, 0.6265168865907934]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,168,600,256,2.0,0.01,0.0001,CiteSeer,[0.6456266907123535, 0.38614116327601095, 0.6130328341475134]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,169,600,256,2.0,0.01,0.0001,CiteSeer,[0.650736399158401, 0.3942800916646995, 0.6202991529776639]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,170,600,256,2.0,0.01,0.0001,CiteSeer,[0.6904117823865344, 0.4181671131884187, 0.6012713051165277]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,171,600,256,2.0,0.01,0.0001,CiteSeer,[0.6543432521791404, 0.39476528105018743, 0.6214981485514464]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,172,600,256,2.0,0.01,0.0001,CiteSeer,[0.6648632401562969, 0.3941101819171394, 0.6144193203616849]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,173,600,256,2.0,0.01,0.0001,CiteSeer,[0.6672678088367899, 0.4015560182798135, 0.633945023800735]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,174,600,256,2.0,0.01,0.0001,CiteSeer,[0.6537421100090172, 0.38280159105151673, 0.6036769283442998]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,175,600,256,2.0,0.01,0.0001,CiteSeer,[0.6684700931770363, 0.4157430783591122, 0.6390298357659999]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,176,600,256,2.0,0.01,0.0001,CiteSeer,[0.6465284039675383, 0.38851132315979225, 0.6155734269978012]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,177,600,256,2.0,0.01,0.0001,CiteSeer,[0.6678689510069131, 0.40504304544059017, 0.6330713482487175]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,178,600,256,2.0,0.01,0.0001,CiteSeer,[0.6657649534114818, 0.4079556504626726, 0.6355983034834694]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,179,600,256,2.0,0.01,0.0001,CiteSeer,[0.6964232040877668, 0.4298743516152853, 0.6112031912846727]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,180,600,256,2.0,0.01,0.0001,CiteSeer,[0.6738803727081455, 0.4066016891558617, 0.62966514060576]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,181,600,256,2.0,0.01,0.0001,CiteSeer,[0.6468289750526, 0.3887907085409046, 0.6177886581402513]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,182,600,256,2.0,0.01,0.0001,CiteSeer,[0.654643823264202, 0.3955179875113949, 0.6185228621715667]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,183,600,256,2.0,0.01,0.0001,CiteSeer,[0.6486324015629696, 0.38078327096124703, 0.6154904667455178]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,184,600,256,2.0,0.01,0.0001,CiteSeer,[0.6537421100090172, 0.39889803056888595, 0.620638466782125]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,185,600,256,2.0,0.01,0.0001,CiteSeer,[0.6555455365193869, 0.39791057522588147, 0.6250544068199865]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,186,600,256,2.0,0.01,0.0001,CiteSeer,[0.6116621581003907, 0.38951175892961365, 0.5581102818884723]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,187,600,256,2.0,0.01,0.0001,CiteSeer,[0.6558461076044485, 0.38668123464223436, 0.6022252013270186]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,188,600,256,2.0,0.01,0.0001,CiteSeer,[0.648331830477908, 0.3864527966243166, 0.6159348061500604]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,189,600,256,2.0,0.01,0.0001,CiteSeer,[0.6420198376916141, 0.38289761089481633, 0.6095961797761215]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,190,600,256,2.0,0.01,0.0001,CiteSeer,[0.6474301172227231, 0.3913750035653929, 0.6105640526902937]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,191,600,256,2.0,0.01,0.0001,CiteSeer,[0.622482717162609, 0.37888475799014415, 0.5900983409125712]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,192,600,256,2.0,0.01,0.0001,CiteSeer,[0.6456266907123535, 0.3953954208933823, 0.5891101053780187]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,193,600,256,2.0,0.01,0.0001,CiteSeer,[0.6468289750526, 0.38384505749655917, 0.6129782184912268]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,194,600,256,2.0,0.01,0.0001,CiteSeer,[0.6441238352870454, 0.38223551049211385, 0.6112572576317512]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,195,600,256,2.0,0.01,0.0001,CiteSeer,[0.6573489630297565, 0.3894387351961758, 0.6106804929829958]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,196,600,256,2.0,0.01,0.0001,CiteSeer,[0.6492335437330928, 0.3927065522877566, 0.6168636446694918]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,197,600,256,2.0,0.01,0.0001,CiteSeer,[0.6498346859032161, 0.3833867909538587, 0.618645433176057]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,198,600,256,2.0,0.01,0.0001,CiteSeer,[0.6504358280733393, 0.39344511638535595, 0.6191609875955075]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.3,0.4,199,600,256,2.0,0.01,0.0001,CiteSeer,[0.6480312593928464, 0.39030013979680633, 0.6055124594976634]

@@ -28,9 +28,9 @@ warnings.filterwarnings('ignore')
 parser = argparse.ArgumentParser()
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='Disables CUDA training.')
-parser.add_argument('--epochs', type=int, default=400,
+parser.add_argument('--epochs', type=int, default=300,
                     help='Number of epochs to train.')
-parser.add_argument('--lr', type=float, default=0.05,
+parser.add_argument('--lr', type=float, default=0.01,
                     help='learning rate.')
 parser.add_argument('--weight_decay', type=float, default=1e-4,
                     help='Weight decay (L2 loss on parameters).')
@@ -44,15 +44,17 @@ parser.add_argument('--alpha', type=float, default=2.0,
                     help='To control the ratio of Ncontrast loss')
 parser.add_argument('--batch_size', type=int, default=400,
                     help='batch size')
-parser.add_argument('--order', type=int, default=2,
+parser.add_argument('--order', type=int, default=1,
                     help='to compute order-th power of adj')
-parser.add_argument('--instance_tau', type=float, default=1,
+parser.add_argument('--instance_tau', type=float, default=0.4,
                     help='temperature for Ncontrast loss')
-parser.add_argument('--cluster_tau', type=float, default=1,
+parser.add_argument('--cluster_tau', type=float, default=0.4,
                     help='temperature for Ncontrast loss')
 parser.add_argument('--theta', type=float, default=0.7,
                     help='threshold of adj matrix')
-parser.add_argument('--seed', type=int, default=233)
+parser.add_argument('--entropy_weight', type=float, default=0.1,
+                    help='threshold of adj matrix')
+parser.add_argument('--seed', type=int, default=2333333)
 parser.add_argument('--drop_edge_rate_1', type=float, default=0.2)
 parser.add_argument('--drop_edge_rate_2', type=float, default=0.4)
 parser.add_argument('--drop_feature_rate_1', type=float, default=0.3)
@@ -77,23 +79,43 @@ def Ncontrast(x_dis, adj_label, tau = args.instance_tau):
     loss = -torch.log(x_dis_sum_pos * (x_dis_sum**(-1))+1e-8).mean()
     return loss
 
+def entropy(x, input_as_probabilities):
+    """ 
+    Helper function to compute the entropy over the batch 
+
+    input: batch w/ shape [b, num_classes]
+    output: entropy value [is ideally -log(num_classes)]
+    """
+
+    if input_as_probabilities:
+        x_ =  torch.clamp(x, min = 1e-8)
+        b =  x_ * torch.log(x_)
+    else:
+        b = F.softmax(x, dim = 1) * F.log_softmax(x, dim = 1)
+
+    if len(b.size()) == 2: # Sample-wise entropy
+        return -b.sum(dim = 1).mean()
+    elif len(b.size()) == 1: # Distribution-wise entropy
+        return - b.sum()
+    else:
+        raise ValueError('Input tensor is %d-Dimensional' %(len(b.size())))
 def get_batch(batch_size):
     """
     get a batch of feature & adjacency matrix
     """
-    rand_indx = torch.tensor(np.random.choice(np.arange(2700), batch_size)).type(torch.long).cuda()
+    rand_indx = torch.tensor(np.random.choice(np.arange(features.shape[0]), batch_size)).type(torch.long).cuda()
     # rand_indx[0:len(idx_train)] = idx_train
     features_batch = features[rand_indx]
     adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
     return features_batch, adj_label_batch
 
-def get_neighbour_batch(cur) :
-    batch_indx = torch.nonzero(adj_label[cur]).squeeze(1)
-    # batch_indx = batch_indx[torch.nonzero(torch.where(batch_indx > cur, torch.zeros_like(batch_indx), batch_indx)).squeeze(1)]
-    batch_indx = torch.cat((idx_train, batch_indx))
-    features_batch = features[batch_indx]
-    adj_label_batch = adj_label[batch_indx, :][:, batch_indx]
-    return features_batch, adj_label_batch
+# def get_neighbour_batch(cur) :
+#     batch_indx = torch.nonzero(adj_label[cur]).squeeze(1)
+#     # batch_indx = batch_indx[torch.nonzero(torch.where(batch_indx > cur, torch.zeros_like(batch_indx), batch_indx)).squeeze(1)]
+#     batch_indx = torch.cat((idx_train, batch_indx))
+#     features_batch = features[batch_indx]
+#     adj_label_batch = adj_label[batch_indx, :][:, batch_indx]
+#     return features_batch, adj_label_batch
 
 
 # def get_neighbour_batch(cur):
@@ -132,14 +154,26 @@ def train_grace_cluster(model, x, edge_index):
     edge_index_2 = dropout_adj(edge_index, p=args.drop_edge_rate_2)[0]
     x_1 = GRACE_cluster.drop_feature(x, args.drop_feature_rate_1)
     x_2 = GRACE_cluster.drop_feature(x, args.drop_feature_rate_2)
-    z1 = model(x_1, edge_index_1)
-    z2 = model(x_2, edge_index_2)
-    loss = model.loss(z1, z2, batch_size=0)
+    h1, c1 = model(x_1, edge_index_1)
+    h2, c2 = model(x_2, edge_index_2)
+    loss = model.loss(h1, h2, c1, c2, batch_size=0)
     loss.backward()
     CC_optimizer.step()
 
     return loss.item()
 
+
+def train_unsup_classifier(cluster_adj_label, embedding, classifier):
+    classifier.train()
+    classifier_optimizer.zero_grad()
+    output, z_dis = classifier(embedding)
+    loss_classification = Ncontrast(z_dis, cluster_adj_label, tau = args.cluster_tau)
+    cluster_entropy = entropy(torch.mean(output, axis=0), input_as_probabilities = True)
+    # print(loss_classification, cluster_entropy)
+    loss_classification -= args.entropy_weight*cluster_entropy
+    loss_classification.backward()
+    classifier_optimizer.step()
+    return loss_classification
 
 def train_classifier(embedding, classifier):
     classifier.train()
@@ -154,7 +188,7 @@ def train_classifier(embedding, classifier):
     return val_f1, test_f1
 
 def test_spectral(c, labels, n_class):
-    y_result = post_proC(c, n_class)
+    y_result = post_proC(c, n_class, args.seed)
     print("Spectral Clustering Done.. Finding Best Fit..")
     scores = err_rate(labels.detach().cpu().numpy(), y_result)
     return scores
@@ -254,40 +288,39 @@ if args.cuda:
 
 print('\n'+'training configs', args)
 for epoch in range(args.epochs):
-    loss = train_grace_cluster(CC_model, data.x, data.edge_index)
-    # loss = train_unsup_gcn()
+    # loss = train_grace_cluster(CC_model, data.x, data.edge_index)
+    loss = train_unsup_gcn()
     # print("Epoch: %d, Loss: %f"%(epoch, loss))
 
-# embedding, x_dis= GCN_model(features, adj_label)
-embedding = CC_model(features, data.edge_index)
-# embedding = embedding.detach()
-pred = CC_model.getCluster(embedding)
-pred = pred.detach()
+embedding, x_dis= GCN_model(features, adj_label)
+embedding = embedding.detach()
+# pred = CC_model.getCluster(data.x, data.edge_index)
+# pred = pred.detach()
+cluster_adj_label = torch.where(x_dis > args.theta, torch.ones_like(x_dis), torch.zeros_like(x_dis))
 
-# scores = test_spectral(embedding, labels, labels.max().item()+1)
-scores = err_rate(labels.cpu().numpy(), pred.cpu().numpy())
+scores = test_spectral(embedding, labels, labels.max().item()+1)
+# scores = err_rate(data.y.cpu().numpy(), pred.cpu().numpy())
+print("Spectral clustering scores:")
 print(scores)
 
-# best_val_f1 = 0
-# best_test_f1 = 0
-# classifier = GMLP.Classifier(nhid=embedding.shape[1], nclass=labels.max().item() + 1)
-# classifier_optimizer = optim.Adam(classifier.parameters(),
-#                     lr=args.lr, weight_decay=args.weight_decay)
+classifier = GMLP.Classifier(nhid=embedding.shape[1], nclass=labels.max().item() + 1)
+classifier_optimizer = optim.Adam(classifier.parameters(),
+                    lr=args.lr, weight_decay=args.weight_decay)
 
-# if args.cuda:
-#     classifier = classifier.cuda()
+if args.cuda:
+    classifier = classifier.cuda()
 
-# for epoch in tqdm(range(args.epochs)):
-#     val_f1, test_f1 = train_classifier(embedding, classifier)
-#     if val_f1 > best_val_f1:
-#         best_val_f1 = val_f1
-#         best_test_f1 = test_f1
-    
-# print(best_val_f1)
-# print(best_test_f1)
+for epoch in tqdm(range(args.epochs)):
+    train_unsup_classifier(cluster_adj_label, embedding, classifier)
 
+logic, dis = classifier(embedding)
+pred = torch.argmax(logic, dim=1)
+print(pred)
+scores = err_rate(labels.cpu().numpy(), pred.cpu().numpy())
+print("SS clustering scores:")
+print(scores)
 
-log_file = open(r"log_Cora_GRACECC.txt", encoding="utf-8",mode="a+")  
+log_file = open(r"log_Cora_self.txt", encoding="utf-8",mode="a+")  
 with log_file as file_to_be_write:  
     print('instance_tau', 'cluster_tau', 'seed', 'epochs', \
             'hidden', \

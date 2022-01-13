@@ -1,5 +1,6 @@
 import numpy as np
 from sklearn import cluster
+from sklearn.cluster import KMeans
 from sklearn import metrics
 from munkres import Munkres
 from scipy.sparse.linalg import svds
@@ -56,11 +57,10 @@ def enhance_sim_matrix(C, K, d, alpha):
     return L
 
 
-def post_proC(L, K):
-    # C: coefficient matrix, K: number of clusters, d: dimension of each subspace
-    spectral = cluster.SpectralClustering(n_clusters=K, eigen_solver='arpack', assign_labels='discretize')
+def post_proC(L, K, seed):
+    spectral = cluster.SpectralClustering(n_clusters=K, eigen_solver='arpack', assign_labels='discretize', random_state=seed).fit(L.cpu())
+    kmeans = KMeans(n_clusters=K, random_state=0).fit(L.cpu())
     #print("Fitting Spectral Clustering...", flush=True)
-    spectral.fit(L.cpu())
     #print("Predicting Spectr Clustering...", flush=True)
     grp = spectral.fit_predict(L.cpu()) + 1
     return grp
