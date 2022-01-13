@@ -1588,3 +1588,5 @@ instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
 0.9,0.4,300,300,256,2.0,0.01,0.0001,Cora,[0.7071639586410635, 0.5241920229280478, 0.6974512076634057]
 instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
 0.4,0.4,2333333,300,256,2.0,0.01,0.0001,Cora,[0.5823485967503693, 0.43453124372073776, 0.44331022060339825]
+instance_tau,cluster_tau,seed,epochs,hidden,alpha,lr,weight_decay,data,test_acc
+0.4,0.4,2333333,300,256,2.0,0.01,0.0001,Cora,[0.5823485967503693, 0.43453124372073776, 0.44331022060339825]
