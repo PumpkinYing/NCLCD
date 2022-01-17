@@ -32,7 +32,7 @@ warnings.filterwarnings('ignore')
 parser = argparse.ArgumentParser()
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='Disables CUDA training.')
-parser.add_argument('--epochs', type=int, default=300,
+parser.add_argument('--epochs', type=int, default=200,
                     help='Number of epochs to train.')
 parser.add_argument('--lr', type=float, default=0.01,
                     help='learning rate.')
@@ -46,7 +46,7 @@ parser.add_argument('--data', type=str, default='Cora',
                     help='dataset to be used')
 parser.add_argument('--alpha', type=float, default=2.0,
                     help='To control the ratio of Ncontrast loss')
-parser.add_argument('--batch_size', type=int, default=140,
+parser.add_argument('--batch_size', type=int, default=5000,
                     help='batch size')
 parser.add_argument('--order', type=int, default=1,
                     help='to compute order-th power of adj')
@@ -54,15 +54,17 @@ parser.add_argument('--instance_tau', type=float, default=0.4,
                     help='temperature for Ncontrast loss')
 parser.add_argument('--cluster_tau', type=float, default=0.4,
                     help='temperature for Ncontrast loss')
-parser.add_argument('--theta', type=float, default=0.7,
+parser.add_argument('--theta', type=float, default=0.5,
                     help='threshold of adj matrix')
 parser.add_argument('--entropy_weight', type=float, default=0.1,
                     help='threshold of adj matrix')
-parser.add_argument('--seed', type=int, default=2333333)
-parser.add_argument('--drop_edge_rate_1', type=float, default=0.2)
-parser.add_argument('--drop_edge_rate_2', type=float, default=0.4)
-parser.add_argument('--drop_feature_rate_1', type=float, default=0.3)
-parser.add_argument('--drop_feature_rate_2', type=float, default=0.4)
+parser.add_argument('--seed', type=int, default=233)
+parser.add_argument('--load', type=bool, default=False)
+
+# parser.add_argument('--drop_edge_rate_1', type=float, default=0.2)
+# parser.add_argument('--drop_edge_rate_2', type=float, default=0.4)
+# parser.add_argument('--drop_feature_rate_1', type=float, default=0.3)
+# parser.add_argument('--drop_feature_rate_2', type=float, default=0.4)
 
 args = parser.parse_args()
 args.cuda = not args.no_cuda and torch.cuda.is_available()
@@ -104,7 +106,7 @@ def entropy(x, input_as_probabilities):
     else:
         raise ValueError('Input tensor is %d-Dimensional' %(len(b.size())))
 
-def get_batch(batch_size):
+def get_batch(batch_size, features, adj_label):
     """
     get a batch of feature & adjacency matrix
     """
@@ -144,7 +146,7 @@ def train_unsup():
     return 
 
 def train_unsup_gcn():
-    features_batch, adj_label_batch = get_batch(batch_size=args.batch_size)
+    features_batch, adj_label_batch = get_batch(args.batch_size, features, adj_label)
     GCN_model.train()
     GCN_optimizer.zero_grad()
     # x, x_dis = GCN_model(features_batch, adj_label_batch)
@@ -172,10 +174,11 @@ def train_grace_cluster(model, x, edge_index):
 
 
 def train_unsup_classifier(cluster_adj_label, embedding, classifier):
+    embedding_batch, adj_label_batch = get_batch(args.batch_size, embedding, cluster_adj_label)
     classifier.train()
     classifier_optimizer.zero_grad()
-    output, z_dis = classifier(embedding)
-    loss_classification = Ncontrast(z_dis, cluster_adj_label, tau = args.cluster_tau)
+    output, z_dis = classifier(embedding_batch)
+    loss_classification = Ncontrast(z_dis, adj_label_batch, tau = args.cluster_tau)
     cluster_entropy = entropy(torch.mean(output, axis=0), input_as_probabilities = True)
     # print(loss_classification, cluster_entropy)
     loss_classification -= args.entropy_weight*cluster_entropy
@@ -299,38 +302,48 @@ if args.cuda:
     idx_test = idx_test.cuda()
 
 print('\n'+'training configs', args)
-for epoch in range(args.epochs):
-    # loss = train_grace_cluster(CC_model, data.x, data.edge_index)
-    loss = train_unsup_gcn()
-    # print("Epoch: %d, Loss: %f"%(epoch, loss))
+filepath = "saved_models/gcnmodel_PubMed_instance_tau_{}_seed_{}_lr_0.01.pkl".format(args.instance_tau, args.seed)
 
+if args.load :
+    GCN_model.load_state_dict(torch.load(filepath))
+else :
+    for epoch in range(args.epochs):
+        # loss = train_grace_cluster(CC_model, data.x, data.edge_index)
+        loss = train_unsup_gcn()
+        print("Epoch: %d, Loss: %f"%(epoch, loss))
+
+filepath = "saved_models/gcnmodel_PubMed_instance_tau_{}_seed_{}_lr_0.01.pkl".format(args.instance_tau, args.seed)
+torch.save(GCN_model.state_dict(), filepath)
 embedding, x_dis= GCN_model(features, adj_label)
 embedding = embedding.detach()
 # pred = CC_model.getCluster(data.x, data.edge_index)
 # pred = pred.detach()
 cluster_adj_label = torch.where(x_dis > args.theta, torch.ones_like(x_dis), torch.zeros_like(x_dis))
+print("Self training done, clustering start")
 
-scores = test_spectral(embedding, labels, labels.max().item()+1)
-# scores = err_rate(data.y.cpu().numpy(), pred.cpu().numpy())
-print("Spectral clustering scores:")
-print(scores)
+# scores = test_spectral(embedding, labels, labels.max().item()+1)
+# # scores = err_rate(data.y.cpu().numpy(), pred.cpu().numpy())
+# print("Spectral clustering scores:")
+# print(scores)
 
 filename = "log_Pubmed_ss.txt"
 log_file = open(filename, encoding="utf-8",mode="a+")  
 with log_file as file_to_be_write:  
     print("args",file=file_to_be_write)
     print(args, file=file_to_be_write)
-    print("spectral scores:", file=file_to_be_write)
-    print(scores, file=file_to_be_write)
+    # print("spectral scores:", file=file_to_be_write)
+    # print(scores, file=file_to_be_write)
 
+torch.cuda.empty_cache()
 classifier = GMLP.Classifier(nhid=embedding.shape[1], nclass=labels.max().item() + 1)
 classifier_optimizer = optim.Adam(classifier.parameters(),
                     lr=args.lr, weight_decay=args.weight_decay)
 
 if args.cuda:
     classifier = classifier.cuda()
-for epoch in tqdm(range(args.epochs)):
-    train_unsup_classifier(cluster_adj_label, embedding, classifier)
+for epoch in range(500):
+    loss = train_unsup_classifier(cluster_adj_label, embedding, classifier)
+    print("Classifier loss: %f"%loss)
 
 logic, dis = classifier(embedding)
 pred = torch.argmax(logic, dim=1)
