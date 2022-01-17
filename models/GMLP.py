@@ -36,14 +36,17 @@ def get_feature_dis(x):
     x :           batch_size x nhid
     x_dis(i,j):   item means the similarity between x(i) and x(j).
     """
-    x_dis = x@x.T
-    mask = torch.eye(x_dis.shape[0]).cuda()
-    x_sum = torch.sum(x**2, 1).reshape(-1, 1)
-    x_sum = torch.sqrt(x_sum).reshape(-1, 1)
-    x_sum = x_sum @ x_sum.T
-    x_dis = x_dis*(x_sum**(-1))
-    x_dis = (1-mask) * x_dis
-    return x_dis
+    # x_dis = x@x.T
+    # mask = torch.eye(x_dis.shape[0]).cuda()
+    # x_sum = torch.sum(x**2, 1).reshape(-1, 1)
+    # x_sum = torch.sqrt(x_sum).reshape(-1, 1)
+    # x_sum = x_sum @ x_sum.T
+    # x_dis = x_dis*(x_sum**(-1))
+    # x_dis = (1-mask) * x_dis
+    # return x_dis
+
+    x = F.normalize(x, dim=1)
+    return torch.mm(x, x.t())
 
 class GraphConvolutionLayer(torch.nn.Module) :
     def __init__(self, in_features, out_features, bias=True) :
@@ -76,14 +79,14 @@ class GCN(torch.nn.Module):
         super(GCN, self).__init__()
         self.gc1 = GraphConvolutionLayer(nfeat, nhid)
         self.gc2 = GraphConvolutionLayer(nhid, nhid)
-        self.dropout = dropout
+        self.relu = torch.nn.ReLU()
+        self.dropout = torch.nn.Dropout(dropout)
 
     def forward(self, x, adj):
-        x = F.relu(self.gc1(x, adj))
-        x = F.dropout(x, self.dropout, training = self.training)
+        x = self.relu(self.gc1(x, adj))
+        x = self.dropout(x)
         x = self.gc2(x, adj)
-        Z = x
-        x_dis = get_feature_dis(Z)
+        x_dis = get_feature_dis(x)
         return x, x_dis
 
 

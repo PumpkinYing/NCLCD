@@ -103,6 +103,7 @@ def entropy(x, input_as_probabilities):
         return - b.sum()
     else:
         raise ValueError('Input tensor is %d-Dimensional' %(len(b.size())))
+
 def get_batch(batch_size):
     """
     get a batch of feature & adjacency matrix
@@ -111,8 +112,7 @@ def get_batch(batch_size):
     # rand_indx[0:len(idx_train)] = idx_train
     features_batch = features[rand_indx]
     adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
-    labels_batch = labels[rand_indx]
-    return features_batch, adj_label_batch, labels_batch
+    return features_batch, adj_label_batch
 
 # def get_neighbour_batch(cur) :
 #     batch_indx = torch.nonzero(adj_label[cur]).squeeze(1)
@@ -144,9 +144,12 @@ def train_unsup():
     return 
 
 def train_unsup_gcn():
+    features_batch, adj_label_batch = get_batch(batch_size=args.batch_size)
     GCN_model.train()
     GCN_optimizer.zero_grad()
+    # x, x_dis = GCN_model(features_batch, adj_label_batch)
     x, x_dis = GCN_model(features, adj_label)
+    # loss_Ncontrast = Ncontrast(x_dis, adj_label_batch, tau = args.instance_tau)
     loss_Ncontrast = Ncontrast(x_dis, adj_label, tau = args.instance_tau)
     loss_Ncontrast.backward()
     GCN_optimizer.step()
@@ -236,20 +239,20 @@ def print_pic(output, out, name) :
     plt.plot(range(mx_idx), out.detach().cpu().numpy(), label='true')
     plt.savefig('./pics/'+name+'.jpg')
 
-def get_dataset(path, name):
-    assert name in ['Cora', 'CiteSeer', 'PubMed', 'DBLP']
-    name = 'dblp' if name == 'DBLP' else name
+# def get_dataset(path, name):
+#     assert name in ['Cora', 'CiteSeer', 'PubMed', 'DBLP']
+#     name = 'dblp' if name == 'DBLP' else name
 
-    return (CitationFull if name == 'dblp' else Planetoid)(
-        path,
-        name,
-        pre_transform = T.NormalizeFeatures())
+#     return (CitationFull if name == 'dblp' else Planetoid)(
+#         path,
+#         name,
+#         pre_transform = T.NormalizeFeatures())
 
-path = osp.join(osp.expanduser('~'), 'datasets', args.data)
-dataset = get_dataset(path, args.data)
-data = dataset[0]
-if args.cuda:
-    data = data.cuda()
+# path = osp.join(osp.expanduser('~'), 'datasets', args.data)
+# dataset = get_dataset(path, args.data)
+# data = dataset[0]
+# if args.cuda:
+#     data = data.cuda()
 
 def seed_it(seed):
     os.environ["PYTHONSEED"] = str(seed)
@@ -267,8 +270,7 @@ seed_it(args.seed)
 ## Model and optimizer
 MLP_model = GMLP.Unsup_GMLP(nfeat=features.shape[1],
                        nhid=args.hidden,
-                       dropout=args.dropout,
-                       )
+                       dropout=args.dropout)
 GCN_model = GMLP.GCN(nfeat=features.shape[1],
                 nhid=args.hidden,
                 dropout=args.dropout)
@@ -313,34 +315,32 @@ scores = test_spectral(embedding, labels, labels.max().item()+1)
 print("Spectral clustering scores:")
 print(scores)
 
+filename = "log_Pubmed_ss.txt"
+log_file = open(filename, encoding="utf-8",mode="a+")  
+with log_file as file_to_be_write:  
+    print("args",file=file_to_be_write)
+    print(args, file=file_to_be_write)
+    print("spectral scores:", file=file_to_be_write)
+    print(scores, file=file_to_be_write)
+
 classifier = GMLP.Classifier(nhid=embedding.shape[1], nclass=labels.max().item() + 1)
 classifier_optimizer = optim.Adam(classifier.parameters(),
                     lr=args.lr, weight_decay=args.weight_decay)
 
 if args.cuda:
     classifier = classifier.cuda()
-
 for epoch in tqdm(range(args.epochs)):
     train_unsup_classifier(cluster_adj_label, embedding, classifier)
 
 logic, dis = classifier(embedding)
 pred = torch.argmax(logic, dim=1)
-print(pred)
 scores = err_rate(labels.cpu().numpy(), pred.cpu().numpy())
 print("SS clustering scores:")
 print(scores)
 
-log_file = open(r"log_Cora_self.txt", encoding="utf-8",mode="a+")  
+log_file = open(filename, encoding="utf-8",mode="a+")  
 with log_file as file_to_be_write:  
-    print('instance_tau', 'cluster_tau', 'seed', 'epochs', \
-            'hidden', \
-                'alpha', 'lr', \
-                    'weight_decay', 'data', \
-                        'test_acc', file=file_to_be_write, sep=',')
-    print(args.instance_tau, args.cluster_tau, args.seed, args.epochs, \
-          args.hidden, \
-             args.alpha, args.lr, \
-                 args.weight_decay, args.data, \
-                     scores, file=file_to_be_write, sep=',')
+    print("ss clustering scores:", file=file_to_be_write)
+    print(scores, file=file_to_be_write)
 
 

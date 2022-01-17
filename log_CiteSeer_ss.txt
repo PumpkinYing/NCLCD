@@ -1,0 +1,864 @@
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.4737000300571085, 0.3169535693790246, 0.32936847487630977]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.4451457769762549, 0.2999321249653447, 0.3467474427444633]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.458370904718966, 0.29490832065009354, 0.36296341863429965]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.4703937481214307, 0.2949564452203463, 0.37618171096694436]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.46227832882476705, 0.3078656393965243, 0.331167589113841]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.45205891193267206, 0.30046642030633225, 0.3485819115229895]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.45927261797415087, 0.2933819140071735, 0.36547294626541005]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.47129546137661554, 0.2957927790270131, 0.37404088884888437]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.4625788999098287, 0.309549181370963, 0.32924108081137365]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.4487526299969943, 0.29321424833171944, 0.3545926562343058]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.46378118425007514, 0.2961131980251189, 0.3648807814549628]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.4670874661857529, 0.2944943072588405, 0.36812664137033085]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.4697926059513075, 0.31822380337262757, 0.3232089675282031]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.46768860835587617, 0.3065204017725434, 0.34924940737062027]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.45536519386834984, 0.298750945712263, 0.35923898175751673]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.47820859633303275, 0.2973110584531849, 0.408540552823631]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.46919146378118426, 0.3168584124678193, 0.3212372019720869]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.4697926059513075, 0.30576180494088456, 0.3536747094422384]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.46468289750526, 0.29825079595485887, 0.36468491544261106]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.4773068830778479, 0.29799322656689553, 0.4095283822158209]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.4703937481214307, 0.31761239278666625, 0.32298377867719863]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.46798917944093776, 0.3036849026027145, 0.37826615693634413]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.436429215509468, 0.28619201987901344, 0.3571388041354862]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.43913435527502254, 0.28834446012687653, 0.3644634371045652]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.4700931770363691, 0.31892727392212566, 0.3178608996201026]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.468590321611061, 0.30419040218034477, 0.35052741736449683]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.46468289750526, 0.2964847818604489, 0.3649466958796306]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.45055605650736397, 0.28993214810616524, 0.36875749298076443]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.4703937481214307, 0.3178009440887334, 0.31811124321551937]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.46558461076044483, 0.29616518957512555, 0.37384762418950324]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.47400060114217013, 0.30040060431306176, 0.3748165124415916]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.45927261797415087, 0.2909059910782571, 0.3760796879173607]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.47069431920649235, 0.3164733415181574, 0.3208439561845767]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.47670574090772466, 0.30738768809712147, 0.36412170234397956]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.46408175533513674, 0.2961070213336622, 0.37460998446055016]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.2, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.4842200180342651, 0.3056094407899817, 0.4247874839120649]
+ss clustering scores:
+[0.45776976254884283, 0.2952687593882782, 0.3714541622290863]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7165614667868951, 0.4459221225057115, 0.6207098839127122]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7162608957018335, 0.4446089640456776, 0.6204845381212799]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7165614667868951, 0.44473112422656985, 0.6234371553256826]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7147580402765255, 0.4421380262022593, 0.6238479667749592]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7180643222122032, 0.4471486180487662, 0.6220138243555955]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7153591824466486, 0.4429935906851392, 0.6197298827066621]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7165614667868951, 0.4442512138193619, 0.623312200246679]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.715058611361587, 0.4426654669841487, 0.6242436360912607]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7162608957018335, 0.44463434595219364, 0.6204843074063329]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7144574691914638, 0.44162612246799227, 0.6189447245192704]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7156597535317103, 0.4437169604447147, 0.6215033852569479]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7141568981064021, 0.4413075821023066, 0.6235086571643448]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7165614667868951, 0.4443055873273694, 0.6206704549833648]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7156597535317103, 0.44359338856017644, 0.6199981219671008]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7168620378719567, 0.44466467559360756, 0.6238996407597897]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7141568981064021, 0.44172387389607015, 0.6237556236871202]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7180643222122032, 0.4466144453977484, 0.621967749035634]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7144574691914638, 0.44178422241894705, 0.6189200197150676]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7168620378719567, 0.4449097888027162, 0.6235598055109832]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.713555755936279, 0.4413874935708377, 0.6256747062314626]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7165614667868951, 0.444955368292855, 0.6207304923633141]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7141568981064021, 0.44155361239498725, 0.6186491463554843]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7162608957018335, 0.44453799927110776, 0.622890243367587]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7126540426810941, 0.4396796963743426, 0.6248052542666961]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7156597535317103, 0.4436216124945319, 0.6199842386435561]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7156597535317103, 0.44336414261774637, 0.6199733397571385]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7162608957018335, 0.4444547145104199, 0.6223334991172775]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7141568981064021, 0.4420146612663179, 0.6240455398527976]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7162608957018335, 0.4450701880517385, 0.620467123228057]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7144574691914638, 0.44178422241894705, 0.6189200197150676]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.715058611361587, 0.442753242004072, 0.6222530126578283]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7129546137661557, 0.440520155556273, 0.6240907107710877]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7147580402765255, 0.4424039447583882, 0.6191704391782664]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7141568981064021, 0.4418415340150404, 0.6186718104334832]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.7153591824466486, 0.4428652909934608, 0.6224364594748547]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.3, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6819957920048091, 0.4253732277159311, 0.6428160706970353]
+ss clustering scores:
+[0.713555755936279, 0.44122979219924335, 0.6245018551531362]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.7000300571085062, 0.423244816909449, 0.6075639639458895]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6967237751728284, 0.41990311335489133, 0.6049298178965747]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6958220619176435, 0.4184918178318706, 0.6075041628745013]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6928163510670273, 0.4150490875186682, 0.6147628294051614]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.698527201683198, 0.4209451393223763, 0.6063906744573243]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6979260595130748, 0.42222604824021437, 0.6057131556175673]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.69702434625789, 0.42026044805051344, 0.6087862950615693]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6955214908325819, 0.41772681365721526, 0.6107940248102529]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6973249173429517, 0.4193412695570866, 0.6052879109575594]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6976254884280132, 0.4208078482822572, 0.6071372051315251]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6952209197475203, 0.41805931997691087, 0.6072470598455985]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6934174932371506, 0.4152320530551123, 0.6082408452715354]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.700931770363691, 0.42375202936234496, 0.6085906908696643]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6994289149383829, 0.4229413246806882, 0.6084209781629595]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6982266305981365, 0.42148176239058177, 0.6098975660223526]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6955214908325819, 0.4180615796150628, 0.6109837750407091]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6976254884280132, 0.4188274869874593, 0.6055224994987137]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.7003306281935677, 0.423538460354909, 0.6115721026356762]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6979260595130748, 0.42132892900710206, 0.6095994246624992]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6964232040877668, 0.417264877369611, 0.6118053709468058]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6979260595130748, 0.41936286717053284, 0.6059116286913767]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.698527201683198, 0.42164376432091416, 0.6104376388147479]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6964232040877668, 0.4227041913880557, 0.621211783056797]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6955214908325819, 0.41736030986086975, 0.6103724646760514]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.5984370303576796, 0.3772274383015591, 0.46178223192223533]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.5942290351668169, 0.37104875338645155, 0.46019431583935866]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6988277727682597, 0.4230004675657132, 0.6109699738911749]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.69702434625789, 0.42053624050265825, 0.6115578517938601]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.5993387436128644, 0.3790232295255645, 0.4623601142218889]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.5966336038473099, 0.37333846080557487, 0.4618088882498874]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.700931770363691, 0.4230504068997691, 0.61812581867989]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6952209197475203, 0.41836007324821056, 0.6100670818715187]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6029455966336038, 0.3746064491060249, 0.4693451967000073]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.5999398857829876, 0.37459963684431064, 0.467950678251757]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6982266305981365, 0.4188832813211978, 0.6193380965556]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.4, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.6597535317102494, 0.4015877459540441, 0.6308384735943938]
+ss clustering scores:
+[0.6925157799819658, 0.42227929121964836, 0.6509755289654295]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6570483919446949, 0.3729682359091582, 0.572980491419865]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6447249774571686, 0.37327963509205736, 0.5711662081120794]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6311992786293958, 0.36931077808141094, 0.5753614350808064]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6242861436729786, 0.3687276228303579, 0.5755168425345552]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6579501051998797, 0.37527961466906046, 0.5748246533842213]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6272918545235948, 0.369489767032779, 0.5732674832809089]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6074541629095281, 0.36204664418364574, 0.5680106683984202]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.5954313195070634, 0.35770644053290535, 0.56343587394239]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.658551247370003, 0.3770847214145883, 0.5755635413970951]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6230838593327321, 0.36581377360441364, 0.5739730767703316]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6008415990381726, 0.3594013485265541, 0.5665683527651666]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.2, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.5903216110610159, 0.35404123671099386, 0.562318093136365]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6567478208596333, 0.37446745040292556, 0.5739182012850041]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6363089870754434, 0.3741340261517862, 0.5732454839615281]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6215810039074241, 0.3659862617797004, 0.5743010867646626]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6188758641418696, 0.36582531601696594, 0.5734093654932707]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6576495341148182, 0.375233977024039, 0.5747196859744784]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6149684400360685, 0.3631108140310684, 0.5707889893302919]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6011421701232341, 0.3571069449329414, 0.5679952306002137]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6038473098887887, 0.3567879621213212, 0.5703711359596771]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6492335437330928, 0.3647341862603008, 0.5676112139434987]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6125638713555756, 0.35932097852273515, 0.5721527923909346]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6017433122933574, 0.3548285221169629, 0.5698351087612276]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.3, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6089570183348362, 0.35724381338988764, 0.5748174063220717]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6570483919446949, 0.3741063946310276, 0.5740746813213015]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.65614667868951, 0.3772343076093859, 0.5764316171731714]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6588518184550646, 0.37654341845502887, 0.5758981226792149]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.4, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6558461076044485, 0.3742062976123788, 0.5764257467594407]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.500751427712654, 0.3042937304764528, 0.43807048446829794]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6513375413285242, 0.3687983575106859, 0.5741697206415307]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6564472497745717, 0.3730831217250011, 0.5751710004194398]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.7, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6552449654343252, 0.37061946417140823, 0.5741222202008457]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.5719867748722572, 0.3009792270844903, 0.5006794446136933]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.2, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6480312593928464, 0.3641995641029667, 0.568561955097317]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.3, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6567478208596333, 0.3742149776328933, 0.5758080977822296]
+args
+Namespace(alpha=2.0, batch_size=140, cluster_tau=0.4, cuda=True, data='CiteSeer', drop_edge_rate_1=0.2, drop_edge_rate_2=0.4, drop_feature_rate_1=0.3, drop_feature_rate_2=0.4, dropout=0.6, entropy_weight=0.4, epochs=300, hidden=256, instance_tau=0.5, lr=0.01, no_cuda=False, order=1, seed=2333333, theta=0.9, weight_decay=0.0001)
+spectral scores:
+[0.5852119026149685, 0.3479847795088172, 0.5623135690485457]
+ss clustering scores:
+[0.6543432521791404, 0.37212084663730255, 0.5753572827467704]
