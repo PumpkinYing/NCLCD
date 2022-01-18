@@ -2,8 +2,13 @@ import os
 
 for seed in range(233, 244):
     for instance_tau in [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 1.0, 2.0]:
-        cmd = "python train.py --instance_tau %f --cluster_tau 0.2 --seed %d --lr 0.01 --data PubMed"%(instance_tau, seed)
-        os.system(cmd)
+        for cluster_tau in [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 1.0]:
+            for epochs in [100, 200, 300, 400, 500]:
+                for theta in [0.2, 0.4, 0.6, 0.8]:
+                    for entropy in [0.1, 0.3, 0.5]:
+                        cmd = "python train.py --instance_tau %f --cluster_tau %f --seed %d --lr 0.01 --data PubMed --load True --epochs %d --theta %f --entropy_weight %f" \
+                            %(instance_tau, cluster_tau, seed, epochs, theta, entropy)
+                        os.system(cmd)
 
 # for instance_tau in [0.2, 0.5, 0.7, 0.9]:
 #     for cluster_tau in [0.2, 0.5, 0.7]:

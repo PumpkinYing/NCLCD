@@ -341,7 +341,7 @@ classifier_optimizer = optim.Adam(classifier.parameters(),
 
 if args.cuda:
     classifier = classifier.cuda()
-for epoch in range(500):
+for epoch in range(args.epochs):
     loss = train_unsup_classifier(cluster_adj_label, embedding, classifier)
     print("Classifier loss: %f"%loss)
 
