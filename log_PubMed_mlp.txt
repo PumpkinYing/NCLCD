@@ -1,0 +1,146 @@
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.2, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.4, weight_decay=0.0001)
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.2, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.4, weight_decay=0.0001)
+ss clustering scores:
+[0.6385859917837399, 0.22448535078638712, 0.6406537997824512]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.2, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.7, weight_decay=0.0001)
+ss clustering scores:
+[0.6362529796622204, 0.2214498554238112, 0.6382977813553982]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.2, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.9, weight_decay=0.0001)
+ss clustering scores:
+[0.6292032256428463, 0.2135823544556449, 0.6304818564537167]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.5, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.2, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.4, weight_decay=0.0001)
+ss clustering scores:
+[0.639701780189684, 0.22570414268453706, 0.6418339820259439]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.5, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.2, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.7, weight_decay=0.0001)
+ss clustering scores:
+[0.6382816858548461, 0.22328836196491475, 0.6405212874201264]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.5, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.2, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.9, weight_decay=0.0001)
+ss clustering scores:
+[0.6312319318354719, 0.21505226489641238, 0.6327025035373098]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.7, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.2, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.4, weight_decay=0.0001)
+ss clustering scores:
+[0.6397524978444997, 0.22565219825851726, 0.6419061342343086]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.7, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.2, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.7, weight_decay=0.0001)
+ss clustering scores:
+[0.6386874270933712, 0.22390205443141775, 0.6409810710432059]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.7, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.2, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.9, weight_decay=0.0001)
+ss clustering scores:
+[0.6315869554191814, 0.21540615641062616, 0.6330793494920642]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.5, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.4, weight_decay=0.0001)
+ss clustering scores:
+[0.6476137343409241, 0.22438533729493187, 0.6465305028485099]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.5, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.7, weight_decay=0.0001)
+ss clustering scores:
+[0.6440127808490136, 0.21232180824974609, 0.6421585151555623]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.5, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.9, weight_decay=0.0001)
+ss clustering scores:
+[0.5268042805700665, 0.2232335546451768, 0.5288916669745792]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.5, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.5, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.4, weight_decay=0.0001)
+ss clustering scores:
+[0.6488309580564995, 0.22566104857892486, 0.6476692297812701]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.5, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.5, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.7, weight_decay=0.0001)
+ss clustering scores:
+[0.6443170867779074, 0.21215313356047996, 0.6424556010299193]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.5, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.5, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.9, weight_decay=0.0001)
+ss clustering scores:
+[0.5254856215448598, 0.22558659782521448, 0.5277828954650994]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.7, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.5, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.4, weight_decay=0.0001)
+ss clustering scores:
+[0.6490845463305777, 0.22584805737075497, 0.6478808466663587]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.7, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.5, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.7, weight_decay=0.0001)
+ss clustering scores:
+[0.6444185220875387, 0.21216384705634966, 0.6425559684480807]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.7, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.5, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.9, weight_decay=0.0001)
+ss clustering scores:
+[0.525029162651519, 0.22525862583733303, 0.5273467526290284]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.7, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.4, weight_decay=0.0001)
+ss clustering scores:
+[0.6478673226150022, 0.22308128422167817, 0.6457792487408013]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.7, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.7, weight_decay=0.0001)
+ss clustering scores:
+[0.5246234214129939, 0.2391784275849727, 0.5296007691706367]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.7, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.9, weight_decay=0.0001)
+ss clustering scores:
+[0.5565248262920323, 0.23346372965895565, 0.5564727792636542]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.5, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.7, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.4, weight_decay=0.0001)
+ss clustering scores:
+[0.4864330273368159, 0.2468478519360546, 0.4916893481946587]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.5, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.7, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.7, weight_decay=0.0001)
+ss clustering scores:
+[0.516965055535832, 0.24145132738888675, 0.522621085552028]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.5, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.7, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.9, weight_decay=0.0001)
+ss clustering scores:
+[0.5566769792564792, 0.2370460783495177, 0.5564720579315445]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.7, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.7, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.4, weight_decay=0.0001)
+ss clustering scores:
+[0.48460719176345285, 0.24556614639116783, 0.48968764848101554]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.7, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.7, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.7, weight_decay=0.0001)
+ss clustering scores:
+[0.5163564436780443, 0.24182952487679443, 0.5220489241305254]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.7, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.7, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.9, weight_decay=0.0001)
+ss clustering scores:
+[0.5564741086372166, 0.2370547490756383, 0.5562613803130688]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.9, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.4, weight_decay=0.0001)
+ss clustering scores:
+[0.5087995131105137, 0.2391804838168177, 0.5135991276886757]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.9, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.7, weight_decay=0.0001)
+ss clustering scores:
+[0.5297459045493736, 0.23536314335107983, 0.535107488315821]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.9, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.9, weight_decay=0.0001)
+ss clustering scores:
+[0.5602779327483897, 0.2334397632163792, 0.5599080716044268]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.5, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.9, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.4, weight_decay=0.0001)
+ss clustering scores:
+[0.504944971344525, 0.2438817930289104, 0.5099373203264435]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.5, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.9, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.7, weight_decay=0.0001)
+ss clustering scores:
+[0.5238626565907593, 0.2366323761524317, 0.5295724715359842]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.5, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.9, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.9, weight_decay=0.0001)
+ss clustering scores:
+[0.5615458741187808, 0.23731873902034403, 0.5610936074924592]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.7, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.9, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.4, weight_decay=0.0001)
+ss clustering scores:
+[0.5039813359030278, 0.24388547565859772, 0.508904110440675]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.7, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.9, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.7, weight_decay=0.0001)
+ss clustering scores:
+[0.5229497388040777, 0.23740043880234982, 0.5286852222568651]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.7, cuda=True, data='PubMed', dropout=0.6, entropy_weight=0.1, epochs=1000, hidden=256, instance_tau=0.9, load=False, lr=0.0001, no_cuda=False, order=4, seed=233, theta=0.9, weight_decay=0.0001)
+ss clustering scores:
+[0.5617994623928589, 0.23789990724668428, 0.5613321136116349]

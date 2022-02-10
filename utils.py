@@ -72,8 +72,9 @@ def err_rate(gt_s, s):
     #missrate = err_x.astype(float) / (gt_s.shape[0])
     acc = metrics.accuracy_score(gt_s, y_pred)
     nmi = metrics.normalized_mutual_info_score(gt_s, y_pred)
+    ari = metrics.adjusted_rand_score(gt_s, y_pred)
     f1_macro = f1_score(gt_s, y_pred, average='macro')
-    return [acc, nmi, f1_macro]
+    return [acc, nmi, f1_macro, ari]
 
 
 def get_A_r(adj, r):
