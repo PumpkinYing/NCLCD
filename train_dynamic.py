@@ -35,7 +35,7 @@ warnings.filterwarnings('ignore')
 parser = argparse.ArgumentParser()
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='Disables CUDA training.')
-parser.add_argument('--epochs', type=int, default=1000,
+parser.add_argument('--epochs', type=int, default=300,
                     help='Number of epochs to train.')
 parser.add_argument('--lr', type=float, default=0.01,
                     help='learning rate.')
@@ -64,6 +64,7 @@ parser.add_argument('--entropy_weight', type=float, default=0.1,
 parser.add_argument('--seed', type=int, default=233)
 parser.add_argument('--load', type=bool, default=False)
 parser.add_argument('--model', default='mlp')
+parser.add_argument('--div', type=float, default=0.2)
 
 args = parser.parse_args()
 args.cuda = not args.no_cuda and torch.cuda.is_available()
@@ -73,6 +74,7 @@ adj, features, labels = load_citation(args.data, 'AugNormAdj', args.cuda)
 # adj = adj.to_dense()
 # adj_label = torch.where(adj < args.theta, torch.zeros_like(adj), torch.ones_like(adj))
 adj_label = get_A_r(adj, args.order)
+
 
 def Ncontrast(x_dis, adj_label, tau = args.instance_tau):
     """
@@ -105,18 +107,21 @@ def entropy(x, input_as_probabilities):
     else:
         raise ValueError('Input tensor is %d-Dimensional' %(len(b.size())))
 
-def get_batch(batch_size, features, adj_label):
+def get_batch(train_idx, test_idx, features, adj_label):
     """
     get a batch of feature & adjacency matrix
     """
-    rand_indx = torch.tensor(np.random.choice(np.arange(features.shape[0]), batch_size)).type(torch.long).cuda()
-    # rand_indx[0:len(idx_train)] = idx_train
-    features_batch = features[rand_indx]
-    adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
+    # rand_indx[0:len(train_idx)] = train_idx
+
+    all_idx = train_idx+test_idx
+    features_batch = features[all_idx]
+    adj_label_batch = adj_label[all_idx, :][:, all_idx]
     return features_batch, adj_label_batch
 
-def train_unsup_mlp():
-    features_batch, adj_label_batch = get_batch(min(args.batch_size, features.shape[0]), features, adj_label)
+def train_unsup_mlp(train_idx, test_idx):
+    features_batch = features
+    adj_label_batch = adj_label
+    # features_batch, adj_label_batch = get_batch(train_idx, test_idx, features, adj_label)
     MLP_model.train()
     MLP_optimizer.zero_grad()
     x, x_dis = MLP_model(features_batch)
@@ -137,24 +142,10 @@ def train_unsup_gcn():
     GCN_optimizer.step()
     return loss_Ncontrast
 
-def train_grace_cluster(model, x, edge_index):
-    model.train()
-    CC_optimizer.zero_grad()
-    edge_index_1 = dropout_adj(edge_index, p=args.drop_edge_rate_1)[0]
-    edge_index_2 = dropout_adj(edge_index, p=args.drop_edge_rate_2)[0]
-    x_1 = GRACE_cluster.drop_feature(x, args.drop_feature_rate_1)
-    x_2 = GRACE_cluster.drop_feature(x, args.drop_feature_rate_2)
-    h1, c1 = model(x_1, edge_index_1)
-    h2, c2 = model(x_2, edge_index_2)
-    loss = model.loss(h1, h2, c1, c2, batch_size=0)
-    loss.backward()
-    CC_optimizer.step()
-
-    return loss.item()
-
-
-def train_unsup_classifier(cluster_adj_label, embedding, classifier):
-    embedding_batch, adj_label_batch = get_batch(min(features.shape[0], args.batch_size), embedding, cluster_adj_label)
+def train_unsup_classifier(train_idx, test_idx, cluster_adj_label, embedding, classifier):
+    embedding_batch = embedding
+    adj_label_batch = cluster_adj_label
+    # embedding_batch, adj_label_batch = get_batch(train_idx, test_idx, embedding, cluster_adj_label)
     adj_label_batch = torch.where(adj_label_batch > args.theta, torch.ones_like(adj_label_batch), torch.zeros_like(adj_label_batch))
     classifier.train()
     classifier_optimizer.zero_grad()
@@ -171,12 +162,12 @@ def train_classifier(embedding, classifier):
     classifier.train()
     classifier_optimizer.zero_grad()
     output = classifier(embedding)
-    loss_nll = F.nll_loss(output[idx_train], labels[idx_train])
+    loss_nll = F.nll_loss(output[train_idx], labels[train_idx])
     loss_nll.backward()
     classifier_optimizer.step()
 
     val_f1 = cal_f1_score(output[idx_val], labels[idx_val])
-    test_f1 = cal_f1_score(output[idx_test], labels[idx_test])
+    test_f1 = cal_f1_score(output[test_idx], labels[test_idx])
     return val_f1, test_f1
 
 def test_spectral(c, labels, n_class):
@@ -184,7 +175,6 @@ def test_spectral(c, labels, n_class):
     print("Spectral Clustering Done.. Finding Best Fit..")
     scores = err_rate(labels.detach().cpu().numpy(), y_result)
     return scores
-
 
 def print_pic(output, out, name) :
     plt.figure()
@@ -213,7 +203,6 @@ def seed_it(seed):
     torch.backends.cudnn.benchmark = True
     torch.backends.cudnn.enabled = True
     torch.manual_seed(seed)
-
 
 seed_it(args.seed)
 
@@ -248,87 +237,109 @@ if args.cuda:
 print('\n'+'training configs', args)
 filepath = "saved_models/gcnmodel_{}_instance_tau_{}_seed_{}_lr_0.01.pkl".format(args.data, args.instance_tau, args.seed)
 
-colors = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'w']
+colors = ['b', 'g', 'r', 'c', 'm', 'olive', 'orange', 'tan']
+colors_old = ['dimgray', 'lime', 'salmon', 'cyan', 'fuchsia', 'y', 'navajowhite', 'wheat']
 
-if args.load :
-    GCN_model.load_state_dict(torch.load(filepath))
-else :
-    tsne = TSNE(n_components=2, init='pca', perplexity=30)
 
-    for epoch in range(args.epochs):
-        # loss = train_grace_cluster(CC_model, data.x, data.edge_index)
-        if args.model == "mlp":
-            loss = train_unsup_mlp()
-        else :
-            loss = train_unsup_gcn()
-        # print("Epoch: %d, Loss: %f"%(epoch, loss))
-        # if(epoch == 0) :
-        #     embedding, _ = GCN_model(features, adj_label)
-        #     cur_embedding = embedding.detach().cpu().numpy()
-        #     positions = tsne.fit_transform(cur_embedding)
-        #     plt.scatter(positions[:,0], positions[:, 1], c=labels.detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
-        #     plt.savefig("{}.eps".format(epoch), format="eps")
-        # if (epoch+1)%50 == 0:
-        #     embedding, _ = GCN_model(features, adj_label)
-        #     cur_embedding = embedding.detach().cpu().numpy()
-        #     positions = tsne.fit_transform(cur_embedding)
-        #     plt.scatter(positions[:,0], positions[:, 1], c=labels.detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
-        #     plt.savefig("{}.eps".format(epoch), format="eps")
-        #     plt.show()
+id_list = list(range(len(labels)))
+random.seed(args.seed)
+random.shuffle(id_list)
+train_idx = []
+test_idx = []
+pre_div = 0
+for div in [0.2, 0.4, 0.6, 0.8, 1]:
+    cur_div = int(len(labels)*div)
+    train_idx = id_list[: pre_div]
+    test_idx = id_list[pre_div: cur_div]
+    pre_div = cur_div
+
+    # adj_label[train_idx,:][:,train_idx] = 0
+
+    print(len(train_idx), len(test_idx))
+
+    if args.load :
+        GCN_model.load_state_dict(torch.load(filepath))
+    else :
+        tsne = TSNE(n_components=2, init='pca', perplexity=30)
+
+        for epoch in range(args.epochs):
+            # loss = train_grace_cluster(CC_model, data.x, data.edge_index)
+            if args.model == "mlp":
+                loss = train_unsup_mlp(train_idx, test_idx)
+            else :
+                loss = train_unsup_gcn()
+            # print("Epoch: %d, Loss: %f"%(epoch, loss))
+            # if(epoch == 0) :
+            #     embedding, _ = GCN_model(features, adj_label)
+            #     cur_embedding = embedding.detach().cpu().numpy()
+            #     positions = tsne.fit_transform(cur_embedding)
+            #     plt.scatter(positions[:,0], positions[:, 1], c=labels.detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
+            #     plt.savefig("{}.eps".format(epoch), format="eps")
+            # if (epoch+1)%50 == 0:
+            #     embedding, _ = GCN_model(features, adj_label)
+            #     cur_embedding = embedding.detach().cpu().numpy()
+            #     positions = tsne.fit_transform(cur_embedding)
+            #     plt.scatter(positions[:,0], positions[:, 1], c=labels.detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
+            #     plt.savefig("{}.eps".format(epoch), format="eps")
+            #     plt.show()
 
 
     # torch.save(GCN_model.state_dict(), filepath)
+    if args.model == "mlp":
+        embedding, x_dis= MLP_model(features)
+    else :
+        embedding, x_dis= GCN_model(features, adj_label)
 
-if args.model == "mlp":
-    embedding, x_dis= MLP_model(features)
-else :
-    embedding, x_dis= GCN_model(features, adj_label)
+    embedding = embedding.detach()
+    # cluster_adj_label = torch.where(x_dis > args.theta, torch.ones_like(x_dis), torch.zeros_like(x_dis))
+    print("Self training done, clustering start")
 
-embedding = embedding.detach()
-# cluster_adj_label = torch.where(x_dis > args.theta, torch.ones_like(x_dis), torch.zeros_like(x_dis))
-print("Self training done, clustering start")
+    # scores = test_spectral(embedding, labels, labels.max().item()+1)
+    # # scores = err_rate(data.y.cpu().numpy(), pred.cpu().numpy())
+    # print("Spectral clustering scores:")
+    # print(scores)
 
-begin_time = time.time()
-test_spectral(embedding, labels, labels.max().item()+1)
-end_time = time.time()
-print("Spectral time:", end_time-begin_time)
-# scores = err_rate(data.y.cpu().numpy(), pred.cpu().numpy())
-# print("Spectral clustering scores:")
-# print(scores)
+    filename = "log_{}_{}_dynamic.txt".format(args.data, args.model)
+    log_file = open(filename, encoding="utf-8",mode="a+")  
+    with log_file as file_to_be_write:  
+        print("args",file=file_to_be_write)
+        print(args, file=file_to_be_write)
+        # print("spectral scores:", file=file_to_be_write)
+        # print(scores, file=file_to_be_write)
 
-# filename = "log_{}_{}.txt".format(args.data, args.model)
-# log_file = open(filename, encoding="utf-8",mode="a+")  
-# with log_file as file_to_be_write:  
-#     print("args",file=file_to_be_write)
-#     print(args, file=file_to_be_write)
-#     # print("spectral scores:", file=file_to_be_write)
-#     # print(scores, file=file_to_be_write)
+    torch.cuda.empty_cache()
+    classifier = GMLP.Classifier(nhid=embedding.shape[1], nclass=labels.max().item() + 1)
+    classifier_optimizer = optim.Adam(classifier.parameters(),
+                        lr=args.lr, weight_decay=args.weight_decay)
 
-torch.cuda.empty_cache()
-classifier = GMLP.Classifier(nhid=embedding.shape[1], nclass=labels.max().item() + 1)
-classifier_optimizer = optim.Adam(classifier.parameters(),
-                    lr=args.lr, weight_decay=args.weight_decay)
+    if args.cuda:
+        classifier = classifier.cuda()
+    for epoch in range(args.epochs):
+        loss = train_unsup_classifier(train_idx, test_idx, x_dis, embedding, classifier)
+        # print("Classifier loss: %f"%loss)
 
-begin_time = time.time()
-if args.cuda:
-    classifier = classifier.cuda()
-for epoch in range(args.epochs):
-    loss = train_unsup_classifier(x_dis, embedding, classifier)
-    # print("Classifier loss: %f"%loss)
-end_time = time.time() 
-print("Classifier time:", end_time-begin_time)
+    classifier.eval()
+    logic = classifier.get_classify_result(embedding)
+    pred = torch.argmax(logic, dim=1)
 
-classifier.eval()
-logic = classifier.get_classify_result(embedding)
-pred = torch.argmax(logic, dim=1)
-scores = err_rate(labels.cpu().numpy(), pred.cpu().numpy())
-print("SS clustering scores:")
-print(scores)
+    labels = labels.cpu()
+    pred = pred.cpu()
+    all_idx = train_idx+test_idx
+    log_file = open(filename, encoding="utf-8",mode="a+")  
+    with log_file as file_to_be_write:  
+        print("SS clustering scores:", file=file_to_be_write)
+        scores = err_rate(labels[all_idx].numpy(), pred[all_idx].cpu().numpy())
+        print(scores, file=file_to_be_write)
 
-# filename = "heat_map.txt"
-# log_file = open(filename, encoding="utf-8",mode="a")  
-# with log_file as file_to_be_write:  
-#     print("ss clustering scores:", file=file_to_be_write)
-#     print(scores, file=file_to_be_write)
+    embedding, _ = MLP_model(features)
+    cur_embedding = embedding.detach().cpu().numpy()
+    positions = tsne.fit_transform(cur_embedding)
+    positions_train = positions[train_idx]
+    positions_test = positions[test_idx]
+    plt.scatter(positions_train[:,0], positions_train[:, 1], c=labels[train_idx].detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors_old))
+    plt.scatter(positions_test[:,0], positions_test[:, 1], c=labels[test_idx].detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
+    plt.savefig("{}.png".format(div), format="png")
 
-
+log_file = open(filename, encoding="utf-8",mode="a+")  
+with log_file as file_to_be_write:  
+    print("", file=file_to_be_write)

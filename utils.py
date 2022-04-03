@@ -165,9 +165,6 @@ def load_citation(dataset_str="Cora", normalization="AugNormAdj", cuda=True):
     labels = np.vstack((ally, ty))
     labels[test_idx_reorder, :] = labels[test_idx_range, :]
 
-    idx_test = test_idx_range.tolist()
-    idx_train = range(len(y))
-    idx_val = range(len(y), len(y)+500)
 
     adj, features = preprocess_citation(adj, features, normalization)
 
@@ -176,19 +173,13 @@ def load_citation(dataset_str="Cora", normalization="AugNormAdj", cuda=True):
     labels = torch.LongTensor(labels)
     labels = torch.max(labels, dim=1)[1]
     adj = sparse_mx_to_torch_sparse_tensor(adj).float()
-    idx_train = torch.LongTensor(idx_train)
-    idx_val = torch.LongTensor(idx_val)
-    idx_test = torch.LongTensor(idx_test)
 
     if cuda:
         features = features.cuda()
         adj = adj.cuda()
         labels = labels.cuda()
-        idx_train = idx_train.cuda()
-        idx_val = idx_val.cuda()
-        idx_test = idx_test.cuda()
 
-    return adj, features, labels, idx_train, idx_val, idx_test
+    return adj, features, labels
 
 
 def load_citation_in_order(dataset = "cora", normalization="AugNormAdj", cuda = True) :

@@ -7378,8 +7378,12 @@ ss clustering scores:
 [0.6406942392909897, 0.48519257288436374, 0.5570747587576128, 0.43017264339047956]
 args
 Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='Cora', dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.7, load=False, lr=0.01, model='GCN', no_cuda=False, order=1, seed=2293, theta=0.6, weight_decay=0.0001)
-ss clustering scores:
-[0.7211964549483013, 0.533134160930302, 0.6942450405529447, 0.5205816403262312]
+Self-supervised clustering scores:
+Acc: 0.7211964549483013
+NMI: 0.533134160930302 
+F1-score :0.6942450405529447
+
+
 args
 Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.2, cuda=True, data='Cora', dropout=0.6, entropy_weight=0.1, epochs=400, hidden=256, instance_tau=0.7, load=False, lr=0.01, model='GCN', no_cuda=False, order=1, seed=2293, theta=0.6, weight_decay=0.0001)
 ss clustering scores:

@@ -65,6 +65,12 @@ parser.add_argument('--seed', type=int, default=233)
 parser.add_argument('--load', type=bool, default=False)
 parser.add_argument('--model', default='mlp')
 
+
+# parser.add_argument('--drop_edge_rate_1', type=float, default=0.2)
+# parser.add_argument('--drop_edge_rate_2', type=float, default=0.4)
+# parser.add_argument('--drop_feature_rate_1', type=float, default=0.3)
+# parser.add_argument('--drop_feature_rate_2', type=float, default=0.4)
+
 args = parser.parse_args()
 args.cuda = not args.no_cuda and torch.cuda.is_available()
 
@@ -114,6 +120,25 @@ def get_batch(batch_size, features, adj_label):
     features_batch = features[rand_indx]
     adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
     return features_batch, adj_label_batch
+
+# def get_neighbour_batch(cur) :
+#     batch_indx = torch.nonzero(adj_label[cur]).squeeze(1)
+#     # batch_indx = batch_indx[torch.nonzero(torch.where(batch_indx > cur, torch.zeros_like(batch_indx), batch_indx)).squeeze(1)]
+#     batch_indx = torch.cat((idx_train, batch_indx))
+#     features_batch = features[batch_indx]
+#     adj_label_batch = adj_label[batch_indx, :][:, batch_indx]
+#     return features_batch, adj_label_batch
+
+
+# def get_neighbour_batch(cur):
+#     batch_indx = torch.nonzero(adj_label[cur]).squeeze(1)
+#     batch_indx = batch_indx[torch.nonzero(torch.where(batch_indx > cur, torch.zeros_like(batch_indx), batch_indx)).squeeze(1)]
+#     rand_indx = torch.tensor(np.random.choice(np.arange(2000), args.batch_size)).type(torch.long).cuda()
+#     rand_indx[0:len(idx_train)] = idx_train
+#     rand_indx[-len(batch_indx):] = batch_indx
+#     features_batch = features[rand_indx]
+#     adj_label_batch = adj_label[rand_indx,:][:,rand_indx]
+#     return features_batch, adj_label_batch
 
 def train_unsup_mlp():
     features_batch, adj_label_batch = get_batch(min(args.batch_size, features.shape[0]), features, adj_label)
@@ -186,6 +211,28 @@ def test_spectral(c, labels, n_class):
     return scores
 
 
+
+
+# def my_test():
+#     model.eval()
+#     output = model(features[idx_train])
+#     output = torch.cat((output, model(features[idx_val])), dim = 0)
+#     for i in idx_test :
+#         features_batch, adj_label_batch = get_neighbour_batch(i)
+#         model.train()
+#         optimizer.zero_grad()
+#         out, x_dis = model(features_batch)
+#         loss_train_class = F.nll_loss(out[idx_train], labels[idx_train])
+#         loss_Ncontrast = Ncontrast(x_dis, adj_label_batch, tau = 1)
+#         loss_train = loss_train_class + loss_Ncontrast * args.alpha
+#         loss_train.backward()
+#         optimizer.step()
+
+#         output = torch.cat((output, model(features[i].unsqueeze(0))), dim = 0)
+
+#     acc_test = cal_f1_score(output[idx_test], labels[idx_test])
+#     return acc_test
+
 def print_pic(output, out, name) :
     plt.figure()
     mx_idx = output.shape[0]
@@ -203,6 +250,21 @@ def print_pic(output, out, name) :
     plt.plot(range(mx_idx), output.detach().cpu().numpy(), label='output')
     plt.plot(range(mx_idx), out.detach().cpu().numpy(), label='true')
     plt.savefig('./pics/'+name+'.jpg')
+
+# def get_dataset(path, name):
+#     assert name in ['Cora', 'CiteSeer', 'PubMed', 'DBLP']
+#     name = 'dblp' if name == 'DBLP' else name
+
+#     return (CitationFull if name == 'dblp' else Planetoid)(
+#         path,
+#         name,
+#         pre_transform = T.NormalizeFeatures())
+
+# path = osp.join(osp.expanduser('~'), 'datasets', args.data)
+# dataset = get_dataset(path, args.data)
+# data = dataset[0]
+# if args.cuda:
+#     data = data.cuda()
 
 def seed_it(seed):
     os.environ["PYTHONSEED"] = str(seed)
@@ -237,98 +299,3 @@ GCN_optimizer = optim.Adam(GCN_model.parameters(),
                        lr=args.lr, weight_decay=args.weight_decay)
 CC_optimizer = optim.Adam(CC_model.parameters(),
                        lr=args.lr, weight_decay=args.weight_decay)
-
-if args.cuda:
-    MLP_model.cuda()
-    GCN_model.cuda()
-    CC_model.cuda()
-    features = features.cuda()
-    labels = labels.cuda()
-
-print('\n'+'training configs', args)
-filepath = "saved_models/gcnmodel_{}_instance_tau_{}_seed_{}_lr_0.01.pkl".format(args.data, args.instance_tau, args.seed)
-
-colors = ['b', 'g', 'r', 'c', 'm', 'y', 'k', 'w']
-
-if args.load :
-    GCN_model.load_state_dict(torch.load(filepath))
-else :
-    tsne = TSNE(n_components=2, init='pca', perplexity=30)
-
-    for epoch in range(args.epochs):
-        # loss = train_grace_cluster(CC_model, data.x, data.edge_index)
-        if args.model == "mlp":
-            loss = train_unsup_mlp()
-        else :
-            loss = train_unsup_gcn()
-        # print("Epoch: %d, Loss: %f"%(epoch, loss))
-        # if(epoch == 0) :
-        #     embedding, _ = GCN_model(features, adj_label)
-        #     cur_embedding = embedding.detach().cpu().numpy()
-        #     positions = tsne.fit_transform(cur_embedding)
-        #     plt.scatter(positions[:,0], positions[:, 1], c=labels.detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
-        #     plt.savefig("{}.eps".format(epoch), format="eps")
-        # if (epoch+1)%50 == 0:
-        #     embedding, _ = GCN_model(features, adj_label)
-        #     cur_embedding = embedding.detach().cpu().numpy()
-        #     positions = tsne.fit_transform(cur_embedding)
-        #     plt.scatter(positions[:,0], positions[:, 1], c=labels.detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
-        #     plt.savefig("{}.eps".format(epoch), format="eps")
-        #     plt.show()
-
-
-    # torch.save(GCN_model.state_dict(), filepath)
-
-if args.model == "mlp":
-    embedding, x_dis= MLP_model(features)
-else :
-    embedding, x_dis= GCN_model(features, adj_label)
-
-embedding = embedding.detach()
-# cluster_adj_label = torch.where(x_dis > args.theta, torch.ones_like(x_dis), torch.zeros_like(x_dis))
-print("Self training done, clustering start")
-
-begin_time = time.time()
-test_spectral(embedding, labels, labels.max().item()+1)
-end_time = time.time()
-print("Spectral time:", end_time-begin_time)
-# scores = err_rate(data.y.cpu().numpy(), pred.cpu().numpy())
-# print("Spectral clustering scores:")
-# print(scores)
-
-# filename = "log_{}_{}.txt".format(args.data, args.model)
-# log_file = open(filename, encoding="utf-8",mode="a+")  
-# with log_file as file_to_be_write:  
-#     print("args",file=file_to_be_write)
-#     print(args, file=file_to_be_write)
-#     # print("spectral scores:", file=file_to_be_write)
-#     # print(scores, file=file_to_be_write)
-
-torch.cuda.empty_cache()
-classifier = GMLP.Classifier(nhid=embedding.shape[1], nclass=labels.max().item() + 1)
-classifier_optimizer = optim.Adam(classifier.parameters(),
-                    lr=args.lr, weight_decay=args.weight_decay)
-
-begin_time = time.time()
-if args.cuda:
-    classifier = classifier.cuda()
-for epoch in range(args.epochs):
-    loss = train_unsup_classifier(x_dis, embedding, classifier)
-    # print("Classifier loss: %f"%loss)
-end_time = time.time() 
-print("Classifier time:", end_time-begin_time)
-
-classifier.eval()
-logic = classifier.get_classify_result(embedding)
-pred = torch.argmax(logic, dim=1)
-scores = err_rate(labels.cpu().numpy(), pred.cpu().numpy())
-print("SS clustering scores:")
-print(scores)
-
-# filename = "heat_map.txt"
-# log_file = open(filename, encoding="utf-8",mode="a")  
-# with log_file as file_to_be_write:  
-#     print("ss clustering scores:", file=file_to_be_write)
-#     print(scores, file=file_to_be_write)
-
-
