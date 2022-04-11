@@ -19,7 +19,7 @@ for instance_tau in [0.2, 0.5, 0.7, 0.9]:
                 for entropy in [0.1]:
                     for data in ['Cora']:
                         # cmd = "python .\\train.py --instance_tau %f --cluster_tau %f" % (instance_tau, cluster_tau)
-                            cmd = "python train_dynamic.py --instance_tau %f --cluster_tau %f --lr %f --theta %f --entropy_weight %f --data %s --order 3 --seed 23333" % (
+                            cmd = "python train.py --instance_tau %f --cluster_tau %f --lr %f --theta %f --entropy_weight %f --data %s --order 3 --seed 23333" % (
                                 instance_tau, cluster_tau, lr, theta, entropy, data)
                             os.system(cmd)
 

@@ -336,9 +336,12 @@ for div in [0.2, 0.4, 0.6, 0.8, 1]:
     positions = tsne.fit_transform(cur_embedding)
     positions_train = positions[train_idx]
     positions_test = positions[test_idx]
+    plt.xticks(fontsize=18)
+    plt.yticks(fontsize=18)
     plt.scatter(positions_train[:,0], positions_train[:, 1], c=labels[train_idx].detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors_old))
     plt.scatter(positions_test[:,0], positions_test[:, 1], c=labels[test_idx].detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
     plt.savefig("{}.png".format(div), format="png")
+    plt.show()
 
 log_file = open(filename, encoding="utf-8",mode="a+")  
 with log_file as file_to_be_write:  

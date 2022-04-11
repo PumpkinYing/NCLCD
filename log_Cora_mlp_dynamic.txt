@@ -2250,3 +2250,45 @@ Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.7, cuda=True, data='Cora', d
 SS clustering scores:
 [0.7079025110782866, 0.5394458232775858, 0.6352977358301856, 0.48851320824498357]
 
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='Cora', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=23333, theta=0.5, weight_decay=0.0001)
+SS clustering scores:
+[0.711645101663586, 0.5365731789716847, 0.6714875552928915, 0.5131151216295927]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='Cora', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=23333, theta=0.5, weight_decay=0.0001)
+SS clustering scores:
+[0.5318559556786704, 0.45879782013071707, 0.45821450384465395, 0.31750026508637363]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='Cora', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=23333, theta=0.5, weight_decay=0.0001)
+SS clustering scores:
+[0.6102216748768473, 0.4529629317596894, 0.554664201882242, 0.41862464486168377]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='Cora', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=23333, theta=0.5, weight_decay=0.0001)
+SS clustering scores:
+[0.6015697137580794, 0.44739150337896316, 0.5526450670969474, 0.4201264116176261]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='Cora', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=23333, theta=0.5, weight_decay=0.0001)
+SS clustering scores:
+[0.6909158050221565, 0.5021075670688963, 0.6078306379780941, 0.48033857212108816]
+
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='Cora', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=23333, theta=0.5, weight_decay=0.0001)
+SS clustering scores:
+[0.711645101663586, 0.5365731789716847, 0.6714875552928915, 0.5131151216295927]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='Cora', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=23333, theta=0.5, weight_decay=0.0001)
+SS clustering scores:
+[0.5318559556786704, 0.45879782013071707, 0.45821450384465395, 0.31750026508637363]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='Cora', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=23333, theta=0.5, weight_decay=0.0001)
+SS clustering scores:
+[0.6102216748768473, 0.4529629317596894, 0.554664201882242, 0.41862464486168377]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='Cora', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=23333, theta=0.5, weight_decay=0.0001)
+SS clustering scores:
+[0.6015697137580794, 0.44739150337896316, 0.5526450670969474, 0.4201264116176261]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='Cora', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=300, hidden=256, instance_tau=0.5, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=23333, theta=0.5, weight_decay=0.0001)
+SS clustering scores:
+[0.6909158050221565, 0.5021075670688963, 0.6078306379780941, 0.48033857212108816]
+
