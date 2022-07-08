@@ -1,10 +1,10 @@
 
 
 ## cora
-python3 train.py --lr=0.001 --weight_decay=5e-3 --data=cora --alpha=10.0 --hidden=256 --batch_size=2000 --order=2 --tau=2
+python train.py --data Cora --epochs 300 --cluster_tau 0.2 --instance_tau 0.7 --seed 2246 --model GCN --order 1 --theta 0.6
 
 ## citeseer
-python3 train.py --lr=0.001 --weight_decay=5e-3 --data=citeseer --alpha=1.0 --hidden=256 --batch_size=2000 --order=2 --tau=0.5
+python train.py --data CiteSeer --epochs 300 --cluster_tau 0.4 --instance_tau 0.4 --seed 2736 --model GCN --order 1 --theta 0.9
 
 ## pubmed
-python3 train.py --lr=0.1 --weight_decay=5e-3 --data=pubmed --alpha=100 --hidden=256 --batch_size=2000 --order=2 --tau=1
+python train.py --data PubMed --epochs 500 --cluster_tau 0.2 --instance_tau 0.5 --seed 238 --model GCN --order 1 --theta 0.8

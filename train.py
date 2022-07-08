@@ -262,23 +262,24 @@ else :
         else :
             loss = train_unsup_gcn()
         print("Epoch: %d, Loss: %f"%(epoch, loss))
-        if(epoch == 0) :
-            embedding, _ = GCN_model(features, adj_label)
-            cur_embedding = embedding.detach().cpu().numpy()
-            positions = tsne.fit_transform(cur_embedding)
-            plt.xticks(fontsize=18)
-            plt.yticks(fontsize=18)
-            plt.scatter(positions[:,0], positions[:, 1], c=labels.detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
-            plt.savefig("{}.eps".format(epoch), format="eps")
-        if (epoch+1)%50 == 0:
-            embedding, _ = GCN_model(features, adj_label)
-            cur_embedding = embedding.detach().cpu().numpy()
-            positions = tsne.fit_transform(cur_embedding)
-            plt.xticks(fontsize=18)
-            plt.yticks(fontsize=18)
-            plt.scatter(positions[:,0], positions[:, 1], c=labels.detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
-            plt.savefig("{}.eps".format(epoch), format="eps")
-            plt.show()
+        # print pic
+        # if(epoch == 0) :
+        #     embedding, _ = GCN_model(features, adj_label)
+        #     cur_embedding = embedding.detach().cpu().numpy()
+        #     positions = tsne.fit_transform(cur_embedding)
+        #     plt.xticks(fontsize=18)
+        #     plt.yticks(fontsize=18)
+        #     plt.scatter(positions[:,0], positions[:, 1], c=labels.detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
+        #     plt.savefig("{}.eps".format(epoch), format="eps")
+        # if (epoch+1)%50 == 0:
+        #     embedding, _ = GCN_model(features, adj_label)
+        #     cur_embedding = embedding.detach().cpu().numpy()
+        #     positions = tsne.fit_transform(cur_embedding)
+        #     plt.xticks(fontsize=18)
+        #     plt.yticks(fontsize=18)
+        #     plt.scatter(positions[:,0], positions[:, 1], c=labels.detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
+        #     plt.savefig("{}.eps".format(epoch), format="eps")
+        #     plt.show()
 
 
     # torch.save(GCN_model.state_dict(), filepath)
@@ -293,12 +294,12 @@ embedding = embedding.detach()
 print("Self training done, clustering start")
 
 begin_time = time.time()
-test_spectral(embedding, labels, labels.max().item()+1)
+scores = test_spectral(embedding, labels, labels.max().item()+1)
 end_time = time.time()
 print("Spectral time:", end_time-begin_time)
 # scores = err_rate(data.y.cpu().numpy(), pred.cpu().numpy())
-# print("Spectral clustering scores:")
-# print(scores)
+print("Spectral clustering scores:")
+print(scores)
 
 # filename = "log_{}_{}.txt".format(args.data, args.model)
 # log_file = open(filename, encoding="utf-8",mode="a+")  

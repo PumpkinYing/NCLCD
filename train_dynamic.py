@@ -268,21 +268,6 @@ for div in [0.2, 0.4, 0.6, 0.8, 1]:
                 loss = train_unsup_mlp(train_idx, test_idx)
             else :
                 loss = train_unsup_gcn()
-            # print("Epoch: %d, Loss: %f"%(epoch, loss))
-            # if(epoch == 0) :
-            #     embedding, _ = GCN_model(features, adj_label)
-            #     cur_embedding = embedding.detach().cpu().numpy()
-            #     positions = tsne.fit_transform(cur_embedding)
-            #     plt.scatter(positions[:,0], positions[:, 1], c=labels.detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
-            #     plt.savefig("{}.eps".format(epoch), format="eps")
-            # if (epoch+1)%50 == 0:
-            #     embedding, _ = GCN_model(features, adj_label)
-            #     cur_embedding = embedding.detach().cpu().numpy()
-            #     positions = tsne.fit_transform(cur_embedding)
-            #     plt.scatter(positions[:,0], positions[:, 1], c=labels.detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
-            #     plt.savefig("{}.eps".format(epoch), format="eps")
-            #     plt.show()
-
 
     # torch.save(GCN_model.state_dict(), filepath)
     if args.model == "mlp":
