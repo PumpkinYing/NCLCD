@@ -1,3 +1,4 @@
+from cProfile import label
 import numpy as np
 from sklearn import cluster
 from sklearn.cluster import KMeans
@@ -17,9 +18,9 @@ from sklearn.metrics import f1_score
 
 def best_map(L1,L2):
     #L1 should be the groundtruth labels and L2 should be the clustering labels we got
-    Label1 = np.unique(L1)
+    Label1 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
     nClass1 = len(Label1)
-    Label2 = np.unique(L2)
+    Label2 = Label1
     nClass2 = len(Label2)
     nClass = np.maximum(nClass1,nClass2)
     G = np.zeros((nClass,nClass))
@@ -67,6 +68,8 @@ def post_proC(L, K, seed):
     return grp
 
 def err_rate(gt_s, s):
+    print(gt_s.shape)
+    print(s.shape)
     y_pred = best_map(gt_s,s)
     #err_x = np.sum(gt_s[:] != c_x[:])
     #missrate = err_x.astype(float) / (gt_s.shape[0])
@@ -131,6 +134,36 @@ def sparse_mx_to_torch_sparse_tensor(sparse_mx):
     return torch.sparse.FloatTensor(indices, values, shape)
 
 def load_citation(dataset_str="Cora", normalization="AugNormAdj", cuda=True):
+
+    if dataset_str == "wiki":
+        graph_index = np.loadtxt(open("./data/wiki/graph.txt"), delimiter='\t',skiprows=0)
+        label_index = np.loadtxt(open("./data/wiki/group.txt"), delimiter='\t',skiprows=0)
+        features_index = np.loadtxt(open("./data/wiki/tfidf.txt"), delimiter='\t',skiprows=0)
+        
+        graph_index = graph_index.astype(np.int32)
+        adj = sp.csr_matrix((np.ones(graph_index.shape[0]), (graph_index[:,0], graph_index[:,1])))
+        labels = label_index[:,1]
+        labels = labels-np.ones(labels.shape[0])
+        features = sp.csr_matrix((features_index[:,2], (features_index[:,0].astype(np.int32), features_index[:,1].astype(np.int32))))
+        adj = adj + adj.T.multiply(adj.T) - adj.multiply(adj.T)
+
+        adj, features = preprocess_citation(adj, features, normalization)
+
+        # porting to pytorch
+        features = torch.FloatTensor(np.array(features.todense())).float()
+        labels = torch.LongTensor(labels)
+        adj = sparse_mx_to_torch_sparse_tensor(adj).float()
+
+        if cuda:
+            features = features.cuda()
+            adj = adj.cuda()
+            labels = labels.cuda()
+
+        print(adj.shape)
+        print(features.shape)
+        print(labels.shape)
+        return adj, features, labels
+
     """
     Load Citation Networks Datasets.
     """

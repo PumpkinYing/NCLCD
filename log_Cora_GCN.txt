@@ -1,0 +1,4 @@
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='Cora', dropout=0.6, entropy_weight=0.1, epochs=400, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='GCN', no_cuda=False, order=1, seed=2131, theta=0.7, weight_decay=0.0001)
+ss clustering scores:
+[0.5299113737075333, 0.4593397234602936, 0.5027937439917871, 0.33085471947683814]

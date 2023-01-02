@@ -1,27 +1,28 @@
 import os
 
-# for seed in range(2100,2300):
-#     for instance_tau in [0.7]:
-#         for cluster_tau in [0.2]:
-#             for epochs in [200, 300, 400, 500]:
-#                 for lr in [0.01]:
-#                     for theta in [0.6]:
-#                         for entropy in [0.1]:
-#                             cmd = "python train.py --instance_tau %f --cluster_tau %f --seed %d --lr %f --data Cora \
-#                                 --epochs %d --theta %f --entropy_weight %f --model GCN" \
-#                                 %(instance_tau, cluster_tau, seed, lr, epochs, theta, entropy)
-#                             os.system(cmd)
-
-for instance_tau in [0.2, 0.5, 0.7, 0.9]:
-    for cluster_tau in [0.2, 0.5, 0.7, 0.9]:
-        for lr in [0.01]:
-            for theta in [0.5]:
-                for entropy in [0.1]:
-                    for data in ['Cora']:
-                        # cmd = "python .\\train.py --instance_tau %f --cluster_tau %f" % (instance_tau, cluster_tau)
-                            cmd = "python train.py --instance_tau %f --cluster_tau %f --lr %f --theta %f --entropy_weight %f --data %s --order 3 --seed 23333" % (
-                                instance_tau, cluster_tau, lr, theta, entropy, data)
+for seed in range(2200,2300):
+    for instance_tau in [0.9]:
+        for cluster_tau in [0.9]:
+            for epochs in [500]:
+                for lr in [0.01]:
+                    for theta in [0.6]:
+                        for entropy in [0.1]:
+                            cmd = "python train_dynamic.py --instance_tau %f --cluster_tau %f --seed %d --lr %f --data wiki \
+                                --epochs %d --theta %f --entropy_weight %f --order 3" \
+                                %(instance_tau, cluster_tau, seed, lr, epochs, theta, entropy)
                             os.system(cmd)
+
+# for instance_tau in [0.2, 0.5, 0.7, 0.9]:
+#     for cluster_tau in [0.2, 0.5, 0.7, 0.9]:
+#         for lr in [0.01]:
+#             for theta in [0.3, 0.5, 0.7, 0.9]:
+#                 # for entropy in [0.1]:
+#                 for epochs in [200, 300, 400, 500]:
+#                     for data in ['wiki']:
+#                         # cmd = "python .\\train.py --instance_tau %f --cluster_tau %f" % (instance_tau, cluster_tau)
+#                             cmd = "python train.py --instance_tau %f --cluster_tau %f --lr %f --theta %f --entropy_weight 0.1 --data %s --epochs %d --order 1 --seed 23333 --model GCN" % (
+#                                 instance_tau, cluster_tau, lr, theta, data, epochs)
+#                             os.system(cmd)
 
 # for instance_tau in [0.2, 0.5, 0.7, 0.9]:
 #     for cluster_tau in [0.2, 0.5, 0.7, 0.9]:

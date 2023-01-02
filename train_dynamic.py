@@ -131,7 +131,7 @@ def train_unsup_mlp(train_idx, test_idx):
     return loss_Ncontrast
 
 def train_unsup_gcn():
-    features_batch, adj_label_batch = get_batch(args.batch_size, features, adj_label)
+    # features_batch, adj_label_batch = get_batch(args.batch_size, features, adj_label)
     GCN_model.train()
     GCN_optimizer.zero_grad()
     # x, x_dis = GCN_model(features_batch, adj_label_batch)
@@ -246,8 +246,8 @@ random.seed(args.seed)
 random.shuffle(id_list)
 train_idx = []
 test_idx = []
-pre_div = 0
-for div in [0.2, 0.4, 0.6, 0.8, 1]:
+pre_div = int(len(labels)*0.2)
+for div in [0.4, 0.6, 0.8, 1]:
     cur_div = int(len(labels)*div)
     train_idx = id_list[: pre_div]
     test_idx = id_list[pre_div: cur_div]
@@ -313,20 +313,24 @@ for div in [0.2, 0.4, 0.6, 0.8, 1]:
     log_file = open(filename, encoding="utf-8",mode="a+")  
     with log_file as file_to_be_write:  
         print("SS clustering scores:", file=file_to_be_write)
-        scores = err_rate(labels[all_idx].numpy(), pred[all_idx].cpu().numpy())
-        print(scores, file=file_to_be_write)
+        train_scores = err_rate(labels[train_idx].numpy(), pred[train_idx].cpu().numpy())
+        test_scores = err_rate(labels[test_idx].numpy(), pred[test_idx].cpu().numpy())
+        print("train:")
+        print(train_scores, file=file_to_be_write)
+        print("test:")
+        print(test_scores, file=file_to_be_write)
 
-    embedding, _ = MLP_model(features)
-    cur_embedding = embedding.detach().cpu().numpy()
-    positions = tsne.fit_transform(cur_embedding)
-    positions_train = positions[train_idx]
-    positions_test = positions[test_idx]
-    plt.xticks(fontsize=18)
-    plt.yticks(fontsize=18)
-    plt.scatter(positions_train[:,0], positions_train[:, 1], c=labels[train_idx].detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors_old))
-    plt.scatter(positions_test[:,0], positions_test[:, 1], c=labels[test_idx].detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
-    plt.savefig("{}.png".format(div), format="png")
-    plt.show()
+    # embedding, _ = MLP_model(features)
+    # cur_embedding = embedding.detach().cpu().numpy()
+    # positions = tsne.fit_transform(cur_embedding)
+    # positions_train = positions[train_idx]
+    # positions_test = positions[test_idx]
+    # plt.xticks(fontsize=18)
+    # plt.yticks(fontsize=18)
+    # plt.scatter(positions_train[:,0], positions_train[:, 1], c=labels[train_idx].detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors_old))
+    # plt.scatter(positions_test[:,0], positions_test[:, 1], c=labels[test_idx].detach().cpu().numpy(), cmap=matplotlib.colors.ListedColormap(colors))
+    # plt.savefig("{}.png".format(div), format="png")
+    # plt.show()
 
 log_file = open(filename, encoding="utf-8",mode="a+")  
 with log_file as file_to_be_write:  

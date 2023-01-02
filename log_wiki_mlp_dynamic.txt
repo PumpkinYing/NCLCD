@@ -1,0 +1,163 @@
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2200, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2201, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2200, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.27234927234927236, 0.3340589975281624, 0.19457407561382203, 0.12068600892194574]
+[0.2390852390852391, 0.2838336939351796, 0.16946327730170382, 0.08357670804151843]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2200, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.26403326403326405, 0.2762450257821342, 0.18502685653085274, 0.11992452177603079]
+[0.25363825363825365, 0.28373494126799986, 0.19495154536846346, 0.09010020467948482]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2200, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.2571032571032571, 0.25309742818114656, 0.17724515954214748, 0.12352224114346484]
+[0.2785862785862786, 0.3043248481410531, 0.20029983947511182, 0.12033006046367206]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2200, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.2692307692307692, 0.2517691193679462, 0.1766616580564176, 0.13234024433781183]
+[0.29313929313929316, 0.30461821516330506, 0.21345016037410317, 0.11206309973065791]
+
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2201, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.288981288981289, 0.32828897799540213, 0.21333293610194615, 0.13543318898626594]
+[0.2577962577962578, 0.3061174538983091, 0.18954659725224507, 0.12201352305552822]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2201, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.2983367983367983, 0.2891202139049846, 0.18942264849326926, 0.14858968582274357]
+[0.31392931392931395, 0.29549108478523317, 0.2159807595703321, 0.14173761575079982]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2201, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.2654192654192654, 0.29293863012877164, 0.17919831634923697, 0.16981309599427477]
+[0.24740124740124741, 0.2973917820096338, 0.16347745952467874, 0.14270827026495764]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2201, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.25935550935550933, 0.2551571712753121, 0.18690284821181555, 0.1147268910737057]
+[0.2681912681912682, 0.28543854394787704, 0.18819149310478736, 0.1021517645773362]
+
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2202, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.3284823284823285, 0.33531898091347795, 0.21707421984058828, 0.1472140489936711]
+[0.36174636174636177, 0.3567603704984845, 0.2383495140873558, 0.17089815346821544]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2202, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.28482328482328484, 0.3154578042934604, 0.2071609484835386, 0.12925052907892606]
+[0.30561330561330563, 0.35495831093048397, 0.2302670119017657, 0.13341201647684225]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2202, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.3076923076923077, 0.3051099759001362, 0.21622460887510653, 0.1472333347015593]
+[0.32432432432432434, 0.32998464879953265, 0.22721399197287187, 0.12881018258762642]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2202, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.2739085239085239, 0.28993524167558427, 0.20637435900221446, 0.14436910585198987]
+[0.31185031185031187, 0.34297712049292306, 0.23611756467430992, 0.1537240134860458]
+
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2203, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.3492723492723493, 0.36666556240239156, 0.24422785424114565, 0.17659950540014993]
+[0.30561330561330563, 0.33396894603242616, 0.21452426104718333, 0.11651823143559034]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2203, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.29521829521829523, 0.32000713375359335, 0.22469827183532123, 0.14642940447724406]
+[0.2702702702702703, 0.3199422692155738, 0.20944969362903065, 0.11840846668130486]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2203, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.30284130284130284, 0.29297844446968846, 0.22333146403600593, 0.1531697935899633]
+[0.3471933471933472, 0.3477354962238889, 0.25166209226026554, 0.17370173952601517]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2203, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.2707900207900208, 0.28487785851560227, 0.208582794233536, 0.12077929011905217]
+[0.28274428274428276, 0.34524406495560167, 0.22118989690403454, 0.11570311884640831]
+
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2204, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.27442827442827444, 0.34920949512990396, 0.21613477039594042, 0.13271091883470024]
+[0.2681912681912682, 0.31741221571037365, 0.2148023362126528, 0.11095460463280397]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2204, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.29625779625779625, 0.3034370078474193, 0.2144663381666325, 0.13557010435760056]
+[0.30561330561330563, 0.3348074746800933, 0.22105778833112638, 0.14778928795101548]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2204, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.2938322938322938, 0.30176458950982415, 0.21986826598275544, 0.1371610569944467]
+[0.3264033264033264, 0.3575175374777779, 0.25196750086888475, 0.14239150325143787]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2204, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.28586278586278585, 0.2867958309085849, 0.20388290936577444, 0.1300509724750752]
+[0.2910602910602911, 0.3310014653395786, 0.19968666409044844, 0.12190910702560138]
+
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2205, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.32432432432432434, 0.35127189673086606, 0.23723947238479537, 0.14734076933421167]
+[0.2972972972972973, 0.34586865715425097, 0.2261669733579829, 0.13307212884973457]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2205, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.3482328482328482, 0.31006191028250546, 0.23855930454908095, 0.15111995241679796]
+[0.35550935550935553, 0.35753818249809144, 0.2705673552113948, 0.15982230622863164]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2205, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.27373527373527373, 0.2906512997978429, 0.2046258662074451, 0.1338238359470748]
+[0.2806652806652807, 0.34435275292113215, 0.2268681505685878, 0.12000139417485671]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2205, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.35602910602910603, 0.30187724144021205, 0.2350579183315682, 0.19166523103939834]
+[0.34303534303534305, 0.3376499823479457, 0.23731979028412759, 0.16607826140282228]
+
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2206, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.2577962577962578, 0.2929698037707622, 0.19363828160180643, 0.09440402264058802]
+[0.27442827442827444, 0.30108724213769017, 0.18982824954309016, 0.12178831256455355]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2206, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.26507276507276506, 0.25884510737416877, 0.17399198962986526, 0.12803789509463037]
+[0.29313929313929316, 0.3152603477952558, 0.2017072869154593, 0.15310281986027338]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2206, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.24601524601524602, 0.25456756325979124, 0.17447933231445695, 0.09988865937663315]
+[0.2577962577962578, 0.28812732278659603, 0.18024667787705925, 0.09154593355937059]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2206, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.2733887733887734, 0.2566381795794707, 0.18082893753945098, 0.11810993236934163]
+[0.29313929313929316, 0.3248310289542887, 0.21471016610058358, 0.11241270834933571]
+
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2207, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.2869022869022869, 0.3344355308943885, 0.19921952258005687, 0.1580815309639322]
+[0.2661122661122661, 0.33578333787376835, 0.20669577585252047, 0.135501788957323]
+args
+Namespace(alpha=2.0, batch_size=5000, cluster_tau=0.9, cuda=True, data='wiki', div=0.2, dropout=0.6, entropy_weight=0.1, epochs=500, hidden=256, instance_tau=0.9, load=False, lr=0.01, model='mlp', no_cuda=False, order=3, seed=2207, theta=0.6, weight_decay=0.0001)
+SS clustering scores:
+[0.2910602910602911, 0.29131883789106183, 0.2151233274714391, 0.12420598215740647]
+[0.3076923076923077, 0.347408527274346, 0.23199684690797753, 0.14308953937927749]

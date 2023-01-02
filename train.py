@@ -293,21 +293,21 @@ embedding = embedding.detach()
 # cluster_adj_label = torch.where(x_dis > args.theta, torch.ones_like(x_dis), torch.zeros_like(x_dis))
 print("Self training done, clustering start")
 
-begin_time = time.time()
-scores = test_spectral(embedding, labels, labels.max().item()+1)
-end_time = time.time()
-print("Spectral time:", end_time-begin_time)
-# scores = err_rate(data.y.cpu().numpy(), pred.cpu().numpy())
-print("Spectral clustering scores:")
-print(scores)
+# begin_time = time.time()
+# scores = test_spectral(embedding, labels, labels.max().item()+1)
+# end_time = time.time()
+# print("Spectral time:", end_time-begin_time)
+# # scores = err_rate(data.y.cpu().numpy(), pred.cpu().numpy())
+# print("Spectral clustering scores:")
+# print(scores)
 
-# filename = "log_{}_{}.txt".format(args.data, args.model)
-# log_file = open(filename, encoding="utf-8",mode="a+")  
-# with log_file as file_to_be_write:  
-#     print("args",file=file_to_be_write)
-#     print(args, file=file_to_be_write)
-#     # print("spectral scores:", file=file_to_be_write)
-#     # print(scores, file=file_to_be_write)
+filename = "log_{}_{}.txt".format(args.data, args.model)
+log_file = open(filename, encoding="utf-8",mode="a+")  
+with log_file as file_to_be_write:  
+    print("args",file=file_to_be_write)
+    print(args, file=file_to_be_write)
+    # print("spectral scores:", file=file_to_be_write)
+    # print(scores, file=file_to_be_write)
 
 torch.cuda.empty_cache()
 classifier = GMLP.Classifier(nhid=embedding.shape[1], nclass=labels.max().item() + 1)
@@ -331,9 +331,9 @@ print("SS clustering scores:")
 print(scores)
 
 # filename = "heat_map.txt"
-# log_file = open(filename, encoding="utf-8",mode="a")  
-# with log_file as file_to_be_write:  
-#     print("ss clustering scores:", file=file_to_be_write)
-#     print(scores, file=file_to_be_write)
+log_file = open(filename, encoding="utf-8",mode="a")  
+with log_file as file_to_be_write:  
+    print("ss clustering scores:", file=file_to_be_write)
+    print(scores, file=file_to_be_write)
 
 
